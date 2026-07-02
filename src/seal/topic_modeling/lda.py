@@ -163,6 +163,22 @@ class LDATopicModel:
                 df_proc["text"] = ""
 
         self._df = df_proc
+        
+        # Añade esto en main() justo después de preprocessor.fit_transform()
+        # para ver la distribución de longitud de lemas antes de decidir el umbral
+
+        lemma_lengths = [len(l) for l in df_proc["lemmas"].tolist()]
+        import numpy as np
+        print(f"Longitud de lemas — distribución:")
+        for p in [10, 25, 50, 75, 90, 95, 99]:
+            print(f"  p{p}: {np.percentile(lemma_lengths, p):.0f} lemas")
+        print(f"  Media: {np.mean(lemma_lengths):.1f}")
+        print(f"  Con >= 3 lemas: {sum(l>=3 for l in lemma_lengths)/len(lemma_lengths):.1%}")
+        print(f"  Con >= 5 lemas: {sum(l>=5 for l in lemma_lengths)/len(lemma_lengths):.1%}")
+        print(f"  Con >= 2 lemas: {sum(l>=2 for l in lemma_lengths)/len(lemma_lengths):.1%}")
+        
+        lemma_lists = df_proc["lemmas"].tolist()
+            
         lemma_lists: List[List[str]] = df_proc["lemmas"].tolist()
         n = len(lemma_lists)
 
@@ -200,8 +216,7 @@ class LDATopicModel:
         betas = np.array([self._lda_model.get_topic_word_dist(k) for k in range(self.num_topics)])
         self._logger.info(f"Betas shape: {betas.shape}")
 
-        self._topic_keys = [[w for w, _ in self._lda_model.get_topic_words(k, self.topn)]
-                            for k in range(self.num_topics)]
+        self._topic_keys = [[w for w, _ in self._lda_model.get_topic_words(k, self.topn)] for k in range(self.num_topics)]
         self._vocab = list(self._lda_model.used_vocabs)
 
         # Save human-readable topic descriptions
@@ -282,7 +297,6 @@ class LDATopicModel:
                 df, text_col="text", id_col="id",
                 compute_bow=False, compute_tfidf=False,
             )
-            lemma_lists = df_proc["lemmas"].tolist()
         else:
             if "lemmas" not in df.columns:
                 raise ValueError("No preprocessor configured. Each data dict must contain 'lemmas'.")
@@ -601,7 +615,7 @@ class LDATopicModel:
         """Keyword-overlap fallback distribution for short documents.
 
         Returns a uniform distribution when there is no overlap or when only
-        a single keyword matches across all topics combined — a single hit is
+        a single keyword matches across all topics combined: a single hit is
         not enough evidence to pin a document to one topic, and doing so
         produces the same kind of deterministic collapse as LDA sparsification.
         """

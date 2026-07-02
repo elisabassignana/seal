@@ -1,15 +1,31 @@
-You are an expert in topic modeling and content classification. You are given a set of keywords and a sample of user prompts from the same cluster.
+You are labeling clusters from a topic model of user prompts sent to an AI assistant.
 
-Your task is to generate a single ultra-short label that captures the precise user intent or core theme of this cluster.
+Each cluster is described by:
+- KEYWORDS: the most characteristic lemmatized words in the cluster
+- PROMPTS: a sample of actual user messages from this cluster
 
-The label must:
-- Be exactly 2 to 3 words. Absolutely no more than 3 words.
-- Use an active, direct [Action/Intent] + [Subject] format.
-- Reflect the exact functional utility the user wants (e.g., "Text Summarization", "Content Editing", "Document Drafting").
-- Avoid redundant or repetitive adjectives (e.g., do NOT combine words with the same root or meaning like "Concise Summary" or "Report Summarization").
-- Avoid hyper-generic words like "Chat", "Text", "Help", "Prompt", "Bot", or "Assistance".
-- Output ONLY the raw words. No quotes, no formatting, no punctuation.
+Your task: write a single label, exactly 2–3 words, that names the core use case.
 
-Keywords: {keywords}
-User prompts: {docs}
+Rules:
+- Format: [Noun/Subject] + [Action] OR [Domain] + [Task]  (e.g. "Code Debugging", "Meal Planning", "Email Drafting")
+- The label should complete the sentence "Users in this cluster want help with ___"
+- Use plain English nouns, not jargon or lema forms
+- No verbs in -ing that sound redundant with the subject (not "Writing Composition")
+- Avoid: Chat, Help, Text, Prompt, Bot, AI, Assistant, General, Other, Misc
+- Output ONLY the label: no quotes, no punctuation, no explanation
+
+Examples of good labels:
+  Code Debugging
+  Meal Planning  
+  Cover Letter Writing
+  Stock Market Analysis
+  Medical Symptom Lookup
+  Travel Recommendations
+  Grammar Correction
+
+KEYWORDS: {keywords}
+
+PROMPTS:
+{docs}
+
 Label:
