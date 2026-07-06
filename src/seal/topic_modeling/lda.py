@@ -147,10 +147,14 @@ class LDATopicModel:
         df = pd.DataFrame(data)
         if self._preprocessor is not None:
             self._logger.info("Preprocessing training data.")
+            # compute_bow=True fits the preprocessor's CountVectorizer so that
+            # min_df/max_df/max_features are actually applied to the training
+            # vocabulary (previously skipped, so tomotopy saw every raw lemma).
             df_proc = self._preprocessor.fit_transform(
                 df, text_col="text", id_col="id",
-                compute_bow=False, compute_tfidf=False,
+                compute_bow=True, compute_tfidf=False,
             )
+            vocab_set = set(self._preprocessor._cv.vocabulary_.keys())
         else:
             if "lemmas" not in df.columns:
                 raise ValueError(
@@ -161,26 +165,22 @@ class LDATopicModel:
                 df_proc["id"] = range(len(df_proc))
             if "text" not in df_proc.columns:
                 df_proc["text"] = ""
+            vocab_set = None
 
         self._df = df_proc
-        
-        # Añade esto en main() justo después de preprocessor.fit_transform()
-        # para ver la distribución de longitud de lemas antes de decidir el umbral
 
-        lemma_lengths = [len(l) for l in df_proc["lemmas"].tolist()]
-        import numpy as np
-        print(f"Longitud de lemas — distribución:")
-        for p in [10, 25, 50, 75, 90, 95, 99]:
-            print(f"  p{p}: {np.percentile(lemma_lengths, p):.0f} lemas")
-        print(f"  Media: {np.mean(lemma_lengths):.1f}")
-        print(f"  Con >= 3 lemas: {sum(l>=3 for l in lemma_lengths)/len(lemma_lengths):.1%}")
-        print(f"  Con >= 5 lemas: {sum(l>=5 for l in lemma_lengths)/len(lemma_lengths):.1%}")
-        print(f"  Con >= 2 lemas: {sum(l>=2 for l in lemma_lengths)/len(lemma_lengths):.1%}")
-        
-        lemma_lists = df_proc["lemmas"].tolist()
-            
-        lemma_lists: List[List[str]] = df_proc["lemmas"].tolist()
-        n = len(lemma_lists)
+        # Raw (unfiltered) per-doc lemmas, persisted as-is for later S3 scoring.
+        raw_lemma_lists: List[List[str]] = df_proc["lemmas"].tolist()
+        n = len(raw_lemma_lists)
+
+        # Tokens actually fed to the LDA model: restricted to the fitted
+        # min_df/max_df/max_features vocabulary when a preprocessor is set.
+        if vocab_set is not None:
+            lemma_lists: List[List[str]] = [
+                [w for w in toks if w in vocab_set] for toks in raw_lemma_lists
+            ]
+        else:
+            lemma_lists = raw_lemma_lists
 
         # 2. Build trainable mask (short-doc fallback)
         trainable_mask = np.array([len(l) >= self.min_doc_words for l in lemma_lists])
@@ -241,10 +241,13 @@ class LDATopicModel:
         # 7. Create TMmodel (uses sparsified thetas; also sorts topics internally)
         self._create_tm_model(X_all, betas, self._vocab)
 
-        # Persist lemmas so TMmodel can compute S3 scores later without re-running the preprocessor
+        # Persist raw (pre-vocab-filter) lemmas so TMmodel can compute S3 scores
+        # later without re-running the preprocessor. _compute_s3 already ignores
+        # tokens outside the trained vocab, so storing the unfiltered lemmas here
+        # keeps the file useful for inspection/debugging too.
         lemmas_path = self.model_path / "TMmodel" / "lemmas.json"
         lemmas_path.write_text(
-            json.dumps(lemma_lists, ensure_ascii=False), encoding="utf-8"
+            json.dumps(raw_lemma_lists, ensure_ascii=False), encoding="utf-8"
         )
 
         # 8. Re-derive topic_keys from TMmodel sorted betas so topic_keys, topic_labels, alphas and tpc_coords all share the same sorted order.
@@ -297,6 +300,13 @@ class LDATopicModel:
                 df, text_col="text", id_col="id",
                 compute_bow=False, compute_tfidf=False,
             )
+            lemma_lists = df_proc["lemmas"].tolist()
+            # Restrict to the vocabulary the model was trained on (self._vocab,
+            # restored by load()) rather than re-fitting a vectorizer on this
+            # (likely small) inference batch.
+            if self._vocab is not None:
+                vocab_set = set(self._vocab)
+                lemma_lists = [[w for w in toks if w in vocab_set] for toks in lemma_lists]
         else:
             if "lemmas" not in df.columns:
                 raise ValueError("No preprocessor configured. Each data dict must contain 'lemmas'.")
@@ -382,6 +392,7 @@ class LDATopicModel:
             vocab = vocab_path.read_text(encoding="utf-8").strip().split("\n")
             top_id = np.argsort(betas, axis=1)[:, ::-1][:, :obj.topn]
             obj._topic_keys = [[vocab[i] for i in row] for row in top_id]
+            obj._vocab = vocab
             obj._logger.info(f"Topic keys restored: {len(obj._topic_keys)} topics")
 
         obj._logger.info("Model loaded successfully.")
