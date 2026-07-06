@@ -2,27 +2,27 @@
 
 Reads data_Elisa/survey-language-technologies.csv (one row per user, prompt1..prompt10
 columns) and writes data_Elisa/sampled_dataset.csv (one row per prompt), with:
+  - the survey disaggregated so each prompt gets its own row
+  - duplicate prompts (repeated across users) dropped, keeping the first occurrence
   - social_class derived from ses (1-3 low, 4-7 middle, 8-10 upper)
   - id formatted as "u{user_id}p{prompt_number}"
   - classes balanced by randomly downsampling to the smallest class size
 """
 
-import csv
-import random
+import pandas as pd
 
 INPUT_PATH = "data_Elisa/survey-language-technologies.csv"
 OUTPUT_PATH = "data_Elisa/sampled_dataset.csv"
 NUM_PROMPTS = 10
 RANDOM_SEED = 42
 
-SES_METADATA_COLUMNS = {"prompt1", "prompt2", "prompt3", "prompt4", "prompt5",
-                         "prompt6", "prompt7", "prompt8", "prompt9", "prompt10"}
+PROMPT_COLUMNS = [f"prompt{i}" for i in range(1, NUM_PROMPTS + 1)]
 
 
-def social_class(ses: str):
+def social_class(ses):
     try:
         value = int(ses)
-    except ValueError:
+    except (TypeError, ValueError):
         return None
     if 1 <= value <= 3:
         return "low"
@@ -34,43 +34,47 @@ def social_class(ses: str):
 
 
 def main():
-    with open(INPUT_PATH, newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        base_columns = [c for c in reader.fieldnames if c not in SES_METADATA_COLUMNS and c != "id"]
-        rows = list(reader)
+    df = pd.read_csv(INPUT_PATH, dtype=str, keep_default_na=False)
+    base_columns = [c for c in df.columns if c not in PROMPT_COLUMNS and c != "id"]
 
-    disaggregated = {"low": [], "middle": [], "upper": []}
-    for row in rows:
-        sclass = social_class(row["ses"])
-        if sclass is None:
-            continue
-        for i in range(1, NUM_PROMPTS + 1):
-            prompt_text = row[f"prompt{i}"].strip()
-            if not prompt_text:
-                continue
-            new_row = {"id": f"u{row['id']}p{i}", "prompt": prompt_text, "social_class": sclass}
-            for col in base_columns:
-                new_row[col] = row[col]
-            disaggregated[sclass].append(new_row)
+    # Preserve the survey's row order so that, after disaggregating and
+    # dropping duplicate prompts, the kept occurrence is the first one.
+    df = df.reset_index(names="_orig_order")
 
-    balanced_n = min(len(v) for v in disaggregated.values())
-    print(f"Class sizes before balancing: { {k: len(v) for k, v in disaggregated.items()} }")
+    disaggregated = df.melt(
+        id_vars=["id", "_orig_order"] + base_columns,
+        value_vars=PROMPT_COLUMNS,
+        var_name="prompt_num",
+        value_name="prompt",
+    )
+    disaggregated["prompt"] = disaggregated["prompt"].str.strip()
+    disaggregated["prompt_num"] = disaggregated["prompt_num"].str.replace("prompt", "").astype(int)
+    disaggregated = disaggregated[disaggregated["prompt"] != ""]
+    disaggregated = disaggregated.sort_values(["_orig_order", "prompt_num"])
+
+    disaggregated = disaggregated.drop_duplicates(subset="prompt", keep="first")
+
+    disaggregated["id"] = "u" + disaggregated["id"] + "p" + disaggregated["prompt_num"].astype(str)
+    disaggregated["social_class"] = disaggregated["ses"].apply(social_class)
+    disaggregated = disaggregated.dropna(subset=["social_class"])
+
+    class_sizes = disaggregated["social_class"].value_counts()
+    balanced_n = class_sizes.min()
+    print(f"Class sizes before balancing: {class_sizes.to_dict()}")
     print(f"Sampling {balanced_n} instances per class")
 
-    rng = random.Random(RANDOM_SEED)
-    sampled = []
-    for sclass, sclass_rows in disaggregated.items():
-        sampled.extend(rng.sample(sclass_rows, balanced_n))
-    rng.shuffle(sampled)
+    sampled = (
+        disaggregated.groupby("social_class", group_keys=False)
+        .sample(n=balanced_n, random_state=RANDOM_SEED)
+        .sample(frac=1, random_state=RANDOM_SEED)
+        .reset_index(drop=True)
+    )
 
     output_columns = ["id", "prompt", "ses", "social_class"] + \
         [c for c in base_columns if c != "ses"]
+    sampled = sampled[output_columns]
 
-    with open(OUTPUT_PATH, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=output_columns)
-        writer.writeheader()
-        writer.writerows(sampled)
-
+    sampled.to_csv(OUTPUT_PATH, index=False)
     print(f"Wrote {len(sampled)} rows to {OUTPUT_PATH}")
 
 
