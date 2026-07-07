@@ -221,5 +221,6 @@ cache
 _old_do_not_remove
 
 # Unused folders [ML]
+results/sampled_dataset_responses.csv
 evaluation/human_likeness/Elisa_prompt_sample/
 evaluation/human_likeness/humtdumt/
