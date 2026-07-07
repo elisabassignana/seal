@@ -219,3 +219,7 @@ __marimo__/
 data
 cache
 _old_do_not_remove
+
+# Unused folders [ML]
+evaluation/human_likeness/Elisa_prompt_sample/
+evaluation/human_likeness/humtdumt/
