@@ -1,0 +1,12 @@
+avg_valence
+avg_arousal
+avg_dominance
+avg_intensity_anger
+avg_intensity_anticipation
+avg_intensity_disgust
+avg_intensity_fear
+avg_intensity_joy
+avg_intensity_sadness
+avg_intensity_surprise
+avg_intensity_trust
+sentiment_score
