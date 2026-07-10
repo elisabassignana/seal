@@ -15,7 +15,6 @@ RESPONSE_COLUMNS = [
     "responses_gpt-5.5",
 ]
 
-
 def zscore(series: pd.Series) -> pd.Series:
     """Standardize a column to mean 0, std 1 across the dataset.
 
