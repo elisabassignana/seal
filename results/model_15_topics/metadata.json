@@ -1,0 +1,17 @@
+{
+  "num_topics": 15,
+  "num_iters": 1500,
+  "alpha": 0.1,
+  "eta": 0.01,
+  "iter_interval": 10,
+  "topn": 15,
+  "thetas_thr": 0.003,
+  "min_doc_words": 2,
+  "do_labeller": false,
+  "do_summarizer": false,
+  "llm_model_type": null,
+  "llm_provider": null,
+  "llm_server": null,
+  "labeller_prompt": null,
+  "summarizer_prompt": null
+}
