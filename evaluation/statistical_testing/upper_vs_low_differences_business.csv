@@ -1,0 +1,397 @@
+measure,p_value,cliffs_delta,higher_group,flag
+normalized_helpfulness_responses_qwen-3.5-27B,0.1040809218962272,0.13717254338454737,upper,no significant difference
+normalized_helpfulness_responses_llama-3.3-70B,0.6193384099324115,0.04200287388084448,upper,no significant difference
+normalized_helpfulness_responses_gemma-4-31B,0.7087199178747969,0.03161268928926716,upper,no significant difference
+normalized_helpfulness_responses_gpt-5.5,0.22333081044662506,0.10279650712943517,upper,no significant difference
+humt_responses_qwen-3.5-27B,0.07842390626258369,-0.14881749219098617,low,no significant difference
+sociot_status_responses_qwen-3.5-27B,0.1660672860014062,0.11713520749665328,upper,no significant difference
+sociot_social_distance_responses_qwen-3.5-27B,0.7106429403607444,0.03145917001338688,upper,no significant difference
+sociot_gender_responses_qwen-3.5-27B,0.5445155403947786,-0.051316376617581434,low,no significant difference
+sociot_warmth_responses_qwen-3.5-27B,0.45889645378710475,0.06269522534582775,upper,no significant difference
+humt_responses_llama-3.3-70B,0.35333392850424017,-0.0785363676929942,low,no significant difference
+sociot_status_responses_llama-3.3-70B,0.350601604178265,-0.07898259705488621,low,no significant difference
+sociot_social_distance_responses_llama-3.3-70B,0.1381672407991144,0.1253904506916555,upper,no significant difference
+sociot_gender_responses_llama-3.3-70B,0.3756748156770794,-0.0749665327978581,low,no significant difference
+sociot_warmth_responses_llama-3.3-70B,0.3424852818842151,0.08032128514056225,upper,no significant difference
+humt_responses_gemma-4-31B,0.5515515705515468,-0.05042391789379741,low,no significant difference
+sociot_status_responses_gemma-4-31B,0.11646449169160851,-0.1327532351628737,low,no significant difference
+sociot_social_distance_responses_gemma-4-31B,0.10580985047513483,0.13676929941990182,upper,no significant difference
+sociot_gender_responses_gemma-4-31B,0.5340458181972123,0.052655064703257475,upper,no significant difference
+sociot_warmth_responses_gemma-4-31B,0.8481828159215077,0.016287371709058456,upper,no significant difference
+humt_responses_gpt-5.5,0.3923250232111608,0.07294063506672803,upper,no significant difference
+sociot_status_responses_gpt-5.5,0.07781283481181846,-0.15025310630464794,low,no significant difference
+sociot_social_distance_responses_gpt-5.5,0.054144004224134706,0.1640589047399908,upper,no significant difference
+sociot_gender_responses_gpt-5.5,0.6703430558841748,-0.03635526921306949,low,no significant difference
+sociot_warmth_responses_gpt-5.5,0.1000522028113953,0.14012885411872986,upper,no significant difference
+cplx_additive_connectives_gemma-4-31B,0.8750878937102013,-0.013386880856760375,low,no significant difference
+cplx_adjectives_density_gemma-4-31B,0.7654135113288314,-0.02532351628737171,low,no significant difference
+cplx_adverbs_density_gemma-4-31B,0.06173766438645716,-0.15796519410977242,low,no significant difference
+cplx_adversative_connectives_gemma-4-31B,0.8124766915418313,0.019857206604194554,upper,no significant difference
+cplx_argument_overlap_adjacent_gemma-4-31B,0.6871762564519048,0.03413654618473896,upper,no significant difference
+cplx_argument_overlap_all_gemma-4-31B,0.1015847252538126,0.1384426595269969,upper,no significant difference
+cplx_average_age_of_acquisition_gemma-4-31B,0.029670131031545175,0.18384649709950915,upper,significant difference
+cplx_average_cefr_level_gemma-4-31B,0.8960081810949946,0.011155734047300312,upper,no significant difference
+cplx_average_concreteness_gemma-4-31B,0.17387028231374535,-0.11501561802766622,low,no significant difference
+cplx_average_familiarity_gemma-4-31B,0.4509286034833312,-0.06381079875055778,low,no significant difference
+cplx_average_imagery_gemma-4-31B,0.6355192117342404,-0.040160642570281124,low,no significant difference
+cplx_average_meaningfulness_gemma-4-31B,0.01401020121238381,-0.20771976796073183,low,significant difference
+cplx_average_number_of_clauses_per_sentence_gemma-4-31B,0.19208555248902148,-0.11033020972780008,low,no significant difference
+cplx_average_number_of_commas_per_sentence_gemma-4-31B,0.7175294362950991,0.030678268630075858,upper,no significant difference
+cplx_average_number_of_meaning_per_word_gemma-4-31B,0.07069457860699283,-0.15283355644801427,low,no significant difference
+cplx_average_sentence_length_gemma-4-31B,0.08829530990757513,-0.14413208389112003,low,no significant difference
+cplx_causal_connectives_gemma-4-31B,0.7655582421426956,0.025100401606425703,upper,no significant difference
+cplx_coca_academic_range_gemma-4-31B,0.8419818617940164,0.016956715751896476,upper,no significant difference
+cplx_coleman_liau_index_gemma-4-31B,0.07151945323315342,0.15238732708612227,upper,no significant difference
+cplx_concept_density_concepts_per_sentence_gemma-4-31B,0.897052240288152,-0.01104417670682731,low,no significant difference
+cplx_conceptual_graph_ontology_number_of_concpets_gemma-4-31B,0.6430598873491084,0.0392681838464971,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_gemma-4-31B,0.5480155691391226,0.050870147255689425,upper,no significant difference
+cplx_connectives_gemma-4-31B,0.897022209525645,-0.01104417670682731,low,no significant difference
+cplx_content_word_frequency_log_gemma-4-31B,0.010954754003854632,-0.21508255243195,low,significant difference
+cplx_content_word_overlap_adjacent_gemma-4-31B,0.7684223544959934,-0.0249888442659527,low,no significant difference
+cplx_content_word_overlap_all_gemma-4-31B,0.2914151714634504,0.0892458723784025,upper,no significant difference
+cplx_dale_chall_readability_score_gemma-4-31B,0.02283739790523111,0.1924364123159304,upper,significant difference
+cplx_dependency_parser_branching_gemma-4-31B,0.4758809313017487,-0.06035252119589469,low,no significant difference
+cplx_dependency_parser_dependency_distance_gemma-4-31B,0.7027916095900218,0.03235162873717091,upper,no significant difference
+cplx_dependency_parser_tree_depth_gemma-4-31B,0.5462681126327369,0.05109326193663543,upper,no significant difference
+cplx_dissimilarity_of_words_between_sentences_gemma-4-31B,0.5728268118802342,0.04836448598130841,upper,no significant difference
+cplx_first_person_pronouns_density_gemma-4-31B,0.17462981798327248,0.1139000446229362,upper,no significant difference
+cplx_flesch_kincaid_grade_level_gemma-4-31B,0.45647400150732187,0.06302989736724676,upper,no significant difference
+cplx_gunning_fog_index_gemma-4-31B,0.6038571668265331,0.043953592146363234,upper,no significant difference
+cplx_knowledge_graph_average_node_pagerank_gemma-4-31B,0.7523470712930258,0.02677376171352075,upper,no significant difference
+cplx_knowledge_graph_number_of_connected_components_gemma-4-31B,0.5480155691391226,0.050870147255689425,upper,no significant difference
+cplx_linsear_write_formula_gemma-4-31B,0.3849737759285713,-0.07351628737170905,low,no significant difference
+cplx_logical_connectives_gemma-4-31B,0.4366008224515373,-0.06581883087907184,low,no significant difference
+cplx_mattr_gemma-4-31B,0.4932079279197734,0.05800981704596162,upper,no significant difference
+cplx_max_kuperman_age_of_acquisition_gemma-4-31B,0.273134612126802,0.0927041499330656,upper,no significant difference
+cplx_max_number_of_clauses_per_sentence_gemma-4-31B,0.17261134997690064,-0.11367692994199018,low,no significant difference
+cplx_max_number_of_if_per_sentence_gemma-4-31B,0.31994389739738704,-0.07942882641677822,low,no significant difference
+cplx_max_number_of_wh_clauses_per_sentence_gemma-4-31B,0.8355169196816836,0.01673360107095047,upper,no significant difference
+cplx_mean_word_length_gemma-4-31B,0.04463120876450088,0.16979027219991075,upper,significant difference
+cplx_median_kuperman_age_of_acquisition_gemma-4-31B,0.08502944698651006,0.14558232931726908,upper,no significant difference
+cplx_modifiers_per_noun_phrase_gemma-4-31B,0.9158827885480388,-0.009036144578313253,low,no significant difference
+cplx_negations_density_gemma-4-31B,0.9786330000596313,-0.0023427041499330657,low,no significant difference
+cplx_noun_overlap_adjacent_gemma-4-31B,0.5736611560282778,-0.047634984381972334,low,no significant difference
+cplx_nouns_density_gemma-4-31B,0.3966567187033373,-0.071731369924141,low,no significant difference
+cplx_number_of_connectives_gemma-4-31B,0.897022209525645,-0.01104417670682731,low,no significant difference
+cplx_number_of_connectives_per_3_sentence_sliding_window_gemma-4-31B,0.021811518725079304,-0.1931057563587684,low,significant difference
+cplx_number_of_wordnet_hypernyms_per_word_gemma-4-31B,0.2567516152091641,-0.09593931280678268,low,no significant difference
+cplx_number_of_wordnet_hyponyms_per_word_gemma-4-31B,0.7503465943889676,-0.026996876394466757,low,no significant difference
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_gemma-4-31B,0.6871762564519048,0.03413654618473896,upper,no significant difference
+cplx_passive_constructions_density_gemma-4-31B,0.4997374547176936,0.056559571619812586,upper,no significant difference
+cplx_percentage_of_words_above_b1_level_gemma-4-31B,0.7403536065764121,0.028112449799196786,upper,no significant difference
+cplx_percentage_of_words_with_more_than_5_meanings_gemma-4-31B,0.22450353424268432,-0.10274431057563588,low,no significant difference
+cplx_polysemy_gemma-4-31B,0.07069457860699283,-0.15283355644801427,low,no significant difference
+cplx_pos_dissimilarity_between_sentences_gemma-4-31B,0.8069225017866448,0.02102803738317757,upper,no significant difference
+cplx_pronouns_density_gemma-4-31B,0.2150776454189095,0.10486390004462294,upper,no significant difference
+cplx_reading_time_gemma-4-31B,0.699855092562425,0.032686300758589915,upper,no significant difference
+cplx_stem_overlap_sent_gemma-4-31B,0.07258383698752423,-0.15373831775700936,low,no significant difference
+cplx_syllables_per_word_gemma-4-31B,0.014113513326985289,0.2074966532797858,upper,significant difference
+cplx_te_score_gemma-4-31B,0.027558546469193427,0.1863007585899152,upper,significant difference
+cplx_temporal_cohesions_gemma-4-31B,0.1841517299340698,0.11189201249442213,upper,no significant difference
+cplx_temporal_connectives_gemma-4-31B,0.1841517299340698,0.11189201249442213,upper,no significant difference
+cplx_text_length_gemma-4-31B,0.45773304130905723,0.06280678268630076,upper,no significant difference
+cplx_third_person_pronouns_density_gemma-4-31B,0.3577799297156131,0.07775546630968318,upper,no significant difference
+cplx_type_token_ratio_gemma-4-31B,0.07577393125752757,0.1501561802766622,upper,no significant difference
+cplx_verb_aspect_repetition_gemma-4-31B,0.017367904005038272,-0.2113573407202216,low,significant difference
+cplx_verb_overlap_adjacent_gemma-4-31B,0.35931690651286374,0.07563587684069611,upper,no significant difference
+cplx_verb_tense_repetition_gemma-4-31B,0.2412329841641636,0.10058962264150943,upper,no significant difference
+cplx_verb_tense_repetition_nltk_gemma-4-31B,0.12587602570081347,-0.13107476635514018,low,no significant difference
+cplx_verb_ttr_gemma-4-31B,0.6158292506313212,0.04250334672021419,upper,no significant difference
+cplx_verb_ttr_adj_gemma-4-31B,0.3725154975787125,-0.07616822429906542,low,no significant difference
+cplx_verbs_density_gemma-4-31B,0.1597016529395412,0.11892012494422133,upper,no significant difference
+cplx_word_concreteness_gemma-4-31B,0.9989465861491567,0.00022311468094600624,upper,no significant difference
+cplx_word_frequency_log_gemma-4-31B,0.01729260026824456,-0.20124944221329763,low,significant difference
+cplx_additive_connectives_gpt-5.5,0.301581062196414,0.08801196502531063,upper,no significant difference
+cplx_adjectives_density_gpt-5.5,0.5703214830533214,-0.04843534284399448,low,no significant difference
+cplx_adverbs_density_gpt-5.5,0.6663420220497696,-0.03681546249424758,low,no significant difference
+cplx_adversative_connectives_gpt-5.5,0.4223365993050924,-0.06500230096640588,low,no significant difference
+cplx_argument_overlap_adjacent_gpt-5.5,0.7028812656662573,-0.03255867464335021,low,no significant difference
+cplx_argument_overlap_all_gpt-5.5,0.20496080008665873,-0.10791532443626323,low,no significant difference
+cplx_average_age_of_acquisition_gpt-5.5,0.0471286322188196,0.16912103083294983,upper,significant difference
+cplx_average_cefr_level_gpt-5.5,0.5018230479338204,0.0572940635066728,upper,no significant difference
+cplx_average_concreteness_gpt-5.5,0.011281472548704184,-0.21583064887252645,low,significant difference
+cplx_average_familiarity_gpt-5.5,0.38047021852350604,-0.0747814081914404,low,no significant difference
+cplx_average_imagery_gpt-5.5,0.5001035773536671,0.05752416014726185,upper,no significant difference
+cplx_average_meaningfulness_gpt-5.5,0.010524054070451408,-0.2179015186378279,low,significant difference
+cplx_average_number_of_clauses_per_sentence_gpt-5.5,0.8764826310648266,-0.013345605154164749,low,no significant difference
+cplx_average_number_of_commas_per_sentence_gpt-5.5,0.7806396657137782,0.023815002300966406,upper,no significant difference
+cplx_average_number_of_meaning_per_word_gpt-5.5,0.03656858551480963,-0.1780947998159227,low,significant difference
+cplx_average_sentence_length_gpt-5.5,0.7202597388019837,0.030602853198343303,upper,no significant difference
+cplx_causal_connectives_gpt-5.5,0.5640164116408133,0.04832029452369995,upper,no significant difference
+cplx_coca_academic_range_gpt-5.5,0.033982606652380204,0.1806258628624022,upper,significant difference
+cplx_coleman_liau_index_gpt-5.5,0.07445617553325316,0.15197883110906582,upper,no significant difference
+cplx_concept_density_concepts_per_sentence_gpt-5.5,0.7051453290406337,0.03232857800276116,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_concpets_gpt-5.5,0.619923212789425,0.04233778186838472,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_gpt-5.5,0.6000399605136388,0.04475379659456972,upper,no significant difference
+cplx_connectives_gpt-5.5,0.7497032117426015,0.027266451909802116,upper,no significant difference
+cplx_content_word_frequency_log_gpt-5.5,0.1367922309518917,-0.1267832489645651,low,no significant difference
+cplx_content_word_overlap_adjacent_gpt-5.5,0.8645505512718166,-0.01461113667740451,low,no significant difference
+cplx_content_word_overlap_all_gpt-5.5,0.5677028301520096,-0.048665439484583524,low,no significant difference
+cplx_dale_chall_readability_score_gpt-5.5,0.14592402423707715,0.12390704095720202,upper,no significant difference
+cplx_dependency_parser_branching_gpt-5.5,0.5174363185840284,-0.05522319374137138,low,no significant difference
+cplx_dependency_parser_dependency_distance_gpt-5.5,0.8499439319483124,-0.01622181316152784,low,no significant difference
+cplx_dependency_parser_tree_depth_gpt-5.5,0.7682766490172243,0.02519558214450069,upper,no significant difference
+cplx_dissimilarity_of_words_between_sentences_gpt-5.5,0.7496277181279452,-0.028642590286425903,low,no significant difference
+cplx_first_person_pronouns_density_gpt-5.5,0.31521749944804767,0.08225954901058445,upper,no significant difference
+cplx_flesch_kincaid_grade_level_gpt-5.5,0.12910787651718567,0.12931431201104465,upper,no significant difference
+cplx_gunning_fog_index_gpt-5.5,0.0462338242359018,0.16981132075471697,upper,significant difference
+cplx_knowledge_graph_average_node_pagerank_gpt-5.5,0.3738908218294875,0.07581684307409112,upper,no significant difference
+cplx_knowledge_graph_number_of_connected_components_gpt-5.5,0.6000399605136388,0.04475379659456972,upper,no significant difference
+cplx_linsear_write_formula_gpt-5.5,0.6812015956286879,0.03508973768982973,upper,no significant difference
+cplx_logical_connectives_gpt-5.5,0.3670772496951443,-0.07685227795674184,low,no significant difference
+cplx_mattr_gpt-5.5,0.947205113058435,0.005752416014726185,upper,no significant difference
+cplx_max_kuperman_age_of_acquisition_gpt-5.5,0.698129810122738,0.03313391624482283,upper,no significant difference
+cplx_max_number_of_clauses_per_sentence_gpt-5.5,0.8471452224180827,0.016451909802116887,upper,no significant difference
+cplx_max_number_of_if_per_sentence_gpt-5.5,0.024186701522201107,-0.18419236079153245,low,significant difference
+cplx_max_number_of_wh_clauses_per_sentence_gpt-5.5,0.38183430531104334,0.0713299585826047,upper,no significant difference
+cplx_mean_word_length_gpt-5.5,0.033982606652380204,0.1806258628624022,upper,significant difference
+cplx_median_kuperman_age_of_acquisition_gpt-5.5,0.029263700183102877,0.18568798895536126,upper,significant difference
+cplx_modifiers_per_noun_phrase_gpt-5.5,0.1459196561716657,0.12390704095720202,upper,no significant difference
+cplx_negations_density_gpt-5.5,0.28830011043550785,-0.08387022549470778,low,no significant difference
+cplx_noun_overlap_adjacent_gpt-5.5,0.8846599885151967,0.012425218591808559,upper,no significant difference
+cplx_nouns_density_gpt-5.5,0.593488284564215,-0.04555913483663138,low,no significant difference
+cplx_number_of_connectives_gpt-5.5,0.7497032117426015,0.027266451909802116,upper,no significant difference
+cplx_number_of_connectives_per_3_sentence_sliding_window_gpt-5.5,0.7836213054498165,-0.023469857340082834,low,no significant difference
+cplx_number_of_wordnet_hypernyms_per_word_gpt-5.5,0.08105407808708552,-0.1486424298205246,low,no significant difference
+cplx_number_of_wordnet_hyponyms_per_word_gpt-5.5,0.5395351859564781,-0.05234698573400828,low,no significant difference
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_gpt-5.5,0.7028812656662573,-0.03255867464335021,low,no significant difference
+cplx_passive_constructions_density_gpt-5.5,0.078252949171573,0.14185457892314773,upper,no significant difference
+cplx_percentage_of_words_above_b1_level_gpt-5.5,0.6981313653323451,0.03313391624482283,upper,no significant difference
+cplx_percentage_of_words_with_more_than_5_meanings_gpt-5.5,0.027518157454204353,-0.18775885872066267,low,significant difference
+cplx_polysemy_gpt-5.5,0.03656858551480963,-0.1780947998159227,low,significant difference
+cplx_pos_dissimilarity_between_sentences_gpt-5.5,0.30764601255278634,0.09090909090909091,upper,no significant difference
+cplx_pronouns_density_gpt-5.5,0.8531185143261231,-0.015876668200644272,low,no significant difference
+cplx_reading_time_gpt-5.5,0.5804651071448814,0.04716981132075472,upper,no significant difference
+cplx_stem_overlap_sent_gpt-5.5,0.7008942750562305,0.03452613922281241,upper,no significant difference
+cplx_syllables_per_word_gpt-5.5,0.009067974200197658,0.2222733548090198,upper,significant difference
+cplx_te_score_gpt-5.5,0.005718008145344629,0.23538886332259548,upper,significant difference
+cplx_temporal_cohesions_gpt-5.5,0.9170696909512165,0.008858720662678324,upper,no significant difference
+cplx_temporal_connectives_gpt-5.5,0.9170696909512165,0.008858720662678324,upper,no significant difference
+cplx_text_length_gpt-5.5,0.43915917336036636,0.06592268752876208,upper,no significant difference
+cplx_third_person_pronouns_density_gpt-5.5,0.33635109362433413,-0.0815692590888173,low,no significant difference
+cplx_type_token_ratio_gpt-5.5,0.5575438209284653,0.05004601932811781,upper,no significant difference
+cplx_verb_aspect_repetition_gpt-5.5,0.3480078047586326,-0.08881578947368421,low,no significant difference
+cplx_verb_overlap_adjacent_gpt-5.5,0.9932962578534146,0.0008053382420616659,upper,no significant difference
+cplx_verb_tense_repetition_gpt-5.5,0.6901428084242657,-0.03623508616880247,low,no significant difference
+cplx_verb_tense_repetition_nltk_gpt-5.5,0.8600453783055257,-0.015958197994633525,low,no significant difference
+cplx_verb_ttr_gpt-5.5,0.7022964825474902,0.03255867464335021,upper,no significant difference
+cplx_verb_ttr_adj_gpt-5.5,0.8746295109560263,-0.014059514059514059,low,no significant difference
+cplx_verbs_density_gpt-5.5,0.6615006742165428,0.0373907040957202,upper,no significant difference
+cplx_word_concreteness_gpt-5.5,0.12049282091928869,-0.13230556833870225,low,no significant difference
+cplx_word_frequency_log_gpt-5.5,0.1117117067002739,-0.1355269213069489,low,no significant difference
+cplx_additive_connectives_llama-3.3-70B,0.23253937853350426,0.10095939312806783,upper,no significant difference
+cplx_adjectives_density_llama-3.3-70B,0.24050993950142896,0.09928603302097277,upper,no significant difference
+cplx_adverbs_density_llama-3.3-70B,0.9326581033949486,-0.007251227130745203,low,no significant difference
+cplx_adversative_connectives_llama-3.3-70B,0.5481797667681167,0.048862115127175365,upper,no significant difference
+cplx_argument_overlap_adjacent_llama-3.3-70B,0.7313960428060652,0.029116465863453816,upper,no significant difference
+cplx_argument_overlap_all_llama-3.3-70B,0.1852449277069238,0.11200356983489514,upper,no significant difference
+cplx_average_age_of_acquisition_llama-3.3-70B,0.06906467633264243,0.1537260151717983,upper,no significant difference
+cplx_average_cefr_level_llama-3.3-70B,0.7664220438106928,-0.025211958946898705,low,no significant difference
+cplx_average_concreteness_llama-3.3-70B,0.07977612614911365,-0.14814814814814814,low,no significant difference
+cplx_average_familiarity_llama-3.3-70B,0.8814043018122968,-0.012717536813922356,low,no significant difference
+cplx_average_imagery_llama-3.3-70B,0.9253169826729298,-0.008032128514056224,low,no significant difference
+cplx_average_meaningfulness_llama-3.3-70B,0.3398067533249497,-0.08076751450245426,low,no significant difference
+cplx_average_number_of_clauses_per_sentence_llama-3.3-70B,0.6075403859831585,-0.04350736278447122,low,no significant difference
+cplx_average_number_of_commas_per_sentence_llama-3.3-70B,0.8049870201424326,0.020972780008924587,upper,no significant difference
+cplx_average_number_of_meaning_per_word_llama-3.3-70B,0.31376300393528445,-0.08522980812137439,low,no significant difference
+cplx_average_sentence_length_llama-3.3-70B,0.8918315936877949,-0.011601963409192326,low,no significant difference
+cplx_causal_connectives_llama-3.3-70B,0.5543376586179976,0.04930834448906738,upper,no significant difference
+cplx_coca_academic_range_llama-3.3-70B,0.2842908802892371,0.09058456046407853,upper,no significant difference
+cplx_coleman_liau_index_llama-3.3-70B,0.05456716168866514,0.16253904506916556,upper,no significant difference
+cplx_concept_density_concepts_per_sentence_llama-3.3-70B,0.9169306360640908,-0.00892458723784025,low,no significant difference
+cplx_conceptual_graph_ontology_number_of_concpets_llama-3.3-70B,0.3424761376004821,0.08032128514056225,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_llama-3.3-70B,0.6794201292955027,0.03502900490852298,upper,no significant difference
+cplx_connectives_llama-3.3-70B,0.4421688514206116,0.06503792949576082,upper,no significant difference
+cplx_content_word_frequency_log_llama-3.3-70B,0.10868881428241028,-0.1356537260151718,low,no significant difference
+cplx_content_word_overlap_adjacent_llama-3.3-70B,0.6900988507225105,0.033801874163319943,upper,no significant difference
+cplx_content_word_overlap_all_llama-3.3-70B,0.1267682503898265,0.12907184292726462,upper,no significant difference
+cplx_dale_chall_readability_score_llama-3.3-70B,0.4399007987726713,0.06537260151717983,upper,no significant difference
+cplx_dependency_parser_branching_llama-3.3-70B,0.18896108784584986,-0.1111111111111111,low,no significant difference
+cplx_dependency_parser_dependency_distance_llama-3.3-70B,0.24908015642475456,-0.09750111557340473,low,no significant difference
+cplx_dependency_parser_tree_depth_llama-3.3-70B,0.6449568348225337,-0.039045069165551095,low,no significant difference
+cplx_dissimilarity_of_words_between_sentences_llama-3.3-70B,0.6690180862615912,0.03635953026196929,upper,no significant difference
+cplx_first_person_pronouns_density_llama-3.3-70B,0.1645218855576951,0.11590807675145025,upper,no significant difference
+cplx_flesch_kincaid_grade_level_llama-3.3-70B,0.38930845737007025,0.07284694332887104,upper,no significant difference
+cplx_gunning_fog_index_llama-3.3-70B,0.22601907866590487,0.10240963855421686,upper,no significant difference
+cplx_knowledge_graph_average_node_pagerank_llama-3.3-70B,0.5366466739376079,0.05232039268183847,upper,no significant difference
+cplx_knowledge_graph_number_of_connected_components_llama-3.3-70B,0.6794201292955027,0.03502900490852298,upper,no significant difference
+cplx_linsear_write_formula_llama-3.3-70B,0.3973822828523974,0.07161981258366801,upper,no significant difference
+cplx_logical_connectives_llama-3.3-70B,0.4396412921960511,-0.06537260151717983,low,no significant difference
+cplx_mattr_llama-3.3-70B,0.8876584673145346,0.012048192771084338,upper,no significant difference
+cplx_max_kuperman_age_of_acquisition_llama-3.3-70B,0.6421175726710259,-0.0393797411869701,low,no significant difference
+cplx_max_number_of_clauses_per_sentence_llama-3.3-70B,0.953369779438612,0.0050200803212851405,upper,no significant difference
+cplx_max_number_of_if_per_sentence_llama-3.3-70B,0.1198349947652759,-0.11925479696564034,low,no significant difference
+cplx_max_number_of_wh_clauses_per_sentence_llama-3.3-70B,0.08230866529985761,-0.13788487282463185,low,no significant difference
+cplx_mean_word_length_llama-3.3-70B,0.023721856369125036,0.19120928157072736,upper,significant difference
+cplx_median_kuperman_age_of_acquisition_llama-3.3-70B,0.1095258232911245,0.1353190539937528,upper,no significant difference
+cplx_modifiers_per_noun_phrase_llama-3.3-70B,0.7294105363406208,0.02933958054439982,upper,no significant difference
+cplx_negations_density_llama-3.3-70B,0.4115904096609203,0.06448014279339581,upper,no significant difference
+cplx_noun_overlap_adjacent_llama-3.3-70B,0.5819362887732769,0.04663096831771531,upper,no significant difference
+cplx_nouns_density_llama-3.3-70B,0.30124628821712107,-0.08746095493083444,low,no significant difference
+cplx_number_of_connectives_llama-3.3-70B,0.4421688514206116,0.06503792949576082,upper,no significant difference
+cplx_number_of_connectives_per_3_sentence_sliding_window_llama-3.3-70B,0.6320588950441577,-0.04049531459170013,low,no significant difference
+cplx_number_of_wordnet_hypernyms_per_word_llama-3.3-70B,0.3074629037264537,-0.08634538152610442,low,no significant difference
+cplx_number_of_wordnet_hyponyms_per_word_llama-3.3-70B,0.33185200246917446,0.0821062025881303,upper,no significant difference
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_llama-3.3-70B,0.7313960428060652,0.029116465863453816,upper,no significant difference
+cplx_passive_constructions_density_llama-3.3-70B,0.751972903709199,0.02643908969210174,upper,no significant difference
+cplx_percentage_of_words_above_b1_level_llama-3.3-70B,0.7027912439624597,0.03235162873717091,upper,no significant difference
+cplx_percentage_of_words_with_more_than_5_meanings_llama-3.3-70B,0.2981697905388876,-0.08801874163319946,low,no significant difference
+cplx_polysemy_llama-3.3-70B,0.31376300393528445,-0.08522980812137439,low,no significant difference
+cplx_pos_dissimilarity_between_sentences_llama-3.3-70B,0.4894510960395754,0.05871725383920506,upper,no significant difference
+cplx_pronouns_density_llama-3.3-70B,0.33185158610663057,0.0821062025881303,upper,no significant difference
+cplx_reading_time_llama-3.3-70B,0.34047470725220996,0.08065595716198126,upper,no significant difference
+cplx_stem_overlap_sent_llama-3.3-70B,0.20917054571913862,-0.10659439927732611,low,no significant difference
+cplx_syllables_per_word_llama-3.3-70B,0.028693658673551968,0.18496207050423918,upper,significant difference
+cplx_te_score_llama-3.3-70B,0.1353811651918267,0.12628290941543954,upper,no significant difference
+cplx_temporal_cohesions_llama-3.3-70B,0.8083378466788107,-0.020526550647032574,low,no significant difference
+cplx_temporal_connectives_llama-3.3-70B,0.8083378466788107,-0.020526550647032574,low,no significant difference
+cplx_text_length_llama-3.3-70B,0.4595179375876235,0.06258366800535475,upper,no significant difference
+cplx_third_person_pronouns_density_llama-3.3-70B,0.31339247698268347,0.08522980812137439,upper,no significant difference
+cplx_type_token_ratio_llama-3.3-70B,0.8637254920899183,0.01461401160196341,upper,no significant difference
+cplx_verb_aspect_repetition_llama-3.3-70B,0.00993453050462644,-0.24378109452736318,low,significant difference
+cplx_verb_overlap_adjacent_llama-3.3-70B,0.053523144365837855,0.16265060240963855,upper,no significant difference
+cplx_verb_tense_repetition_llama-3.3-70B,0.2043576494983701,-0.10875955320399765,low,no significant difference
+cplx_verb_tense_repetition_nltk_llama-3.3-70B,0.5505264853157728,-0.05083200364713927,low,no significant difference
+cplx_verb_ttr_llama-3.3-70B,0.41151647813477565,-0.06950022311468095,low,no significant difference
+cplx_verb_ttr_adj_llama-3.3-70B,0.9904068921455185,0.001129177958446251,upper,no significant difference
+cplx_verbs_density_llama-3.3-70B,0.2545426663089916,0.0963855421686747,upper,no significant difference
+cplx_word_concreteness_llama-3.3-70B,0.09806975215517223,-0.1398929049531459,low,no significant difference
+cplx_word_frequency_log_llama-3.3-70B,0.10023358267850951,-0.1390004462293619,low,no significant difference
+cplx_additive_connectives_qwen-3.5-27B,0.6250056884133983,-0.041387773315484155,low,no significant difference
+cplx_adjectives_density_qwen-3.5-27B,0.6525597149407719,0.03815261044176707,upper,no significant difference
+cplx_adverbs_density_qwen-3.5-27B,0.48079586969628096,-0.05968317715305667,low,no significant difference
+cplx_adversative_connectives_qwen-3.5-27B,0.6400313657888873,-0.039045069165551095,low,no significant difference
+cplx_argument_overlap_adjacent_qwen-3.5-27B,0.0844194227396772,0.1459170013386881,upper,no significant difference
+cplx_argument_overlap_all_qwen-3.5-27B,0.8316505160038408,0.018072289156626505,upper,no significant difference
+cplx_average_age_of_acquisition_qwen-3.5-27B,0.018309320306446247,0.1994645247657296,upper,significant difference
+cplx_average_cefr_level_qwen-3.5-27B,0.6930219383914926,0.03346720214190094,upper,no significant difference
+cplx_average_concreteness_qwen-3.5-27B,0.10925366316692707,-0.1354306113342258,low,no significant difference
+cplx_average_familiarity_qwen-3.5-27B,0.34788271550750616,-0.07942882641677822,low,no significant difference
+cplx_average_imagery_qwen-3.5-27B,0.4122840921708112,-0.06938866577420794,low,no significant difference
+cplx_average_meaningfulness_qwen-3.5-27B,0.01668259987748056,-0.20236501561802767,low,significant difference
+cplx_average_number_of_clauses_per_sentence_qwen-3.5-27B,0.5891846472449301,-0.04573850959393128,low,no significant difference
+cplx_average_number_of_commas_per_sentence_qwen-3.5-27B,0.07256086671435054,0.15182954038375726,upper,no significant difference
+cplx_average_number_of_meaning_per_word_qwen-3.5-27B,0.32922696546935803,-0.0825524319500223,low,no significant difference
+cplx_average_sentence_length_qwen-3.5-27B,0.25952884536090415,-0.09538152610441768,low,no significant difference
+cplx_causal_connectives_qwen-3.5-27B,0.18264708252011752,-0.11166889781347612,low,no significant difference
+cplx_coca_academic_range_qwen-3.5-27B,0.6392898821072752,0.03971441320838911,upper,no significant difference
+cplx_coleman_liau_index_qwen-3.5-27B,0.013354278975376804,0.20917001338688085,upper,significant difference
+cplx_concept_density_concepts_per_sentence_qwen-3.5-27B,0.8337286441002391,0.0178491744756805,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_concpets_qwen-3.5-27B,0.6988721897731256,0.03279785809906292,upper,no significant difference
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_qwen-3.5-27B,0.5630600671340511,0.048973672467648374,upper,no significant difference
+cplx_connectives_qwen-3.5-27B,0.2522366573431547,-0.09683177153056671,low,no significant difference
+cplx_content_word_frequency_log_qwen-3.5-27B,0.04084687639638378,-0.17291387773315484,low,significant difference
+cplx_content_word_overlap_adjacent_qwen-3.5-27B,0.1892986659082433,0.11099955377063811,upper,no significant difference
+cplx_content_word_overlap_all_qwen-3.5-27B,0.8876477028381836,-0.012048192771084338,low,no significant difference
+cplx_dale_chall_readability_score_qwen-3.5-27B,0.028789280516945834,0.1848505131637662,upper,significant difference
+cplx_dependency_parser_branching_qwen-3.5-27B,0.926365464097153,0.007920571173583222,upper,no significant difference
+cplx_dependency_parser_dependency_distance_qwen-3.5-27B,0.4461857320361008,-0.06448014279339581,low,no significant difference
+cplx_dependency_parser_tree_depth_qwen-3.5-27B,0.2045175085316705,0.107318161535029,upper,no significant difference
+cplx_dissimilarity_of_words_between_sentences_qwen-3.5-27B,0.8172363165764178,0.01963409192324855,upper,no significant difference
+cplx_first_person_pronouns_density_qwen-3.5-27B,0.5919390481775835,0.04462293618920125,upper,no significant difference
+cplx_flesch_kincaid_grade_level_qwen-3.5-27B,0.19251649807195292,0.11021865238732709,upper,no significant difference
+cplx_gunning_fog_index_qwen-3.5-27B,0.09753466687878054,0.14011601963409193,upper,no significant difference
+cplx_knowledge_graph_average_node_pagerank_qwen-3.5-27B,0.7096532589044666,0.031570727353859886,upper,no significant difference
+cplx_knowledge_graph_number_of_connected_components_qwen-3.5-27B,0.5630600671340511,0.048973672467648374,upper,no significant difference
+cplx_linsear_write_formula_qwen-3.5-27B,0.42594782830803524,-0.06738063364569388,low,no significant difference
+cplx_logical_connectives_qwen-3.5-27B,0.05859576208897407,-0.15986166889781347,low,no significant difference
+cplx_mattr_qwen-3.5-27B,0.05920742981369742,0.15952699687639446,upper,no significant difference
+cplx_max_kuperman_age_of_acquisition_qwen-3.5-27B,0.3526189050335057,0.07864792503346721,upper,no significant difference
+cplx_max_number_of_clauses_per_sentence_qwen-3.5-27B,0.5428923610056551,-0.05098170459616243,low,no significant difference
+cplx_max_number_of_if_per_sentence_qwen-3.5-27B,0.40338240299267614,-0.06749219098616689,low,no significant difference
+cplx_max_number_of_wh_clauses_per_sentence_qwen-3.5-27B,0.34813295587252824,-0.07429718875502007,low,no significant difference
+cplx_mean_word_length_qwen-3.5-27B,0.010309763940110779,0.21686746987951808,upper,significant difference
+cplx_median_kuperman_age_of_acquisition_qwen-3.5-27B,0.035162949695343976,0.17804551539491298,upper,significant difference
+cplx_modifiers_per_noun_phrase_qwen-3.5-27B,0.35470408997392777,-0.0783132530120482,low,no significant difference
+cplx_negations_density_qwen-3.5-27B,0.3654064965780919,-0.07585899152164212,low,no significant difference
+cplx_noun_overlap_adjacent_qwen-3.5-27B,0.09892220942034718,0.1394466755912539,upper,no significant difference
+cplx_nouns_density_qwen-3.5-27B,0.8980972731099176,0.010932619366354306,upper,no significant difference
+cplx_number_of_connectives_qwen-3.5-27B,0.2522366573431547,-0.09683177153056671,low,no significant difference
+cplx_number_of_connectives_per_3_sentence_sliding_window_qwen-3.5-27B,0.3968274966529832,-0.071508255243195,low,no significant difference
+cplx_number_of_wordnet_hypernyms_per_word_qwen-3.5-27B,0.7304044583946936,-0.02922802320392682,low,no significant difference
+cplx_number_of_wordnet_hyponyms_per_word_qwen-3.5-27B,0.8543931187808134,-0.015618027666220438,low,no significant difference
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_qwen-3.5-27B,0.0844194227396772,0.1459170013386881,upper,no significant difference
+cplx_passive_constructions_density_qwen-3.5-27B,0.43914431218428673,-0.06492637215528782,low,no significant difference
+cplx_percentage_of_words_above_b1_level_qwen-3.5-27B,0.8316688666332964,0.018072289156626505,upper,no significant difference
+cplx_percentage_of_words_with_more_than_5_meanings_qwen-3.5-27B,0.2378759750170849,-0.09984381972333779,low,no significant difference
+cplx_polysemy_qwen-3.5-27B,0.32922696546935803,-0.0825524319500223,low,no significant difference
+cplx_pos_dissimilarity_between_sentences_qwen-3.5-27B,0.5427635277042752,-0.051539491298527446,low,no significant difference
+cplx_pronouns_density_qwen-3.5-27B,0.607544870466134,0.04350736278447122,upper,no significant difference
+cplx_reading_time_qwen-3.5-27B,0.8730767545707986,0.013609995537706381,upper,no significant difference
+cplx_stem_overlap_sent_qwen-3.5-27B,0.31249623661841164,-0.08545292280232039,low,no significant difference
+cplx_syllables_per_word_qwen-3.5-27B,0.004188001377256734,0.24207942882641678,upper,significant difference
+cplx_te_score_qwen-3.5-27B,0.03733806595085881,0.17603748326639893,upper,significant difference
+cplx_temporal_cohesions_qwen-3.5-27B,0.2663511902195157,-0.09359660865684961,low,no significant difference
+cplx_temporal_connectives_qwen-3.5-27B,0.2663511902195157,-0.09359660865684961,low,no significant difference
+cplx_text_length_qwen-3.5-27B,0.7916681542503269,0.02242302543507363,upper,no significant difference
+cplx_third_person_pronouns_density_qwen-3.5-27B,0.3841967991985471,0.07362784471218206,upper,no significant difference
+cplx_type_token_ratio_qwen-3.5-27B,0.07447722541429737,0.15082552431950022,upper,no significant difference
+cplx_verb_aspect_repetition_qwen-3.5-27B,0.9583777834831855,0.004801581697500353,upper,no significant difference
+cplx_verb_overlap_adjacent_qwen-3.5-27B,0.21926698619235185,0.09906291834002677,upper,no significant difference
+cplx_verb_tense_repetition_qwen-3.5-27B,0.16019997926419616,0.11901812858912285,upper,no significant difference
+cplx_verb_tense_repetition_nltk_qwen-3.5-27B,0.47997161351597906,0.05979473449352968,upper,no significant difference
+cplx_verb_ttr_qwen-3.5-27B,0.434377676265563,0.06615350290049085,upper,no significant difference
+cplx_verb_ttr_adj_qwen-3.5-27B,0.3028151072358304,0.08668005354752342,upper,no significant difference
+cplx_verbs_density_qwen-3.5-27B,0.163657989147726,0.11780455153949129,upper,no significant difference
+cplx_word_concreteness_qwen-3.5-27B,0.8502519104352216,-0.01606425702811245,low,no significant difference
+cplx_word_frequency_log_qwen-3.5-27B,0.052124901589063646,-0.1642124051762606,low,no significant difference
+syco_framing_qwen-3.5-27B,0.402672629281983,-0.03990273018680225,low,no significant difference
+syco_framing_llama-3.3-70B,0.09096984796266808,-0.059909362219520285,low,no significant difference
+syco_framing_gemma-4-31B,0.8216898948919934,-0.008953244169337902,low,no significant difference
+syco_framing_gpt-5.5,0.11915822708326902,0.04277661103128109,upper,no significant difference
+syco_validation_qwen-3.5-27B,0.4194276257015529,-0.022217309605394052,low,no significant difference
+syco_validation_llama-3.3-70B,0.18612353312626373,-0.03371283298330938,low,no significant difference
+syco_validation_gemma-4-31B,0.04917492959274092,-0.045871559633027525,low,significant difference
+syco_validation_gpt-5.5,0.049167352691845356,-0.045871559633027525,low,significant difference
+syco_indirectness_qwen-3.5-27B,0.6354455699770196,0.034597104012379795,upper,no significant difference
+syco_indirectness_llama-3.3-70B,0.5105923810635926,0.0526141262296894,upper,no significant difference
+syco_indirectness_gemma-4-31B,0.6762451174141537,0.029402011716591136,upper,no significant difference
+syco_indirectness_gpt-5.5,0.9222058692287728,0.006963634353929479,upper,no significant difference
+ling_avg_valence_gemma-4-31B,0.002714832803538107,0.2534582775546631,upper,significant difference
+ling_avg_valence_llama-3.3-70B,0.0009158741249007077,0.28023203926818385,upper,significant difference
+ling_avg_valence_qwen-3.5-27B,0.004402280871941165,0.24074074074074073,upper,significant difference
+ling_avg_valence_gpt-5.5,0.004484523616702884,0.24206166589967787,upper,significant difference
+ling_avg_arousal_gemma-4-31B,0.7744981252710228,0.02431950022311468,upper,no significant difference
+ling_avg_arousal_llama-3.3-70B,0.6205316014507349,0.04194556001784917,upper,no significant difference
+ling_avg_arousal_qwen-3.5-27B,0.5729239225639253,0.047746541722445336,upper,no significant difference
+ling_avg_arousal_gpt-5.5,0.0962084729588303,0.1417395306028532,upper,no significant difference
+ling_avg_dominance_gemma-4-31B,0.006152576583067499,0.23159303882195448,upper,significant difference
+ling_avg_dominance_llama-3.3-70B,0.00029593850144801173,0.30589022757697454,upper,significant difference
+ling_avg_dominance_qwen-3.5-27B,0.0035105223093489456,0.24676483712628292,upper,significant difference
+ling_avg_dominance_gpt-5.5,0.0001552946357303913,0.32213529682466635,upper,significant difference
+ling_avg_intensity_anger_gemma-4-31B,0.19981130626678878,-0.10832217759928603,low,no significant difference
+ling_avg_intensity_anger_llama-3.3-70B,0.615521566563373,-0.04239178937974119,low,no significant difference
+ling_avg_intensity_anger_qwen-3.5-27B,0.5004082810271797,0.057005800981704595,upper,no significant difference
+ling_avg_intensity_anger_gpt-5.5,0.8172103929891774,0.019558214450069028,upper,no significant difference
+ling_avg_intensity_anticipation_gemma-4-31B,0.7593740892896885,-0.025992860330209727,low,no significant difference
+ling_avg_intensity_anticipation_llama-3.3-70B,0.5100124891759468,0.055778670236501564,upper,no significant difference
+ling_avg_intensity_anticipation_qwen-3.5-27B,0.24691790274128678,0.09794734493529675,upper,no significant difference
+ling_avg_intensity_anticipation_gpt-5.5,0.029720704114758276,0.18511274735388863,upper,significant difference
+ling_avg_intensity_disgust_gemma-4-31B,0.833026606007726,0.0178491744756805,upper,no significant difference
+ling_avg_intensity_disgust_llama-3.3-70B,0.5489968149027156,-0.050200803212851405,low,no significant difference
+ling_avg_intensity_disgust_qwen-3.5-27B,0.32494181597753735,-0.08266398929049532,low,no significant difference
+ling_avg_intensity_disgust_gpt-5.5,0.9687676922439243,-0.003336401288541187,low,no significant difference
+ling_avg_intensity_fear_gemma-4-31B,0.21208505613068462,-0.10553324408746095,low,no significant difference
+ling_avg_intensity_fear_llama-3.3-70B,0.8876334736044206,-0.012048192771084338,low,no significant difference
+ling_avg_intensity_fear_qwen-3.5-27B,0.5515145598361589,0.05042391789379741,upper,no significant difference
+ling_avg_intensity_fear_gpt-5.5,0.6686483214080988,0.036470317533364015,upper,no significant difference
+ling_avg_intensity_joy_gemma-4-31B,0.4832566129182434,0.05934850513163766,upper,no significant difference
+ling_avg_intensity_joy_llama-3.3-70B,0.09255879824265956,0.14223560910307897,upper,no significant difference
+ling_avg_intensity_joy_qwen-3.5-27B,0.09620214561245498,0.14067380633645693,upper,no significant difference
+ling_avg_intensity_joy_gpt-5.5,0.4711276214708221,0.06143580303727566,upper,no significant difference
+ling_avg_intensity_sadness_gemma-4-31B,0.7163711231838507,-0.030789825970548863,low,no significant difference
+ling_avg_intensity_sadness_llama-3.3-70B,0.17119553127779208,0.11546184738955824,upper,no significant difference
+ling_avg_intensity_sadness_qwen-3.5-27B,0.697734166612,0.03290941543953592,upper,no significant difference
+ling_avg_intensity_sadness_gpt-5.5,0.9273583722638107,-0.007823285780027611,low,no significant difference
+ling_avg_intensity_surprise_gemma-4-31B,0.76731573721097,0.025100401606425703,upper,no significant difference
+ling_avg_intensity_surprise_llama-3.3-70B,0.8646503958245206,-0.014502454261490405,low,no significant difference
+ling_avg_intensity_surprise_qwen-3.5-27B,0.30798661930565085,0.08623382418563141,upper,no significant difference
+ling_avg_intensity_surprise_gpt-5.5,0.45130945130802824,0.06373676944316613,upper,no significant difference
+ling_avg_intensity_trust_gemma-4-31B,0.007388536026979899,0.22646140116019634,upper,significant difference
+ling_avg_intensity_trust_llama-3.3-70B,0.03309733650224631,0.18016510486390006,upper,significant difference
+ling_avg_intensity_trust_qwen-3.5-27B,0.40182609215989484,0.07095046854082998,upper,no significant difference
+ling_avg_intensity_trust_gpt-5.5,0.11539637821636686,0.13414634146341464,upper,no significant difference
+ling_sentiment_score_gemma-4-31B,0.00028249510025378527,0.3068942436412316,upper,significant difference
+ling_sentiment_score_llama-3.3-70B,0.00036610984026444563,0.30120481927710846,upper,significant difference
+ling_sentiment_score_qwen-3.5-27B,0.002392290521800714,0.2566934404283802,upper,significant difference
+ling_sentiment_score_gpt-5.5,0.007885843120074556,0.22630004601932813,upper,significant difference
