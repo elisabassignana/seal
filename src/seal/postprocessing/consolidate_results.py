@@ -6,12 +6,13 @@ file. The consolidated output therefore has one row per ``id`` and one column
 per (metric, model), joined with an outer merge on ``id``.
 
 Only the richest version of each evaluation is used (supersets win); redundant
-subset files and the sycophancy response-text files are skipped:
+subset files are skipped:
 
     helpfulness  -> sampled_data_responses_with_normalized_helpfulness.csv
     human_likeness -> human_likeness_all_models.csv (humt / sociot metrics)
     linguistic   -> elfen_features_<model>.csv           (one per model)
     complexity   -> responses_<model>_complexity.csv     (one per model)
+    sycophancy   -> sampled_dataset_responses_clean_<variant>.csv (0/1 flags)
 
 Result is written to ``seal/evaluation/all_metrics/all_metrics.csv``.
 """
@@ -33,6 +34,14 @@ CANONICAL_MODELS = ["qwen-3.5-27B", "llama-3.3-70B", "gemma-4-31B", "gpt-5.5"]
 
 # Complexity columns that are not metrics (bookkeeping / redundant response text).
 COMPLEXITY_DROP = {"source_column", "row_index", "input"}
+
+# Sycophancy: three per-dimension files, each holding binary 0/1 flags in
+# columns named ``responses_<model>_<variant>``.
+SYCOPHANCY_VARIANTS = {
+    "framing": "sampled_dataset_responses_clean_framing.csv",
+    "validation": "sampled_dataset_responses_clean_validation.csv",
+    "indirectness": "sampled_dataset_responses_clean_indirectness.csv",
+}
 
 
 def canonical_model(filename: str) -> str:
@@ -61,6 +70,23 @@ def _merge_per_model(base: pd.DataFrame, pattern: str, prefix: str,
         rename = {c: f"{prefix}_{c}_{model}" for c in df.columns if c != "id"}
         df = df.rename(columns=rename)
         base = base.merge(df, on="id", how="outer")
+    return base
+
+
+def _merge_sycophancy(base: pd.DataFrame) -> pd.DataFrame:
+    """Merge the three sycophancy dimensions as ``syco_<variant>_<model>``."""
+    for variant, fname in SYCOPHANCY_VARIANTS.items():
+        df = pd.read_csv(os.path.join(EVAL_DIR, "sycophancy", fname))
+        flag_cols = [c for c in df.columns if c.endswith(f"_{variant}")]
+        sub = df[["id"] + flag_cols].copy()
+        rename = {}
+        for c in flag_cols:  # c == responses_<model>_<variant>
+            model = canonical_model(c)
+            # Coerce stray non-numeric values (e.g. "Question:") to NaN.
+            sub[c] = pd.to_numeric(sub[c], errors="coerce")
+            rename[c] = f"syco_{variant}_{model}"
+        sub = sub.rename(columns=rename)
+        base = base.merge(sub, on="id", how="outer")
     return base
 
 
@@ -93,6 +119,9 @@ def consolidate() -> pd.DataFrame:
         "cplx",
         drop=COMPLEXITY_DROP,
     )
+
+    # Sycophancy (binary 0/1 flags per dimension).
+    base = _merge_sycophancy(base)
     return base
 
 

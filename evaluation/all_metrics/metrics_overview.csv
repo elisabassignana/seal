@@ -1,0 +1,947 @@
+column,family,base_metric,model,n_nonnull,mean,std,min,max
+user,Identifier / demographics,user,,732,,,,
+social_class,Identifier / demographics,social_class,,732,,,,
+gender,Identifier / demographics,gender,,732,,,,
+gender_other,Identifier / demographics,gender_other,,9,,,,
+age,Identifier / demographics,age,,732,,,,
+nationality,Identifier / demographics,nationality,,728,,,,
+ethnicity,Identifier / demographics,ethnicity,,720,,,,
+ethnicity_other,Identifier / demographics,ethnicity_other,,20,,,,
+marital,Identifier / demographics,marital,,732,,,,
+marital_other,Identifier / demographics,marital_other,,21,,,,
+language,Identifier / demographics,language,,729,,,,
+language_other,Identifier / demographics,language_other,,16,,,,
+religion,Identifier / demographics,religion,,732,,,,
+religion_other,Identifier / demographics,religion_other,,35,,,,
+education,Identifier / demographics,education,,732,,,,
+mum_education,Identifier / demographics,mum_education,,732,,,,
+dad_education,Identifier / demographics,dad_education,,732,,,,
+home,Identifier / demographics,home,,732,,,,
+home_other,Identifier / demographics,home_other,,56,,,,
+employment,Identifier / demographics,employment,,732,,,,
+occupation,Identifier / demographics,occupation,,715,,,,
+mother_occupation,Identifier / demographics,mother_occupation,,722,,,,
+father_occupation,Identifier / demographics,father_occupation,,718,,,,
+hobbies,Identifier / demographics,hobbies,,711,,,,
+hobbies_other,Identifier / demographics,hobbies_other,,113,,,,
+tech,Identifier / demographics,tech,,730,,,,
+tech_other,Identifier / demographics,tech_other,,62,,,,
+know_nlp,Identifier / demographics,know_nlp,,727,,,,
+know_nlp_other,Identifier / demographics,know_nlp_other,,7,,,,
+use_nlp,Identifier / demographics,use_nlp,,720,,,,
+use_nlp_other,Identifier / demographics,use_nlp_other,,6,,,,
+would_nlp,Identifier / demographics,would_nlp,,662,,,,
+would_nlp_other,Identifier / demographics,would_nlp_other,,21,,,,
+frequency_llm,Identifier / demographics,frequency_llm,,732,,,,
+llm_use,Identifier / demographics,llm_use,,721,,,,
+llm_other,Identifier / demographics,llm_other,,38,,,,
+usecases,Identifier / demographics,usecases,,724,,,,
+usecases_other,Identifier / demographics,usecases_other,,24,,,,
+contexts,Identifier / demographics,contexts,,719,,,,
+contexts_other,Identifier / demographics,contexts_other,,16,,,,
+comments,Identifier / demographics,comments,,315,,,,
+ses,Identifier / demographics,ses,,732,5.1393,2.1432,1.0,10.0
+helpfulness_score_responses_qwen-3.5-27B,Helpfulness (raw),helpfulness_score_responses,qwen-3.5-27B,732,5.5836,2.2774,-3.7344,14.0938
+helpfulness_score_responses_llama-3.3-70B,Helpfulness (raw),helpfulness_score_responses,llama-3.3-70B,732,5.0964,2.8169,-5.0312,19.125
+helpfulness_score_responses_gemma-4-31B,Helpfulness (raw),helpfulness_score_responses,gemma-4-31B,732,4.412,2.0175,-5.0312,12.0
+helpfulness_score_responses_gpt-5.5,Helpfulness (raw),helpfulness_score_responses,gpt-5.5,732,4.0504,3.0757,-9.25,15.0625
+normalized_helpfulness_responses_qwen-3.5-27B,Helpfulness (normalized),normalized_helpfulness_responses,qwen-3.5-27B,732,-0.044,0.7358,-3.0544,2.7054
+normalized_helpfulness_responses_llama-3.3-70B,Helpfulness (normalized),normalized_helpfulness_responses,llama-3.3-70B,732,-0.0424,0.7408,-2.7057,3.6467
+normalized_helpfulness_responses_gemma-4-31B,Helpfulness (normalized),normalized_helpfulness_responses,gemma-4-31B,732,-0.0491,0.7325,-3.4775,2.7057
+normalized_helpfulness_responses_gpt-5.5,Helpfulness (normalized),normalized_helpfulness_responses,gpt-5.5,732,-0.0072,0.7223,-3.1305,2.5787
+humt_responses_qwen-3.5-27B,Human-likeness,humt_responses,qwen-3.5-27B,732,0.0155,0.0175,-0.0433,0.1628
+std_humt_responses_qwen-3.5-27B,Human-likeness,std_humt_responses,qwen-3.5-27B,732,0.0141,0.0016,0.0102,0.0268
+sociot_status_responses_qwen-3.5-27B,Human-likeness,sociot_status_responses,qwen-3.5-27B,732,-0.0522,0.0189,-0.1855,0.0188
+std_sociot_status_responses_qwen-3.5-27B,Human-likeness,std_sociot_status_responses,qwen-3.5-27B,732,0.0096,0.001,0.0069,0.0151
+sociot_social_distance_responses_qwen-3.5-27B,Human-likeness,sociot_social_distance_responses,qwen-3.5-27B,732,0.0368,0.0224,-0.0341,0.2028
+std_sociot_social_distance_responses_qwen-3.5-27B,Human-likeness,std_sociot_social_distance_responses,qwen-3.5-27B,732,0.0124,0.0015,0.0082,0.0266
+sociot_gender_responses_qwen-3.5-27B,Human-likeness,sociot_gender_responses,qwen-3.5-27B,732,0.0042,0.0143,-0.0504,0.0819
+std_sociot_gender_responses_qwen-3.5-27B,Human-likeness,std_sociot_gender_responses,qwen-3.5-27B,732,0.0162,0.0018,0.012,0.0281
+sociot_warmth_responses_qwen-3.5-27B,Human-likeness,sociot_warmth_responses,qwen-3.5-27B,732,0.0155,0.0182,-0.0453,0.0794
+std_sociot_warmth_responses_qwen-3.5-27B,Human-likeness,std_sociot_warmth_responses,qwen-3.5-27B,732,0.0081,0.0009,0.0062,0.0142
+humt_responses_llama-3.3-70B,Human-likeness,humt_responses,llama-3.3-70B,732,0.0188,0.0254,-0.0637,0.2389
+std_humt_responses_llama-3.3-70B,Human-likeness,std_humt_responses,llama-3.3-70B,732,0.0148,0.0043,0.0072,0.0699
+sociot_status_responses_llama-3.3-70B,Human-likeness,sociot_status_responses,llama-3.3-70B,732,-0.0563,0.0226,-0.2268,0.0072
+std_sociot_status_responses_llama-3.3-70B,Human-likeness,std_sociot_status_responses,llama-3.3-70B,732,0.0101,0.0027,0.0057,0.0452
+sociot_social_distance_responses_llama-3.3-70B,Human-likeness,sociot_social_distance_responses,llama-3.3-70B,732,0.0401,0.0301,-0.0357,0.3458
+std_sociot_social_distance_responses_llama-3.3-70B,Human-likeness,std_sociot_social_distance_responses,llama-3.3-70B,732,0.013,0.0035,0.0067,0.0557
+sociot_gender_responses_llama-3.3-70B,Human-likeness,sociot_gender_responses,llama-3.3-70B,732,0.0065,0.0167,-0.0519,0.1333
+std_sociot_gender_responses_llama-3.3-70B,Human-likeness,std_sociot_gender_responses,llama-3.3-70B,732,0.0171,0.0048,0.0091,0.0764
+sociot_warmth_responses_llama-3.3-70B,Human-likeness,sociot_warmth_responses,llama-3.3-70B,732,0.0126,0.0168,-0.0433,0.0755
+std_sociot_warmth_responses_llama-3.3-70B,Human-likeness,std_sociot_warmth_responses,llama-3.3-70B,732,0.0086,0.0024,0.0046,0.038
+humt_responses_gemma-4-31B,Human-likeness,humt_responses,gemma-4-31B,732,0.0177,0.024,-0.0612,0.2575
+std_humt_responses_gemma-4-31B,Human-likeness,std_humt_responses,gemma-4-31B,732,0.0141,0.0023,0.0088,0.0347
+sociot_status_responses_gemma-4-31B,Human-likeness,sociot_status_responses,gemma-4-31B,732,-0.0533,0.0231,-0.2943,0.0316
+std_sociot_status_responses_gemma-4-31B,Human-likeness,std_sociot_status_responses,gemma-4-31B,732,0.0097,0.0016,0.0062,0.0243
+sociot_social_distance_responses_gemma-4-31B,Human-likeness,sociot_social_distance_responses,gemma-4-31B,732,0.0407,0.0302,-0.0377,0.4064
+std_sociot_social_distance_responses_gemma-4-31B,Human-likeness,std_sociot_social_distance_responses,gemma-4-31B,732,0.0124,0.002,0.0082,0.029
+sociot_gender_responses_gemma-4-31B,Human-likeness,sociot_gender_responses,gemma-4-31B,732,0.0048,0.0142,-0.044,0.0782
+std_sociot_gender_responses_gemma-4-31B,Human-likeness,std_sociot_gender_responses,gemma-4-31B,732,0.0162,0.0027,0.0106,0.0398
+sociot_warmth_responses_gemma-4-31B,Human-likeness,sociot_warmth_responses,gemma-4-31B,732,0.0147,0.0173,-0.1276,0.0758
+std_sociot_warmth_responses_gemma-4-31B,Human-likeness,std_sociot_warmth_responses,gemma-4-31B,732,0.0081,0.0013,0.0053,0.0189
+humt_responses_gpt-5.5,Human-likeness,humt_responses,gpt-5.5,728,0.0228,0.0315,-0.0433,0.2927
+std_humt_responses_gpt-5.5,Human-likeness,std_humt_responses,gpt-5.5,728,0.0168,0.0032,0.0114,0.0333
+sociot_status_responses_gpt-5.5,Human-likeness,sociot_status_responses,gpt-5.5,728,-0.0616,0.0363,-0.2877,0.0293
+std_sociot_status_responses_gpt-5.5,Human-likeness,std_sociot_status_responses,gpt-5.5,728,0.0114,0.0022,0.0075,0.0267
+sociot_social_distance_responses_gpt-5.5,Human-likeness,sociot_social_distance_responses,gpt-5.5,728,0.0469,0.0423,-0.0401,0.3908
+std_sociot_social_distance_responses_gpt-5.5,Human-likeness,std_sociot_social_distance_responses,gpt-5.5,728,0.0148,0.0029,0.0096,0.0338
+sociot_gender_responses_gpt-5.5,Human-likeness,sociot_gender_responses,gpt-5.5,728,0.0052,0.0182,-0.0685,0.1208
+std_sociot_gender_responses_gpt-5.5,Human-likeness,std_sociot_gender_responses,gpt-5.5,728,0.0195,0.0039,0.0123,0.0452
+sociot_warmth_responses_gpt-5.5,Human-likeness,sociot_warmth_responses,gpt-5.5,728,0.0172,0.0181,-0.0634,0.1109
+std_sociot_warmth_responses_gpt-5.5,Human-likeness,std_sociot_warmth_responses,gpt-5.5,728,0.0096,0.0017,0.0064,0.0187
+ling_n_positive_sentiment_gemma-4-31B,Linguistic (elfen),ling_n_positive_sentiment,gemma-4-31B,732,0.1796,0.0731,0.0,0.9211
+ling_n_negative_sentiment_gemma-4-31B,Linguistic (elfen),ling_n_negative_sentiment,gemma-4-31B,732,0.1355,0.0798,0.0,0.5083
+ling_n_tokens_gemma-4-31B,Linguistic (elfen),ling_n_tokens,gemma-4-31B,732,0.6596,0.2083,0.0,0.9141
+ling_sentiment_score_gemma-4-31B,Linguistic (elfen),ling_sentiment_score,gemma-4-31B,732,0.4104,0.0563,0.2199,0.9723
+ling_avg_valence_gemma-4-31B,Linguistic (elfen),ling_avg_valence,gemma-4-31B,732,0.652,0.0365,0.5137,0.8287
+ling_n_low_valence_gemma-4-31B,Linguistic (elfen),ling_n_low_valence,gemma-4-31B,732,0.1753,0.116,0.0,0.7194
+ling_n_high_valence_gemma-4-31B,Linguistic (elfen),ling_n_high_valence,gemma-4-31B,732,0.329,0.0814,0.0,0.9375
+ling_avg_arousal_gemma-4-31B,Linguistic (elfen),ling_avg_arousal,gemma-4-31B,732,0.3589,0.0533,0.0,0.5415
+ling_n_low_arousal_gemma-4-31B,Linguistic (elfen),ling_n_low_arousal,gemma-4-31B,732,0.2906,0.072,0.0,0.75
+ling_n_high_arousal_gemma-4-31B,Linguistic (elfen),ling_n_high_arousal,gemma-4-31B,732,0.17,0.0917,0.0,0.5834
+ling_avg_dominance_gemma-4-31B,Linguistic (elfen),ling_avg_dominance,gemma-4-31B,732,0.4921,0.0524,0.2469,0.6514
+ling_n_low_dominance_gemma-4-31B,Linguistic (elfen),ling_n_low_dominance,gemma-4-31B,732,0.1599,0.1079,0.0,0.9427
+ling_n_high_dominance_gemma-4-31B,Linguistic (elfen),ling_n_high_dominance,gemma-4-31B,732,0.2927,0.1032,0.0,0.9531
+ling_avg_intensity_anger_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_anger,gemma-4-31B,732,0.4296,0.0967,0.0,0.8004
+ling_avg_intensity_anticipation_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_anticipation,gemma-4-31B,732,0.5601,0.0664,0.2431,1.0
+ling_avg_intensity_disgust_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_disgust,gemma-4-31B,732,0.3589,0.1159,0.0,0.8314
+ling_avg_intensity_fear_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_fear,gemma-4-31B,732,0.3938,0.0975,0.0665,0.8093
+ling_avg_intensity_joy_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_joy,gemma-4-31B,732,0.447,0.0895,0.1224,0.9274
+ling_avg_intensity_sadness_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_sadness,gemma-4-31B,732,0.3859,0.0935,0.0,0.8225
+ling_avg_intensity_surprise_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_surprise,gemma-4-31B,732,0.3648,0.0942,0.0263,0.7819
+ling_avg_intensity_trust_gemma-4-31B,Linguistic (elfen),ling_avg_intensity_trust,gemma-4-31B,732,0.465,0.0693,0.2072,1.0
+ling_n_low_intensity_anger_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_anger,gemma-4-31B,732,0.0175,0.0208,0.0,0.3375
+ling_n_low_intensity_anticipation_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_anticipation,gemma-4-31B,732,0.0247,0.0386,0.0,0.4252
+ling_n_low_intensity_disgust_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_disgust,gemma-4-31B,732,0.0321,0.0321,0.0,0.3321
+ling_n_low_intensity_fear_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_fear,gemma-4-31B,732,0.0519,0.0334,0.0,0.375
+ling_n_low_intensity_joy_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_joy,gemma-4-31B,732,0.0712,0.0448,0.0,0.3063
+ling_n_low_intensity_sadness_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_sadness,gemma-4-31B,732,0.0825,0.059,0.0,0.4472
+ling_n_low_intensity_surprise_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_surprise,gemma-4-31B,732,0.0247,0.0209,0.0,0.2143
+ling_n_low_intensity_trust_gemma-4-31B,Linguistic (elfen),ling_n_low_intensity_trust,gemma-4-31B,732,0.0254,0.0276,0.0,0.2591
+ling_n_high_intensity_anger_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_anger,gemma-4-31B,732,0.0398,0.058,0.0,0.5499
+ling_n_high_intensity_anticipation_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_anticipation,gemma-4-31B,732,0.0259,0.031,0.0,0.3554
+ling_n_high_intensity_disgust_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_disgust,gemma-4-31B,732,0.0105,0.0245,0.0,0.3277
+ling_n_high_intensity_fear_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_fear,gemma-4-31B,732,0.0206,0.0283,0.0,0.3488
+ling_n_high_intensity_joy_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_joy,gemma-4-31B,732,0.0137,0.0204,0.0,0.269
+ling_n_high_intensity_sadness_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_sadness,gemma-4-31B,732,0.0122,0.0203,0.0,0.2907
+ling_n_high_intensity_surprise_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_surprise,gemma-4-31B,732,0.026,0.0366,0.0,0.25
+ling_n_high_intensity_trust_gemma-4-31B,Linguistic (elfen),ling_n_high_intensity_trust,gemma-4-31B,732,0.0236,0.022,0.0,0.2321
+ling_avg_prevalence_gemma-4-31B,Linguistic (elfen),ling_avg_prevalence,gemma-4-31B,732,0.9318,0.037,0.0,0.9591
+ling_n_low_prevalence_gemma-4-31B,Linguistic (elfen),ling_n_low_prevalence,gemma-4-31B,732,0.0163,0.0408,0.0,1.0
+ling_n_high_prevalence_gemma-4-31B,Linguistic (elfen),ling_n_high_prevalence,gemma-4-31B,732,0.624,0.0983,0.0,0.9752
+ling_min_prevalence_gemma-4-31B,Linguistic (elfen),ling_min_prevalence,gemma-4-31B,732,0.5908,0.1585,0.0,0.9645
+ling_max_prevalence_gemma-4-31B,Linguistic (elfen),ling_max_prevalence,gemma-4-31B,732,0.9976,0.0375,0.0,1.0
+ling_avg_socialness_gemma-4-31B,Linguistic (elfen),ling_avg_socialness,gemma-4-31B,732,0.3651,0.0862,0.0641,0.9158
+ling_n_low_socialness_gemma-4-31B,Linguistic (elfen),ling_n_low_socialness,gemma-4-31B,732,0.1673,0.0862,0.0,0.5702
+ling_n_high_socialness_gemma-4-31B,Linguistic (elfen),ling_n_high_socialness,gemma-4-31B,732,0.3194,0.1084,0.0,0.873
+ling_avg_sd_socialness_gemma-4-31B,Linguistic (elfen),ling_avg_sd_socialness,gemma-4-31B,732,0.5489,0.038,0.2052,0.777
+ling_n_controversial_socialness_gemma-4-31B,Linguistic (elfen),ling_n_controversial_socialness,gemma-4-31B,732,0.359,0.0997,0.0,1.0
+ling_min_socialness_gemma-4-31B,Linguistic (elfen),ling_min_socialness,gemma-4-31B,732,0.1198,0.0655,0.0072,0.7609
+ling_max_socialness_gemma-4-31B,Linguistic (elfen),ling_max_socialness,gemma-4-31B,732,0.8422,0.1059,0.0485,0.9944
+ling_avg_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Auditory_sensorimotor,gemma-4-31B,732,0.4701,0.0993,0.0975,0.8745
+ling_avg_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Gustatory_sensorimotor,gemma-4-31B,732,0.1764,0.0729,0.0928,0.9684
+ling_avg_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Haptic_sensorimotor,gemma-4-31B,732,0.5098,0.0857,0.1442,1.0
+ling_avg_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Interoceptive_sensorimotor,gemma-4-31B,732,0.373,0.0925,0.0989,1.0
+ling_avg_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Olfactory_sensorimotor,gemma-4-31B,732,0.278,0.0713,0.1406,0.9494
+ling_avg_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Visual_sensorimotor,gemma-4-31B,732,0.5257,0.0688,0.1527,0.8736
+ling_avg_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Foot_leg_sensorimotor,gemma-4-31B,732,0.3599,0.0684,0.0747,0.9424
+ling_avg_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Hand_arm_sensorimotor,gemma-4-31B,732,0.4683,0.0698,0.0678,0.8557
+ling_avg_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Head_sensorimotor,gemma-4-31B,732,0.5437,0.0813,0.0,0.9646
+ling_avg_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Mouth_sensorimotor,gemma-4-31B,732,0.3721,0.0798,0.0522,0.9865
+ling_avg_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_Torso_sensorimotor,gemma-4-31B,732,0.3237,0.0707,0.0,1.0
+ling_n_low_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Auditory_sensorimotor,gemma-4-31B,732,0.5254,0.0809,0.0,0.8537
+ling_n_low_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Gustatory_sensorimotor,gemma-4-31B,732,0.6158,0.0974,0.0,0.9467
+ling_n_low_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Haptic_sensorimotor,gemma-4-31B,732,0.5864,0.0942,0.0,0.9624
+ling_n_low_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Interoceptive_sensorimotor,gemma-4-31B,732,0.6051,0.0901,0.0,0.9595
+ling_n_low_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Olfactory_sensorimotor,gemma-4-31B,732,0.6154,0.0955,0.0,0.9379
+ling_n_low_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Visual_sensorimotor,gemma-4-31B,732,0.4283,0.0903,0.0,0.9286
+ling_n_low_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Foot_leg_sensorimotor,gemma-4-31B,732,0.5824,0.089,0.0,0.9243
+ling_n_low_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Hand_arm_sensorimotor,gemma-4-31B,732,0.5905,0.0939,0.0,0.9588
+ling_n_low_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Head_sensorimotor,gemma-4-31B,732,0.5546,0.096,0.0,0.9868
+ling_n_low_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Mouth_sensorimotor,gemma-4-31B,732,0.5748,0.0899,0.0,0.9306
+ling_n_low_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_low_Torso_sensorimotor,gemma-4-31B,732,0.5958,0.0889,0.0,0.9243
+ling_n_high_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Auditory_sensorimotor,gemma-4-31B,732,0.0989,0.0728,0.0,0.6875
+ling_n_high_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Gustatory_sensorimotor,gemma-4-31B,732,0.0317,0.0755,0.0,1.0
+ling_n_high_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Haptic_sensorimotor,gemma-4-31B,732,0.097,0.0947,0.0,0.795
+ling_n_high_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Interoceptive_sensorimotor,gemma-4-31B,732,0.1446,0.103,0.0,1.0
+ling_n_high_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Olfactory_sensorimotor,gemma-4-31B,732,0.0342,0.0619,0.0,0.4232
+ling_n_high_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Visual_sensorimotor,gemma-4-31B,732,0.2796,0.085,0.0,0.7368
+ling_n_high_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Foot_leg_sensorimotor,gemma-4-31B,732,0.0744,0.0697,0.0,1.0
+ling_n_high_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Hand_arm_sensorimotor,gemma-4-31B,732,0.1443,0.0902,0.0,1.0
+ling_n_high_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Head_sensorimotor,gemma-4-31B,732,0.2159,0.0996,0.0,0.6706
+ling_n_high_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Mouth_sensorimotor,gemma-4-31B,732,0.1347,0.0909,0.0,1.0
+ling_n_high_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_high_Torso_sensorimotor,gemma-4-31B,732,0.0604,0.0674,0.0,0.4136
+ling_avg_sd_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Auditory_sensorimotor,gemma-4-31B,732,0.5955,0.088,0.1427,0.9183
+ling_avg_sd_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Gustatory_sensorimotor,gemma-4-31B,732,0.5102,0.0657,0.2873,0.8694
+ling_avg_sd_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Haptic_sensorimotor,gemma-4-31B,732,0.5961,0.054,0.2684,0.8785
+ling_avg_sd_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Interoceptive_sensorimotor,gemma-4-31B,732,0.5158,0.0988,0.0787,0.9265
+ling_avg_sd_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Olfactory_sensorimotor,gemma-4-31B,732,0.4843,0.0609,0.2799,0.835
+ling_avg_sd_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Visual_sensorimotor,gemma-4-31B,732,0.6621,0.0457,0.4189,0.9218
+ling_avg_sd_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Foot_leg_sensorimotor,gemma-4-31B,732,0.3973,0.0547,0.1482,0.7182
+ling_avg_sd_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Hand_arm_sensorimotor,gemma-4-31B,732,0.4837,0.0464,0.0191,0.7079
+ling_avg_sd_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Head_sensorimotor,gemma-4-31B,732,0.3901,0.0559,0.1525,0.83
+ling_avg_sd_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Mouth_sensorimotor,gemma-4-31B,732,0.5651,0.0793,0.1447,0.9116
+ling_avg_sd_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_avg_sd_Torso_sensorimotor,gemma-4-31B,732,0.4258,0.0552,0.0198,0.8295
+ling_n_controversial_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Auditory_sensorimotor,gemma-4-31B,732,0.3559,0.0785,0.0,1.0
+ling_n_controversial_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Gustatory_sensorimotor,gemma-4-31B,732,0.1451,0.0712,0.0,0.6304
+ling_n_controversial_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Haptic_sensorimotor,gemma-4-31B,732,0.1393,0.0476,0.0,0.4375
+ling_n_controversial_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Interoceptive_sensorimotor,gemma-4-31B,732,0.3194,0.0973,0.0,0.9239
+ling_n_controversial_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Olfactory_sensorimotor,gemma-4-31B,732,0.1537,0.0769,0.0,0.8056
+ling_n_controversial_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Visual_sensorimotor,gemma-4-31B,732,0.4004,0.0846,0.0,0.8199
+ling_n_controversial_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Foot_leg_sensorimotor,gemma-4-31B,732,0.2566,0.0883,0.0,1.0
+ling_n_controversial_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Hand_arm_sensorimotor,gemma-4-31B,732,0.2316,0.0661,0.0,0.6875
+ling_n_controversial_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Head_sensorimotor,gemma-4-31B,732,0.5121,0.0871,0.0,0.9444
+ling_n_controversial_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Mouth_sensorimotor,gemma-4-31B,732,0.2795,0.0859,0.0,0.7448
+ling_n_controversial_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_n_controversial_Torso_sensorimotor,gemma-4-31B,732,0.24,0.0837,0.0,0.7778
+ling_min_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Auditory_sensorimotor,gemma-4-31B,732,0.0835,0.1094,0.0,0.8444
+ling_min_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Gustatory_sensorimotor,gemma-4-31B,732,0.0017,0.0184,0.0,0.3333
+ling_min_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Haptic_sensorimotor,gemma-4-31B,732,0.0031,0.0271,0.0,0.3636
+ling_min_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Interoceptive_sensorimotor,gemma-4-31B,732,0.0067,0.0318,0.0,0.5229
+ling_min_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Olfactory_sensorimotor,gemma-4-31B,732,0.0022,0.0175,0.0,0.3333
+ling_min_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Visual_sensorimotor,gemma-4-31B,732,0.2028,0.0616,0.0199,0.6881
+ling_min_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Foot_leg_sensorimotor,gemma-4-31B,732,0.0043,0.0223,0.0,0.293
+ling_min_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Hand_arm_sensorimotor,gemma-4-31B,732,0.0264,0.0238,0.0,0.2739
+ling_min_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Head_sensorimotor,gemma-4-31B,732,0.2723,0.0425,0.1163,0.5306
+ling_min_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Mouth_sensorimotor,gemma-4-31B,732,0.0581,0.0595,0.0,0.6706
+ling_min_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_min_Torso_sensorimotor,gemma-4-31B,732,0.0031,0.0192,0.0,0.2408
+ling_max_Auditory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Auditory_sensorimotor,gemma-4-31B,732,0.8036,0.1173,0.1543,1.0
+ling_max_Gustatory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Gustatory_sensorimotor,gemma-4-31B,732,0.6213,0.1767,0.1674,1.0
+ling_max_Haptic_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Haptic_sensorimotor,gemma-4-31B,732,0.8131,0.1079,0.2019,0.9865
+ling_max_Interoceptive_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Interoceptive_sensorimotor,gemma-4-31B,732,0.7854,0.0981,0.1463,1.0
+ling_max_Olfactory_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Olfactory_sensorimotor,gemma-4-31B,732,0.602,0.1384,0.1785,0.9862
+ling_max_Visual_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Visual_sensorimotor,gemma-4-31B,732,0.9068,0.0773,0.4333,1.0
+ling_max_Foot_leg_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Foot_leg_sensorimotor,gemma-4-31B,732,0.8121,0.1069,0.2307,1.0
+ling_max_Hand_arm_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Hand_arm_sensorimotor,gemma-4-31B,732,0.8265,0.1013,0.1765,0.9868
+ling_max_Head_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Head_sensorimotor,gemma-4-31B,732,0.8645,0.0921,0.1627,1.0
+ling_max_Mouth_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Mouth_sensorimotor,gemma-4-31B,732,0.835,0.1069,0.0787,1.0
+ling_max_Torso_sensorimotor_gemma-4-31B,Linguistic (elfen),ling_max_Torso_sensorimotor,gemma-4-31B,732,0.7229,0.0914,0.0874,0.9308
+ling_avg_iconicity_gemma-4-31B,Linguistic (elfen),ling_avg_iconicity,gemma-4-31B,732,0.4758,0.0708,0.2124,0.7502
+ling_n_low_iconicity_gemma-4-31B,Linguistic (elfen),ling_n_low_iconicity,gemma-4-31B,732,0.3465,0.0809,0.0,0.6536
+ling_n_high_iconicity_gemma-4-31B,Linguistic (elfen),ling_n_high_iconicity,gemma-4-31B,732,0.413,0.0936,0.0,0.816
+ling_avg_sd_iconicity_gemma-4-31B,Linguistic (elfen),ling_avg_sd_iconicity,gemma-4-31B,732,0.4113,0.0594,0.1586,0.8378
+ling_n_controversial_iconicity_gemma-4-31B,Linguistic (elfen),ling_n_controversial_iconicity,gemma-4-31B,732,0.1635,0.0693,0.0,0.6071
+ling_min_iconicity_gemma-4-31B,Linguistic (elfen),ling_min_iconicity,gemma-4-31B,732,0.0294,0.0523,0.0,0.6667
+ling_max_iconicity_gemma-4-31B,Linguistic (elfen),ling_max_iconicity,gemma-4-31B,732,0.6971,0.1044,0.2564,0.9744
+ling_n_positive_sentiment_gpt-5.5,Linguistic (elfen),ling_n_positive_sentiment,gpt-5.5,728,0.1512,0.0769,0.0,0.7429
+ling_n_negative_sentiment_gpt-5.5,Linguistic (elfen),ling_n_negative_sentiment,gpt-5.5,728,0.0914,0.0715,0.0,0.6562
+ling_n_tokens_gpt-5.5,Linguistic (elfen),ling_n_tokens,gpt-5.5,728,0.3287,0.1892,0.0028,0.8142
+ling_sentiment_score_gpt-5.5,Linguistic (elfen),ling_sentiment_score,gpt-5.5,728,0.4032,0.0592,0.0433,0.832
+ling_avg_valence_gpt-5.5,Linguistic (elfen),ling_avg_valence,gpt-5.5,728,0.6183,0.0589,0.324,0.8353
+ling_n_low_valence_gpt-5.5,Linguistic (elfen),ling_n_low_valence,gpt-5.5,728,0.1027,0.0812,0.0,0.4646
+ling_n_high_valence_gpt-5.5,Linguistic (elfen),ling_n_high_valence,gpt-5.5,728,0.2466,0.0768,0.0,0.5926
+ling_avg_arousal_gpt-5.5,Linguistic (elfen),ling_avg_arousal,gpt-5.5,728,0.4392,0.0607,0.1288,0.6676
+ling_n_low_arousal_gpt-5.5,Linguistic (elfen),ling_n_low_arousal,gpt-5.5,728,0.168,0.059,0.0,0.4345
+ling_n_high_arousal_gpt-5.5,Linguistic (elfen),ling_n_high_arousal,gpt-5.5,728,0.1428,0.1011,0.0,0.6938
+ling_avg_dominance_gpt-5.5,Linguistic (elfen),ling_avg_dominance,gpt-5.5,728,0.4852,0.0977,0.0667,1.0
+ling_n_low_dominance_gpt-5.5,Linguistic (elfen),ling_n_low_dominance,gpt-5.5,728,0.123,0.1045,0.0,1.0
+ling_n_high_dominance_gpt-5.5,Linguistic (elfen),ling_n_high_dominance,gpt-5.5,728,0.266,0.1319,0.0,0.9141
+ling_avg_intensity_anger_gpt-5.5,Linguistic (elfen),ling_avg_intensity_anger,gpt-5.5,728,0.3994,0.0921,0.012,0.8391
+ling_avg_intensity_anticipation_gpt-5.5,Linguistic (elfen),ling_avg_intensity_anticipation,gpt-5.5,728,0.4931,0.0853,0.0,0.8228
+ling_avg_intensity_disgust_gpt-5.5,Linguistic (elfen),ling_avg_intensity_disgust,gpt-5.5,728,0.3403,0.0939,0.044,1.0
+ling_avg_intensity_fear_gpt-5.5,Linguistic (elfen),ling_avg_intensity_fear,gpt-5.5,728,0.3422,0.097,0.0,0.9283
+ling_avg_intensity_joy_gpt-5.5,Linguistic (elfen),ling_avg_intensity_joy,gpt-5.5,728,0.4439,0.0884,0.0613,0.84
+ling_avg_intensity_sadness_gpt-5.5,Linguistic (elfen),ling_avg_intensity_sadness,gpt-5.5,728,0.4227,0.1048,0.0,0.8651
+ling_avg_intensity_surprise_gpt-5.5,Linguistic (elfen),ling_avg_intensity_surprise,gpt-5.5,728,0.3381,0.1021,0.0471,0.9058
+ling_avg_intensity_trust_gpt-5.5,Linguistic (elfen),ling_avg_intensity_trust,gpt-5.5,728,0.4609,0.085,0.078,0.828
+ling_n_low_intensity_anger_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_anger,gpt-5.5,728,0.0318,0.0497,0.0,0.7857
+ling_n_low_intensity_anticipation_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_anticipation,gpt-5.5,728,0.0149,0.0367,0.0,0.6
+ling_n_low_intensity_disgust_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_disgust,gpt-5.5,728,0.0113,0.0415,0.0,1.0
+ling_n_low_intensity_fear_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_fear,gpt-5.5,728,0.0535,0.063,0.0,1.0
+ling_n_low_intensity_joy_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_joy,gpt-5.5,728,0.0197,0.0184,0.0,0.1601
+ling_n_low_intensity_sadness_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_sadness,gpt-5.5,728,0.0564,0.0729,0.0,1.0
+ling_n_low_intensity_surprise_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_surprise,gpt-5.5,728,0.0324,0.0408,0.0,0.396
+ling_n_low_intensity_trust_gpt-5.5,Linguistic (elfen),ling_n_low_intensity_trust,gpt-5.5,728,0.0102,0.0219,0.0,0.3333
+ling_n_high_intensity_anger_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_anger,gpt-5.5,728,0.0133,0.0318,0.0,0.3502
+ling_n_high_intensity_anticipation_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_anticipation,gpt-5.5,728,0.0231,0.0358,0.0,0.3125
+ling_n_high_intensity_disgust_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_disgust,gpt-5.5,728,0.0185,0.0488,0.0,0.5192
+ling_n_high_intensity_fear_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_fear,gpt-5.5,728,0.0279,0.0552,0.0,0.5048
+ling_n_high_intensity_joy_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_joy,gpt-5.5,728,0.0138,0.0292,0.0,0.3397
+ling_n_high_intensity_sadness_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_sadness,gpt-5.5,728,0.0289,0.0596,0.0,0.5385
+ling_n_high_intensity_surprise_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_surprise,gpt-5.5,728,0.0119,0.0292,0.0,0.3685
+ling_n_high_intensity_trust_gpt-5.5,Linguistic (elfen),ling_n_high_intensity_trust,gpt-5.5,728,0.0403,0.0515,0.0,0.4236
+ling_avg_prevalence_gpt-5.5,Linguistic (elfen),ling_avg_prevalence,gpt-5.5,728,0.8706,0.025,0.6441,0.9307
+ling_n_low_prevalence_gpt-5.5,Linguistic (elfen),ling_n_low_prevalence,gpt-5.5,728,0.0304,0.0566,0.0,0.7111
+ling_n_high_prevalence_gpt-5.5,Linguistic (elfen),ling_n_high_prevalence,gpt-5.5,728,0.6185,0.124,0.0,0.9417
+ling_min_prevalence_gpt-5.5,Linguistic (elfen),ling_min_prevalence,gpt-5.5,728,0.6702,0.1437,0.0,0.9618
+ling_max_prevalence_gpt-5.5,Linguistic (elfen),ling_max_prevalence,gpt-5.5,728,0.989,0.0509,0.4588,1.0
+ling_avg_socialness_gpt-5.5,Linguistic (elfen),ling_avg_socialness,gpt-5.5,728,0.4392,0.0762,0.0,0.9087
+ling_n_low_socialness_gpt-5.5,Linguistic (elfen),ling_n_low_socialness,gpt-5.5,728,0.1306,0.0913,0.0,0.7692
+ling_n_high_socialness_gpt-5.5,Linguistic (elfen),ling_n_high_socialness,gpt-5.5,728,0.287,0.1289,0.0,0.7778
+ling_avg_sd_socialness_gpt-5.5,Linguistic (elfen),ling_avg_sd_socialness,gpt-5.5,728,0.6716,0.0452,0.0346,0.8574
+ling_n_controversial_socialness_gpt-5.5,Linguistic (elfen),ling_n_controversial_socialness,gpt-5.5,728,0.2696,0.0994,0.0,0.7429
+ling_min_socialness_gpt-5.5,Linguistic (elfen),ling_min_socialness,gpt-5.5,728,0.1269,0.0746,0.0,0.91
+ling_max_socialness_gpt-5.5,Linguistic (elfen),ling_max_socialness,gpt-5.5,728,0.8127,0.1222,0.0,0.9925
+ling_avg_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Auditory_sensorimotor,gpt-5.5,728,0.4031,0.0545,0.1912,0.656
+ling_avg_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Gustatory_sensorimotor,gpt-5.5,728,0.1483,0.0722,0.0,0.8728
+ling_avg_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Haptic_sensorimotor,gpt-5.5,728,0.3506,0.0735,0.0648,0.8779
+ling_avg_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Interoceptive_sensorimotor,gpt-5.5,728,0.4157,0.0733,0.0911,0.7678
+ling_avg_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Olfactory_sensorimotor,gpt-5.5,728,0.2325,0.0695,0.0125,0.7962
+ling_avg_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Visual_sensorimotor,gpt-5.5,728,0.4169,0.0577,0.1643,0.7393
+ling_avg_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Foot_leg_sensorimotor,gpt-5.5,728,0.3887,0.0665,0.1031,0.9717
+ling_avg_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Hand_arm_sensorimotor,gpt-5.5,728,0.3301,0.061,0.0573,0.7757
+ling_avg_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Head_sensorimotor,gpt-5.5,728,0.3672,0.0618,0.0153,0.6694
+ling_avg_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Mouth_sensorimotor,gpt-5.5,728,0.3427,0.0801,0.0797,0.7512
+ling_avg_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_Torso_sensorimotor,gpt-5.5,728,0.291,0.0588,0.0385,0.6836
+ling_n_low_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Auditory_sensorimotor,gpt-5.5,728,0.5283,0.1043,0.0,0.8665
+ling_n_low_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Gustatory_sensorimotor,gpt-5.5,728,0.5931,0.1233,0.0,0.9321
+ling_n_low_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Haptic_sensorimotor,gpt-5.5,728,0.5299,0.1111,0.0,0.9045
+ling_n_low_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Interoceptive_sensorimotor,gpt-5.5,728,0.5501,0.1102,0.0,0.9528
+ling_n_low_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Olfactory_sensorimotor,gpt-5.5,728,0.5928,0.1197,0.0,0.9263
+ling_n_low_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Visual_sensorimotor,gpt-5.5,728,0.3211,0.0914,0.0,0.7
+ling_n_low_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Foot_leg_sensorimotor,gpt-5.5,728,0.5761,0.114,0.0,0.9722
+ling_n_low_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Hand_arm_sensorimotor,gpt-5.5,728,0.481,0.1032,0.0,0.8269
+ling_n_low_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Head_sensorimotor,gpt-5.5,728,0.4729,0.1111,0.0,0.8512
+ling_n_low_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Mouth_sensorimotor,gpt-5.5,728,0.5171,0.1079,0.0,0.8722
+ling_n_low_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_low_Torso_sensorimotor,gpt-5.5,728,0.5635,0.1098,0.0,0.8877
+ling_n_high_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Auditory_sensorimotor,gpt-5.5,728,0.0612,0.0542,0.0,0.6
+ling_n_high_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Gustatory_sensorimotor,gpt-5.5,728,0.0232,0.0613,0.0,0.759
+ling_n_high_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Haptic_sensorimotor,gpt-5.5,728,0.0725,0.0858,0.0,0.8752
+ling_n_high_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Interoceptive_sensorimotor,gpt-5.5,728,0.0968,0.0874,0.0,0.8831
+ling_n_high_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Olfactory_sensorimotor,gpt-5.5,728,0.0268,0.0559,0.0,0.4542
+ling_n_high_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Visual_sensorimotor,gpt-5.5,728,0.2132,0.0873,0.0,1.0
+ling_n_high_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Foot_leg_sensorimotor,gpt-5.5,728,0.0455,0.0494,0.0,0.4545
+ling_n_high_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Hand_arm_sensorimotor,gpt-5.5,728,0.0738,0.0627,0.0,1.0
+ling_n_high_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Head_sensorimotor,gpt-5.5,728,0.0901,0.0562,0.0,0.4
+ling_n_high_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Mouth_sensorimotor,gpt-5.5,728,0.0889,0.0763,0.0,0.6
+ling_n_high_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_high_Torso_sensorimotor,gpt-5.5,728,0.0255,0.0356,0.0,0.3951
+ling_avg_sd_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Auditory_sensorimotor,gpt-5.5,728,0.6854,0.07,0.2282,0.8768
+ling_avg_sd_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Gustatory_sensorimotor,gpt-5.5,728,0.4829,0.0647,0.0,0.7281
+ling_avg_sd_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Haptic_sensorimotor,gpt-5.5,728,0.5189,0.065,0.181,0.7725
+ling_avg_sd_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Interoceptive_sensorimotor,gpt-5.5,728,0.6193,0.0488,0.2482,0.813
+ling_avg_sd_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Olfactory_sensorimotor,gpt-5.5,728,0.5498,0.0634,0.0716,0.8434
+ling_avg_sd_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Visual_sensorimotor,gpt-5.5,728,0.7287,0.0469,0.2533,0.879
+ling_avg_sd_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Foot_leg_sensorimotor,gpt-5.5,728,0.5045,0.0493,0.251,0.7427
+ling_avg_sd_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Hand_arm_sensorimotor,gpt-5.5,728,0.4932,0.0535,0.0411,0.7097
+ling_avg_sd_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Head_sensorimotor,gpt-5.5,728,0.4385,0.0569,0.1925,0.7152
+ling_avg_sd_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Mouth_sensorimotor,gpt-5.5,728,0.5286,0.0594,0.2942,0.8001
+ling_avg_sd_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_avg_sd_Torso_sensorimotor,gpt-5.5,728,0.4253,0.0556,0.0789,0.7227
+ling_n_controversial_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Auditory_sensorimotor,gpt-5.5,728,0.2616,0.0824,0.0,0.7692
+ling_n_controversial_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Gustatory_sensorimotor,gpt-5.5,728,0.1121,0.0842,0.0,0.7521
+ling_n_controversial_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Haptic_sensorimotor,gpt-5.5,728,0.1325,0.063,0.0,0.425
+ling_n_controversial_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Interoceptive_sensorimotor,gpt-5.5,728,0.1354,0.0531,0.0,0.375
+ling_n_controversial_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Olfactory_sensorimotor,gpt-5.5,728,0.1216,0.092,0.0,0.9402
+ling_n_controversial_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Visual_sensorimotor,gpt-5.5,728,0.2477,0.0762,0.0,1.0
+ling_n_controversial_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Foot_leg_sensorimotor,gpt-5.5,728,0.1863,0.086,0.0,0.75
+ling_n_controversial_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Hand_arm_sensorimotor,gpt-5.5,728,0.2267,0.0783,0.0,0.825
+ling_n_controversial_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Head_sensorimotor,gpt-5.5,728,0.4062,0.0906,0.0,0.7857
+ling_n_controversial_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Mouth_sensorimotor,gpt-5.5,728,0.2137,0.0829,0.0,0.9231
+ling_n_controversial_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_n_controversial_Torso_sensorimotor,gpt-5.5,728,0.1724,0.0826,0.0,0.75
+ling_min_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Auditory_sensorimotor,gpt-5.5,728,0.061,0.0504,0.0,0.3582
+ling_min_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Gustatory_sensorimotor,gpt-5.5,728,0.0022,0.0159,0.0,0.2912
+ling_min_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Haptic_sensorimotor,gpt-5.5,728,0.0064,0.0243,0.0,0.2426
+ling_min_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Interoceptive_sensorimotor,gpt-5.5,728,0.0098,0.0272,0.0,0.3205
+ling_min_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Olfactory_sensorimotor,gpt-5.5,728,0.0018,0.0101,0.0,0.1528
+ling_min_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Visual_sensorimotor,gpt-5.5,728,0.1414,0.0468,0.0124,0.5387
+ling_min_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Foot_leg_sensorimotor,gpt-5.5,728,0.009,0.0311,0.0,0.5461
+ling_min_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Hand_arm_sensorimotor,gpt-5.5,728,0.0315,0.0342,0.0,0.3728
+ling_min_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Head_sensorimotor,gpt-5.5,728,0.201,0.0465,0.076,0.532
+ling_min_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Mouth_sensorimotor,gpt-5.5,728,0.0598,0.048,0.0,0.4639
+ling_min_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_min_Torso_sensorimotor,gpt-5.5,728,0.0074,0.0236,0.0,0.3111
+ling_max_Auditory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Auditory_sensorimotor,gpt-5.5,728,0.8028,0.1065,0.2207,1.0
+ling_max_Gustatory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Gustatory_sensorimotor,gpt-5.5,728,0.532,0.1903,0.0,1.0
+ling_max_Haptic_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Haptic_sensorimotor,gpt-5.5,728,0.7472,0.1262,0.0802,1.0
+ling_max_Interoceptive_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Interoceptive_sensorimotor,gpt-5.5,728,0.7583,0.1121,0.0967,1.0
+ling_max_Olfactory_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Olfactory_sensorimotor,gpt-5.5,728,0.5377,0.1552,0.0105,0.9789
+ling_max_Visual_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Visual_sensorimotor,gpt-5.5,728,0.8564,0.0892,0.4502,1.0
+ling_max_Foot_leg_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Foot_leg_sensorimotor,gpt-5.5,728,0.7542,0.1201,0.0976,1.0
+ling_max_Hand_arm_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Hand_arm_sensorimotor,gpt-5.5,728,0.7732,0.1157,0.1712,0.9893
+ling_max_Head_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Head_sensorimotor,gpt-5.5,728,0.8357,0.0926,0.333,1.0
+ling_max_Mouth_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Mouth_sensorimotor,gpt-5.5,728,0.7942,0.1266,0.1087,1.0
+ling_max_Torso_sensorimotor_gpt-5.5,Linguistic (elfen),ling_max_Torso_sensorimotor,gpt-5.5,728,0.7287,0.1102,0.007,0.9439
+ling_avg_iconicity_gpt-5.5,Linguistic (elfen),ling_avg_iconicity,gpt-5.5,728,0.3829,0.041,0.2201,1.0
+ling_n_low_iconicity_gpt-5.5,Linguistic (elfen),ling_n_low_iconicity,gpt-5.5,728,0.1641,0.0596,0.0,0.4242
+ling_n_high_iconicity_gpt-5.5,Linguistic (elfen),ling_n_high_iconicity,gpt-5.5,728,0.2376,0.0737,0.0,0.5
+ling_avg_sd_iconicity_gpt-5.5,Linguistic (elfen),ling_avg_sd_iconicity,gpt-5.5,728,0.5428,0.0516,0.0,0.8479
+ling_n_controversial_iconicity_gpt-5.5,Linguistic (elfen),ling_n_controversial_iconicity,gpt-5.5,728,0.1238,0.077,0.0,1.0
+ling_min_iconicity_gpt-5.5,Linguistic (elfen),ling_min_iconicity,gpt-5.5,728,0.045,0.0626,0.0,0.9258
+ling_max_iconicity_gpt-5.5,Linguistic (elfen),ling_max_iconicity,gpt-5.5,728,0.7072,0.0958,0.3305,1.0
+ling_n_positive_sentiment_llama-3.3-70B,Linguistic (elfen),ling_n_positive_sentiment,llama-3.3-70B,732,0.2259,0.1004,0.0,1.0
+ling_n_negative_sentiment_llama-3.3-70B,Linguistic (elfen),ling_n_negative_sentiment,llama-3.3-70B,732,0.0918,0.063,0.0,0.5444
+ling_n_tokens_llama-3.3-70B,Linguistic (elfen),ling_n_tokens,llama-3.3-70B,732,0.5524,0.2255,0.0028,0.9522
+ling_sentiment_score_llama-3.3-70B,Linguistic (elfen),ling_sentiment_score,llama-3.3-70B,732,0.4362,0.0749,0.1728,1.0
+ling_avg_valence_llama-3.3-70B,Linguistic (elfen),ling_avg_valence,llama-3.3-70B,732,0.6818,0.0612,0.39,0.9112
+ling_n_low_valence_llama-3.3-70B,Linguistic (elfen),ling_n_low_valence,llama-3.3-70B,732,0.1116,0.0916,0.0,0.6799
+ling_n_high_valence_llama-3.3-70B,Linguistic (elfen),ling_n_high_valence,llama-3.3-70B,732,0.3745,0.0956,0.0,0.7467
+ling_avg_arousal_llama-3.3-70B,Linguistic (elfen),ling_avg_arousal,llama-3.3-70B,732,0.4587,0.074,0.0,0.74
+ling_n_low_arousal_llama-3.3-70B,Linguistic (elfen),ling_n_low_arousal,llama-3.3-70B,732,0.2047,0.0641,0.0,0.75
+ling_n_high_arousal_llama-3.3-70B,Linguistic (elfen),ling_n_high_arousal,llama-3.3-70B,732,0.1851,0.1063,0.0,0.6821
+ling_avg_dominance_llama-3.3-70B,Linguistic (elfen),ling_avg_dominance,llama-3.3-70B,732,0.5628,0.1036,0.0172,0.843
+ling_n_low_dominance_llama-3.3-70B,Linguistic (elfen),ling_n_low_dominance,llama-3.3-70B,732,0.0893,0.07,0.0,0.766
+ling_n_high_dominance_llama-3.3-70B,Linguistic (elfen),ling_n_high_dominance,llama-3.3-70B,732,0.32,0.1187,0.0,1.0
+ling_avg_intensity_anger_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_anger,llama-3.3-70B,732,0.3935,0.097,0.0665,1.0
+ling_avg_intensity_anticipation_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_anticipation,llama-3.3-70B,732,0.494,0.0763,0.0,0.7709
+ling_avg_intensity_disgust_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_disgust,llama-3.3-70B,732,0.3426,0.1237,0.0,0.9195
+ling_avg_intensity_fear_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_fear,llama-3.3-70B,732,0.3123,0.0878,0.0333,0.6624
+ling_avg_intensity_joy_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_joy,llama-3.3-70B,732,0.471,0.1045,0.0,0.9955
+ling_avg_intensity_sadness_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_sadness,llama-3.3-70B,732,0.3791,0.1041,0.0,0.8284
+ling_avg_intensity_surprise_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_surprise,llama-3.3-70B,732,0.3236,0.0891,0.0094,0.7981
+ling_avg_intensity_trust_llama-3.3-70B,Linguistic (elfen),ling_avg_intensity_trust,llama-3.3-70B,732,0.5084,0.0759,0.1222,1.0
+ling_n_low_intensity_anger_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_anger,llama-3.3-70B,732,0.021,0.027,0.0,0.3388
+ling_n_low_intensity_anticipation_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_anticipation,llama-3.3-70B,732,0.0177,0.0287,0.0,0.2703
+ling_n_low_intensity_disgust_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_disgust,llama-3.3-70B,732,0.0435,0.0601,0.0,0.6562
+ling_n_low_intensity_fear_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_fear,llama-3.3-70B,732,0.0737,0.0506,0.0,0.3793
+ling_n_low_intensity_joy_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_joy,llama-3.3-70B,732,0.0799,0.0671,0.0,1.0
+ling_n_low_intensity_sadness_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_sadness,llama-3.3-70B,732,0.066,0.0629,0.0,0.5522
+ling_n_low_intensity_surprise_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_surprise,llama-3.3-70B,732,0.0498,0.0532,0.0,0.4306
+ling_n_low_intensity_trust_llama-3.3-70B,Linguistic (elfen),ling_n_low_intensity_trust,llama-3.3-70B,732,0.0165,0.0259,0.0,0.357
+ling_n_high_intensity_anger_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_anger,llama-3.3-70B,732,0.0079,0.02,0.0,0.3226
+ling_n_high_intensity_anticipation_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_anticipation,llama-3.3-70B,732,0.0361,0.0525,0.0,0.7292
+ling_n_high_intensity_disgust_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_disgust,llama-3.3-70B,732,0.0061,0.0135,0.0,0.1781
+ling_n_high_intensity_fear_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_fear,llama-3.3-70B,732,0.0141,0.0272,0.0,0.4435
+ling_n_high_intensity_joy_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_joy,llama-3.3-70B,732,0.0394,0.0616,0.0,0.9048
+ling_n_high_intensity_sadness_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_sadness,llama-3.3-70B,732,0.0244,0.042,0.0,0.355
+ling_n_high_intensity_surprise_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_surprise,llama-3.3-70B,732,0.014,0.0457,0.0,1.0
+ling_n_high_intensity_trust_llama-3.3-70B,Linguistic (elfen),ling_n_high_intensity_trust,llama-3.3-70B,732,0.0805,0.0859,0.0,0.9306
+ling_avg_prevalence_llama-3.3-70B,Linguistic (elfen),ling_avg_prevalence,llama-3.3-70B,732,0.9516,0.0427,0.0,0.9877
+ling_n_low_prevalence_llama-3.3-70B,Linguistic (elfen),ling_n_low_prevalence,llama-3.3-70B,732,0.0191,0.0465,0.0,1.0
+ling_n_high_prevalence_llama-3.3-70B,Linguistic (elfen),ling_n_high_prevalence,llama-3.3-70B,732,0.7017,0.1069,0.0,0.9802
+ling_min_prevalence_llama-3.3-70B,Linguistic (elfen),ling_min_prevalence,llama-3.3-70B,732,0.6609,0.164,0.0,0.9816
+ling_max_prevalence_llama-3.3-70B,Linguistic (elfen),ling_max_prevalence,llama-3.3-70B,732,0.9976,0.0379,0.0,1.0
+ling_avg_socialness_llama-3.3-70B,Linguistic (elfen),ling_avg_socialness,llama-3.3-70B,732,0.4653,0.0721,0.1884,0.6375
+ling_n_low_socialness_llama-3.3-70B,Linguistic (elfen),ling_n_low_socialness,llama-3.3-70B,732,0.1703,0.1061,0.0,0.6952
+ling_n_high_socialness_llama-3.3-70B,Linguistic (elfen),ling_n_high_socialness,llama-3.3-70B,732,0.3729,0.1296,0.0,0.8128
+ling_avg_sd_socialness_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_socialness,llama-3.3-70B,732,0.5832,0.037,0.3999,0.7755
+ling_n_controversial_socialness_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_socialness,llama-3.3-70B,732,0.2822,0.0811,0.0,0.7
+ling_min_socialness_llama-3.3-70B,Linguistic (elfen),ling_min_socialness,llama-3.3-70B,732,0.1314,0.0606,0.0236,0.4949
+ling_max_socialness_llama-3.3-70B,Linguistic (elfen),ling_max_socialness,llama-3.3-70B,732,0.86,0.0802,0.2479,1.0
+ling_avg_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Auditory_sensorimotor,llama-3.3-70B,732,0.251,0.0457,0.0509,0.4749
+ling_avg_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Gustatory_sensorimotor,llama-3.3-70B,732,0.1727,0.0685,0.0913,1.0
+ling_avg_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Haptic_sensorimotor,llama-3.3-70B,732,0.4915,0.0875,0.1438,1.0
+ling_avg_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Interoceptive_sensorimotor,llama-3.3-70B,732,0.4234,0.0892,0.19,0.7472
+ling_avg_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Olfactory_sensorimotor,llama-3.3-70B,732,0.2797,0.0695,0.1517,1.0
+ling_avg_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Visual_sensorimotor,llama-3.3-70B,732,0.4021,0.0755,0.0421,0.7404
+ling_avg_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Foot_leg_sensorimotor,llama-3.3-70B,732,0.3262,0.0714,0.0538,0.881
+ling_avg_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Hand_arm_sensorimotor,llama-3.3-70B,732,0.4914,0.0834,0.0478,0.8062
+ling_avg_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Head_sensorimotor,llama-3.3-70B,732,0.38,0.0687,0.0014,0.6597
+ling_avg_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Mouth_sensorimotor,llama-3.3-70B,732,0.2095,0.0506,0.0198,0.4848
+ling_avg_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_Torso_sensorimotor,llama-3.3-70B,732,0.3809,0.0864,0.0216,0.7518
+ling_n_low_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Auditory_sensorimotor,llama-3.3-70B,732,0.6308,0.0889,0.0,0.9502
+ling_n_low_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Gustatory_sensorimotor,llama-3.3-70B,732,0.6913,0.1056,0.0,0.9615
+ling_n_low_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Haptic_sensorimotor,llama-3.3-70B,732,0.6514,0.0989,0.0,0.9003
+ling_n_low_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Interoceptive_sensorimotor,llama-3.3-70B,732,0.6733,0.0928,0.0,0.9768
+ling_n_low_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Olfactory_sensorimotor,llama-3.3-70B,732,0.6986,0.1045,0.0,0.9716
+ling_n_low_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Visual_sensorimotor,llama-3.3-70B,732,0.4085,0.0946,0.0,0.7937
+ling_n_low_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Foot_leg_sensorimotor,llama-3.3-70B,732,0.6791,0.0957,0.0,0.9265
+ling_n_low_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Hand_arm_sensorimotor,llama-3.3-70B,732,0.6528,0.0977,0.0,0.9316
+ling_n_low_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Head_sensorimotor,llama-3.3-70B,732,0.5741,0.0952,0.0,0.906
+ling_n_low_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Mouth_sensorimotor,llama-3.3-70B,732,0.6271,0.0888,0.0,0.9287
+ling_n_low_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_low_Torso_sensorimotor,llama-3.3-70B,732,0.6767,0.0933,0.0,0.9429
+ling_n_high_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Auditory_sensorimotor,llama-3.3-70B,732,0.0423,0.037,0.0,0.3427
+ling_n_high_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Gustatory_sensorimotor,llama-3.3-70B,732,0.0269,0.0724,0.0,1.0
+ling_n_high_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Haptic_sensorimotor,llama-3.3-70B,732,0.0635,0.0738,0.0,0.6017
+ling_n_high_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Interoceptive_sensorimotor,llama-3.3-70B,732,0.1447,0.1217,0.0,0.7448
+ling_n_high_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Olfactory_sensorimotor,llama-3.3-70B,732,0.0271,0.061,0.0,0.5145
+ling_n_high_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Visual_sensorimotor,llama-3.3-70B,732,0.334,0.104,0.0,0.7768
+ling_n_high_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Foot_leg_sensorimotor,llama-3.3-70B,732,0.0653,0.0718,0.0,0.875
+ling_n_high_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Hand_arm_sensorimotor,llama-3.3-70B,732,0.0953,0.0678,0.0,0.6412
+ling_n_high_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Head_sensorimotor,llama-3.3-70B,732,0.2144,0.1187,0.0,0.9
+ling_n_high_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Mouth_sensorimotor,llama-3.3-70B,732,0.0561,0.0441,0.0,0.3365
+ling_n_high_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_high_Torso_sensorimotor,llama-3.3-70B,732,0.0325,0.0516,0.0,0.5784
+ling_avg_sd_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Auditory_sensorimotor,llama-3.3-70B,732,0.632,0.0762,0.1202,0.8435
+ling_avg_sd_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Gustatory_sensorimotor,llama-3.3-70B,732,0.5705,0.0571,0.3647,0.7837
+ling_avg_sd_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Haptic_sensorimotor,llama-3.3-70B,732,0.6406,0.0571,0.2916,0.9119
+ling_avg_sd_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Interoceptive_sensorimotor,llama-3.3-70B,732,0.4954,0.0641,0.2123,0.7135
+ling_avg_sd_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Olfactory_sensorimotor,llama-3.3-70B,732,0.6175,0.0516,0.3871,0.8818
+ling_avg_sd_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Visual_sensorimotor,llama-3.3-70B,732,0.5548,0.0901,0.0816,0.9372
+ling_avg_sd_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Foot_leg_sensorimotor,llama-3.3-70B,732,0.4513,0.0698,0.1449,0.7064
+ling_avg_sd_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Hand_arm_sensorimotor,llama-3.3-70B,732,0.5993,0.0632,0.0,0.8063
+ling_avg_sd_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Head_sensorimotor,llama-3.3-70B,732,0.6146,0.0463,0.3009,0.9365
+ling_avg_sd_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Mouth_sensorimotor,llama-3.3-70B,732,0.6864,0.0699,0.3357,0.9423
+ling_avg_sd_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_Torso_sensorimotor,llama-3.3-70B,732,0.512,0.0639,0.0732,0.7842
+ling_n_controversial_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Auditory_sensorimotor,llama-3.3-70B,732,0.3782,0.0855,0.0,0.7549
+ling_n_controversial_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Gustatory_sensorimotor,llama-3.3-70B,732,0.1567,0.0905,0.0,0.8056
+ling_n_controversial_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Haptic_sensorimotor,llama-3.3-70B,732,0.2286,0.0879,0.0,0.6562
+ling_n_controversial_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Interoceptive_sensorimotor,llama-3.3-70B,732,0.2412,0.0751,0.0,0.5929
+ling_n_controversial_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Olfactory_sensorimotor,llama-3.3-70B,732,0.1395,0.0899,0.0,1.0
+ling_n_controversial_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Visual_sensorimotor,llama-3.3-70B,732,0.3453,0.081,0.0,0.9107
+ling_n_controversial_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Foot_leg_sensorimotor,llama-3.3-70B,732,0.2622,0.1008,0.0,0.74
+ling_n_controversial_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Hand_arm_sensorimotor,llama-3.3-70B,732,0.2993,0.0911,0.0,0.7371
+ling_n_controversial_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Head_sensorimotor,llama-3.3-70B,732,0.4773,0.0894,0.0,1.0
+ling_n_controversial_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Mouth_sensorimotor,llama-3.3-70B,732,0.291,0.1018,0.0,0.7054
+ling_n_controversial_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_Torso_sensorimotor,llama-3.3-70B,732,0.2552,0.105,0.0,1.0
+ling_min_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Auditory_sensorimotor,llama-3.3-70B,732,0.0408,0.0361,0.0,0.3424
+ling_min_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Gustatory_sensorimotor,llama-3.3-70B,732,0.0015,0.0195,0.0,0.4275
+ling_min_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Haptic_sensorimotor,llama-3.3-70B,732,0.0054,0.0379,0.0,0.6623
+ling_min_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Interoceptive_sensorimotor,llama-3.3-70B,732,0.0046,0.0224,0.0,0.3333
+ling_min_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Olfactory_sensorimotor,llama-3.3-70B,732,0.0026,0.0192,0.0,0.2294
+ling_min_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Visual_sensorimotor,llama-3.3-70B,732,0.1751,0.0525,0.0,0.6275
+ling_min_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Foot_leg_sensorimotor,llama-3.3-70B,732,0.0041,0.0201,0.0,0.3333
+ling_min_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Hand_arm_sensorimotor,llama-3.3-70B,732,0.0572,0.0345,0.0,0.358
+ling_min_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Head_sensorimotor,llama-3.3-70B,732,0.2063,0.0295,0.0595,0.462
+ling_min_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Mouth_sensorimotor,llama-3.3-70B,732,0.0344,0.0262,0.0,0.3377
+ling_min_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_min_Torso_sensorimotor,llama-3.3-70B,732,0.0035,0.0203,0.0,0.3333
+ling_max_Auditory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Auditory_sensorimotor,llama-3.3-70B,732,0.8052,0.1041,0.2571,1.0
+ling_max_Gustatory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Gustatory_sensorimotor,llama-3.3-70B,732,0.5745,0.1694,0.1778,1.0
+ling_max_Haptic_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Haptic_sensorimotor,llama-3.3-70B,732,0.7747,0.0993,0.2326,0.9855
+ling_max_Interoceptive_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Interoceptive_sensorimotor,llama-3.3-70B,732,0.7899,0.0912,0.2225,1.0
+ling_max_Olfactory_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Olfactory_sensorimotor,llama-3.3-70B,732,0.5723,0.1334,0.2059,0.9867
+ling_max_Visual_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Visual_sensorimotor,llama-3.3-70B,732,0.8978,0.0679,0.5091,1.0
+ling_max_Foot_leg_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Foot_leg_sensorimotor,llama-3.3-70B,732,0.7816,0.0977,0.2669,1.0
+ling_max_Hand_arm_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Hand_arm_sensorimotor,llama-3.3-70B,732,0.8252,0.082,0.3059,0.9994
+ling_max_Head_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Head_sensorimotor,llama-3.3-70B,732,0.8622,0.0779,0.2898,1.0
+ling_max_Mouth_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Mouth_sensorimotor,llama-3.3-70B,732,0.7785,0.1124,0.0048,1.0
+ling_max_Torso_sensorimotor_llama-3.3-70B,Linguistic (elfen),ling_max_Torso_sensorimotor,llama-3.3-70B,732,0.7463,0.0832,0.2492,0.943
+ling_avg_iconicity_llama-3.3-70B,Linguistic (elfen),ling_avg_iconicity,llama-3.3-70B,732,0.2547,0.0569,0.099,0.4995
+ling_n_low_iconicity_llama-3.3-70B,Linguistic (elfen),ling_n_low_iconicity,llama-3.3-70B,732,0.3272,0.0917,0.0,0.7966
+ling_n_high_iconicity_llama-3.3-70B,Linguistic (elfen),ling_n_high_iconicity,llama-3.3-70B,732,0.3258,0.0784,0.0,0.677
+ling_avg_sd_iconicity_llama-3.3-70B,Linguistic (elfen),ling_avg_sd_iconicity,llama-3.3-70B,732,0.3047,0.061,0.1137,0.7268
+ling_n_controversial_iconicity_llama-3.3-70B,Linguistic (elfen),ling_n_controversial_iconicity,llama-3.3-70B,732,0.1313,0.0594,0.0,0.6278
+ling_min_iconicity_llama-3.3-70B,Linguistic (elfen),ling_min_iconicity,llama-3.3-70B,732,0.0412,0.0432,0.0,0.5517
+ling_max_iconicity_llama-3.3-70B,Linguistic (elfen),ling_max_iconicity,llama-3.3-70B,732,0.6481,0.1161,0.2538,1.0
+ling_n_positive_sentiment_qwen-3.5-27B,Linguistic (elfen),ling_n_positive_sentiment,qwen-3.5-27B,732,0.18,0.0734,0.0,0.6005
+ling_n_negative_sentiment_qwen-3.5-27B,Linguistic (elfen),ling_n_negative_sentiment,qwen-3.5-27B,732,0.1504,0.0895,0.0,0.5677
+ling_n_tokens_qwen-3.5-27B,Linguistic (elfen),ling_n_tokens,qwen-3.5-27B,732,0.6006,0.2182,0.0287,0.9426
+ling_sentiment_score_qwen-3.5-27B,Linguistic (elfen),ling_sentiment_score,qwen-3.5-27B,732,0.4343,0.0615,0.2287,0.8048
+ling_avg_valence_qwen-3.5-27B,Linguistic (elfen),ling_avg_valence,qwen-3.5-27B,732,0.6724,0.0624,0.4308,0.9308
+ling_n_low_valence_qwen-3.5-27B,Linguistic (elfen),ling_n_low_valence,qwen-3.5-27B,732,0.1547,0.1032,0.0,0.6714
+ling_n_high_valence_qwen-3.5-27B,Linguistic (elfen),ling_n_high_valence,qwen-3.5-27B,732,0.4341,0.1042,0.1395,1.0
+ling_avg_arousal_qwen-3.5-27B,Linguistic (elfen),ling_avg_arousal,qwen-3.5-27B,732,0.5196,0.0859,0.0922,0.7911
+ling_n_low_arousal_qwen-3.5-27B,Linguistic (elfen),ling_n_low_arousal,qwen-3.5-27B,732,0.4176,0.1008,0.1099,0.9639
+ling_n_high_arousal_qwen-3.5-27B,Linguistic (elfen),ling_n_high_arousal,qwen-3.5-27B,732,0.2261,0.119,0.0,0.7311
+ling_avg_dominance_qwen-3.5-27B,Linguistic (elfen),ling_avg_dominance,qwen-3.5-27B,732,0.5548,0.0772,0.2188,0.7657
+ling_n_low_dominance_qwen-3.5-27B,Linguistic (elfen),ling_n_low_dominance,qwen-3.5-27B,732,0.1736,0.1087,0.0,0.94
+ling_n_high_dominance_qwen-3.5-27B,Linguistic (elfen),ling_n_high_dominance,qwen-3.5-27B,732,0.2556,0.0878,0.0,0.7309
+ling_avg_intensity_anger_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_anger,qwen-3.5-27B,732,0.423,0.0951,0.0665,0.8604
+ling_avg_intensity_anticipation_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_anticipation,qwen-3.5-27B,732,0.4355,0.0673,0.0838,0.8338
+ling_avg_intensity_disgust_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_disgust,qwen-3.5-27B,732,0.3477,0.1098,0.0488,0.7425
+ling_avg_intensity_fear_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_fear,qwen-3.5-27B,732,0.3683,0.1003,0.0669,0.7198
+ling_avg_intensity_joy_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_joy,qwen-3.5-27B,732,0.4505,0.0933,0.0831,0.9954
+ling_avg_intensity_sadness_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_sadness,qwen-3.5-27B,732,0.3985,0.0951,0.0,0.7726
+ling_avg_intensity_surprise_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_surprise,qwen-3.5-27B,732,0.3615,0.0937,0.0709,0.7314
+ling_avg_intensity_trust_qwen-3.5-27B,Linguistic (elfen),ling_avg_intensity_trust,qwen-3.5-27B,732,0.4552,0.0778,0.1814,1.0
+ling_n_low_intensity_anger_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_anger,qwen-3.5-27B,732,0.0807,0.0699,0.0,0.5738
+ling_n_low_intensity_anticipation_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_anticipation,qwen-3.5-27B,732,0.0323,0.0474,0.0,0.5738
+ling_n_low_intensity_disgust_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_disgust,qwen-3.5-27B,732,0.0544,0.0657,0.0,0.8276
+ling_n_low_intensity_fear_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_fear,qwen-3.5-27B,732,0.1088,0.0698,0.0,0.5833
+ling_n_low_intensity_joy_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_joy,qwen-3.5-27B,732,0.0765,0.0534,0.0,0.6019
+ling_n_low_intensity_sadness_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_sadness,qwen-3.5-27B,732,0.0547,0.0447,0.0,0.558
+ling_n_low_intensity_surprise_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_surprise,qwen-3.5-27B,732,0.0353,0.0322,0.0,0.3546
+ling_n_low_intensity_trust_qwen-3.5-27B,Linguistic (elfen),ling_n_low_intensity_trust,qwen-3.5-27B,732,0.0329,0.0478,0.0,0.7143
+ling_n_high_intensity_anger_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_anger,qwen-3.5-27B,732,0.0192,0.03,0.0,0.2995
+ling_n_high_intensity_anticipation_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_anticipation,qwen-3.5-27B,732,0.0259,0.0395,0.0,0.7391
+ling_n_high_intensity_disgust_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_disgust,qwen-3.5-27B,732,0.0194,0.0392,0.0,0.2573
+ling_n_high_intensity_fear_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_fear,qwen-3.5-27B,732,0.0327,0.0466,0.0,0.3963
+ling_n_high_intensity_joy_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_joy,qwen-3.5-27B,732,0.0275,0.0384,0.0,0.3965
+ling_n_high_intensity_sadness_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_sadness,qwen-3.5-27B,732,0.0335,0.051,0.0,0.3655
+ling_n_high_intensity_surprise_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_surprise,qwen-3.5-27B,732,0.0389,0.0621,0.0,0.4876
+ling_n_high_intensity_trust_qwen-3.5-27B,Linguistic (elfen),ling_n_high_intensity_trust,qwen-3.5-27B,732,0.0329,0.0316,0.0,0.3036
+ling_avg_prevalence_qwen-3.5-27B,Linguistic (elfen),ling_avg_prevalence,qwen-3.5-27B,732,0.9105,0.0294,0.4544,0.9745
+ling_n_low_prevalence_qwen-3.5-27B,Linguistic (elfen),ling_n_low_prevalence,qwen-3.5-27B,732,0.0329,0.0448,0.0,0.528
+ling_n_high_prevalence_qwen-3.5-27B,Linguistic (elfen),ling_n_high_prevalence,qwen-3.5-27B,732,0.6346,0.0933,0.2869,0.9619
+ling_min_prevalence_qwen-3.5-27B,Linguistic (elfen),ling_min_prevalence,qwen-3.5-27B,732,0.5638,0.1876,0.0806,0.953
+ling_max_prevalence_qwen-3.5-27B,Linguistic (elfen),ling_max_prevalence,qwen-3.5-27B,732,0.9991,0.0124,0.7214,1.0
+ling_avg_socialness_qwen-3.5-27B,Linguistic (elfen),ling_avg_socialness,qwen-3.5-27B,732,0.414,0.1036,0.0468,1.0
+ling_n_low_socialness_qwen-3.5-27B,Linguistic (elfen),ling_n_low_socialness,qwen-3.5-27B,732,0.1746,0.0935,0.0,0.6508
+ling_n_high_socialness_qwen-3.5-27B,Linguistic (elfen),ling_n_high_socialness,qwen-3.5-27B,732,0.3011,0.102,0.0358,0.6466
+ling_avg_sd_socialness_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_socialness,qwen-3.5-27B,732,0.4,0.0455,0.0967,0.7178
+ling_n_controversial_socialness_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_socialness,qwen-3.5-27B,732,0.2178,0.0562,0.0426,0.4648
+ling_min_socialness_qwen-3.5-27B,Linguistic (elfen),ling_min_socialness,qwen-3.5-27B,732,0.1394,0.0674,0.0,0.9317
+ling_max_socialness_qwen-3.5-27B,Linguistic (elfen),ling_max_socialness,qwen-3.5-27B,732,0.8286,0.0942,0.2621,1.0
+ling_avg_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Auditory_sensorimotor,qwen-3.5-27B,732,0.2337,0.0563,0.0508,0.6477
+ling_avg_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Gustatory_sensorimotor,qwen-3.5-27B,732,0.1641,0.0715,0.0698,0.8798
+ling_avg_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Haptic_sensorimotor,qwen-3.5-27B,732,0.3568,0.074,0.1767,0.7363
+ling_avg_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.3717,0.1007,0.1053,0.7591
+ling_avg_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Olfactory_sensorimotor,qwen-3.5-27B,732,0.2515,0.0807,0.0884,0.9556
+ling_avg_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Visual_sensorimotor,qwen-3.5-27B,732,0.4339,0.084,0.1224,0.8605
+ling_avg_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.5,0.0599,0.3138,0.7413
+ling_avg_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.6319,0.0685,0.3827,0.9407
+ling_avg_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Head_sensorimotor,qwen-3.5-27B,732,0.3919,0.1212,0.0252,0.9422
+ling_avg_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Mouth_sensorimotor,qwen-3.5-27B,732,0.1829,0.0514,0.059,0.6352
+ling_avg_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_Torso_sensorimotor,qwen-3.5-27B,732,0.4622,0.0594,0.2834,0.6935
+ling_n_low_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Auditory_sensorimotor,qwen-3.5-27B,732,0.5561,0.0816,0.2551,0.9068
+ling_n_low_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Gustatory_sensorimotor,qwen-3.5-27B,732,0.6252,0.0935,0.2916,0.9777
+ling_n_low_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Haptic_sensorimotor,qwen-3.5-27B,732,0.5957,0.0901,0.2177,0.9452
+ling_n_low_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.5811,0.0806,0.2809,0.9675
+ling_n_low_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Olfactory_sensorimotor,qwen-3.5-27B,732,0.6249,0.0915,0.2762,0.9646
+ling_n_low_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Visual_sensorimotor,qwen-3.5-27B,732,0.4035,0.0869,0.1021,0.8571
+ling_n_low_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.6039,0.0868,0.285,0.9818
+ling_n_low_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.5978,0.0918,0.2714,0.9483
+ling_n_low_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Head_sensorimotor,qwen-3.5-27B,732,0.5386,0.0952,0.204,0.9639
+ling_n_low_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Mouth_sensorimotor,qwen-3.5-27B,732,0.5679,0.0842,0.2652,0.9675
+ling_n_low_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_low_Torso_sensorimotor,qwen-3.5-27B,732,0.616,0.0866,0.285,0.9683
+ling_n_high_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Auditory_sensorimotor,qwen-3.5-27B,732,0.1127,0.0867,0.0,0.7614
+ling_n_high_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Gustatory_sensorimotor,qwen-3.5-27B,732,0.0316,0.0743,0.0,0.8533
+ling_n_high_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Haptic_sensorimotor,qwen-3.5-27B,732,0.0796,0.0812,0.0,0.6494
+ling_n_high_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.1313,0.0973,0.0,0.5922
+ling_n_high_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Olfactory_sensorimotor,qwen-3.5-27B,732,0.03,0.062,0.0,0.6975
+ling_n_high_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Visual_sensorimotor,qwen-3.5-27B,732,0.3732,0.1037,0.0,0.8277
+ling_n_high_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.0933,0.075,0.0,0.7286
+ling_n_high_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.1716,0.1079,0.0,1.0
+ling_n_high_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Head_sensorimotor,qwen-3.5-27B,732,0.2276,0.1196,0.0,0.8744
+ling_n_high_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Mouth_sensorimotor,qwen-3.5-27B,732,0.1754,0.125,0.0,1.0
+ling_n_high_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_high_Torso_sensorimotor,qwen-3.5-27B,732,0.0511,0.0696,0.0,0.7607
+ling_avg_sd_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Auditory_sensorimotor,qwen-3.5-27B,732,0.7307,0.0726,0.3614,0.9331
+ling_avg_sd_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Gustatory_sensorimotor,qwen-3.5-27B,732,0.5821,0.071,0.3779,0.8904
+ling_avg_sd_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Haptic_sensorimotor,qwen-3.5-27B,732,0.5068,0.0963,0.1821,0.9306
+ling_avg_sd_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.5081,0.0958,0.1157,0.8846
+ling_avg_sd_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Olfactory_sensorimotor,qwen-3.5-27B,732,0.5606,0.0844,0.3183,0.9539
+ling_avg_sd_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Visual_sensorimotor,qwen-3.5-27B,732,0.3158,0.0507,0.0667,0.695
+ling_avg_sd_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.6671,0.0452,0.3855,0.8225
+ling_avg_sd_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.6868,0.0462,0.3929,0.829
+ling_avg_sd_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Head_sensorimotor,qwen-3.5-27B,732,0.2086,0.0335,0.0666,0.5788
+ling_avg_sd_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Mouth_sensorimotor,qwen-3.5-27B,732,0.5753,0.0788,0.177,0.871
+ling_avg_sd_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_Torso_sensorimotor,qwen-3.5-27B,732,0.6586,0.0465,0.3821,0.8364
+ling_n_controversial_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Auditory_sensorimotor,qwen-3.5-27B,732,0.4367,0.0898,0.1892,0.7556
+ling_n_controversial_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Gustatory_sensorimotor,qwen-3.5-27B,732,0.1408,0.0795,0.0,0.6988
+ling_n_controversial_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Haptic_sensorimotor,qwen-3.5-27B,732,0.154,0.053,0.0,0.4554
+ling_n_controversial_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.3448,0.1043,0.0,0.8374
+ling_n_controversial_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Olfactory_sensorimotor,qwen-3.5-27B,732,0.1402,0.0796,0.0,1.0
+ling_n_controversial_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Visual_sensorimotor,qwen-3.5-27B,732,0.392,0.0829,0.1313,0.9375
+ling_n_controversial_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.2698,0.0959,0.0465,0.8315
+ling_n_controversial_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.2782,0.0767,0.0743,0.7348
+ling_n_controversial_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Head_sensorimotor,qwen-3.5-27B,732,0.4655,0.0764,0.1815,0.8159
+ling_n_controversial_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Mouth_sensorimotor,qwen-3.5-27B,732,0.2821,0.0897,0.0376,0.8571
+ling_n_controversial_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_Torso_sensorimotor,qwen-3.5-27B,732,0.1838,0.0708,0.0,0.625
+ling_min_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Auditory_sensorimotor,qwen-3.5-27B,732,0.0331,0.0348,0.0,0.5
+ling_min_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Gustatory_sensorimotor,qwen-3.5-27B,732,0.0008,0.0186,0.0,0.5
+ling_min_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Haptic_sensorimotor,qwen-3.5-27B,732,0.002,0.0151,0.0,0.2505
+ling_min_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.0059,0.0294,0.0,0.5
+ling_min_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Olfactory_sensorimotor,qwen-3.5-27B,732,0.0009,0.0139,0.0,0.3086
+ling_min_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Visual_sensorimotor,qwen-3.5-27B,732,0.2063,0.0532,0.0213,0.6197
+ling_min_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.0046,0.0196,0.0,0.2625
+ling_min_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.0476,0.0279,0.0,0.2535
+ling_min_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Head_sensorimotor,qwen-3.5-27B,732,0.2609,0.0422,0.0953,0.6715
+ling_min_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Mouth_sensorimotor,qwen-3.5-27B,732,0.0251,0.0277,0.0,0.5287
+ling_min_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_min_Torso_sensorimotor,qwen-3.5-27B,732,0.0048,0.0238,0.0,0.2333
+ling_max_Auditory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Auditory_sensorimotor,qwen-3.5-27B,732,0.7973,0.1078,0.2143,1.0
+ling_max_Gustatory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Gustatory_sensorimotor,qwen-3.5-27B,732,0.5832,0.1828,0.1329,1.0
+ling_max_Haptic_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Haptic_sensorimotor,qwen-3.5-27B,732,0.8061,0.0935,0.3906,1.0
+ling_max_Interoceptive_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Interoceptive_sensorimotor,qwen-3.5-27B,732,0.7923,0.0836,0.3476,1.0
+ling_max_Olfactory_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Olfactory_sensorimotor,qwen-3.5-27B,732,0.5744,0.1439,0.1269,0.9859
+ling_max_Visual_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Visual_sensorimotor,qwen-3.5-27B,732,0.8841,0.0786,0.3953,1.0
+ling_max_Foot_leg_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Foot_leg_sensorimotor,qwen-3.5-27B,732,0.8305,0.0841,0.459,1.0
+ling_max_Hand_arm_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Hand_arm_sensorimotor,qwen-3.5-27B,732,0.8625,0.0651,0.4249,0.9895
+ling_max_Head_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Head_sensorimotor,qwen-3.5-27B,732,0.8336,0.0885,0.2862,1.0
+ling_max_Mouth_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Mouth_sensorimotor,qwen-3.5-27B,732,0.7709,0.1084,0.1369,1.0
+ling_max_Torso_sensorimotor_qwen-3.5-27B,Linguistic (elfen),ling_max_Torso_sensorimotor,qwen-3.5-27B,732,0.7842,0.0583,0.3183,0.9468
+ling_avg_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_avg_iconicity,qwen-3.5-27B,732,0.3048,0.0649,0.0845,0.8325
+ling_n_low_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_n_low_iconicity,qwen-3.5-27B,732,0.3674,0.0947,0.0727,0.8727
+ling_n_high_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_n_high_iconicity,qwen-3.5-27B,732,0.3704,0.0818,0.1107,0.75
+ling_avg_sd_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_avg_sd_iconicity,qwen-3.5-27B,732,0.6598,0.0537,0.4329,0.9053
+ling_n_controversial_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_n_controversial_iconicity,qwen-3.5-27B,732,0.1676,0.0785,0.0,1.0
+ling_min_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_min_iconicity,qwen-3.5-27B,732,0.029,0.0342,0.0,0.3618
+ling_max_iconicity_qwen-3.5-27B,Linguistic (elfen),ling_max_iconicity,qwen-3.5-27B,732,0.6919,0.0994,0.3235,0.9749
+cplx_additive_connectives_gemma-4-31B,Complexity,cplx_additive_connectives,gemma-4-31B,732,12.3293,5.1417,0.0,29.0
+cplx_adjectives_density_gemma-4-31B,Complexity,cplx_adjectives_density,gemma-4-31B,732,0.0858,0.0235,0.0,0.2414
+cplx_adverbs_density_gemma-4-31B,Complexity,cplx_adverbs_density,gemma-4-31B,732,0.0338,0.0131,0.0,0.1136
+cplx_adversative_connectives_gemma-4-31B,Complexity,cplx_adversative_connectives,gemma-4-31B,732,1.2921,1.0251,0.0,6.5
+cplx_argument_overlap_adjacent_gemma-4-31B,Complexity,cplx_argument_overlap_adjacent,gemma-4-31B,732,0.0885,0.0782,0.0,1.0
+cplx_argument_overlap_all_gemma-4-31B,Complexity,cplx_argument_overlap_all,gemma-4-31B,732,0.197,0.1232,0.0,0.8182
+cplx_average_age_of_acquisition_gemma-4-31B,Complexity,cplx_average_age_of_acquisition,gemma-4-31B,731,5.9157,0.421,4.0533,7.5089
+cplx_average_cefr_level_gemma-4-31B,Complexity,cplx_average_cefr_level,gemma-4-31B,732,1.848,0.2461,-1.0,3.64
+cplx_average_concreteness_gemma-4-31B,Complexity,cplx_average_concreteness,gemma-4-31B,732,2.9145,0.6846,-1.0,4.86
+cplx_average_familiarity_gemma-4-31B,Complexity,cplx_average_familiarity,gemma-4-31B,732,12.4987,0.7177,1.0,14.6154
+cplx_average_imagery_gemma-4-31B,Complexity,cplx_average_imagery,gemma-4-31B,732,1430.5439,215.7069,5.0,2514.027
+cplx_average_meaningfulness_gemma-4-31B,Complexity,cplx_average_meaningfulness,gemma-4-31B,732,455.5948,32.3868,0.0,594.8333
+cplx_average_number_of_clauses_per_sentence_gemma-4-31B,Complexity,cplx_average_number_of_clauses_per_sentence,gemma-4-31B,732,2.3681,0.4907,1.0,7.1667
+cplx_average_number_of_commas_per_sentence_gemma-4-31B,Complexity,cplx_average_number_of_commas_per_sentence,gemma-4-31B,732,0.834,0.3342,0.0,3.0417
+cplx_average_number_of_meaning_per_word_gemma-4-31B,Complexity,cplx_average_number_of_meaning_per_word,gemma-4-31B,732,7.7848,1.2503,3.3333,16.2727
+cplx_average_sentence_length_gemma-4-31B,Complexity,cplx_average_sentence_length,gemma-4-31B,732,16.2872,3.3932,3.0,43.601
+cplx_causal_connectives_gemma-4-31B,Complexity,cplx_causal_connectives,gemma-4-31B,732,2.0729,1.4321,0.0,11.0
+cplx_coca_academic_range_gemma-4-31B,Complexity,cplx_coca_academic_range,gemma-4-31B,732,307830.2794,60288.8012,7483.0,698364.4615
+cplx_coleman_liau_index_gemma-4-31B,Complexity,cplx_coleman_liau_index,gemma-4-31B,732,10.3419,2.6185,-12.06,21.46
+cplx_concept_density_concepts_per_sentence_gemma-4-31B,Complexity,cplx_concept_density_concepts_per_sentence,gemma-4-31B,732,7.9044,2.0145,0.0,20.0
+cplx_conceptual_graph_ontology_number_of_concpets_gemma-4-31B,Complexity,cplx_conceptual_graph_ontology_number_of_concpets,gemma-4-31B,732,172.0873,58.9765,0.0,328.0
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_gemma-4-31B,Complexity,cplx_conceptual_graph_ontology_number_of_distinct_concepts,gemma-4-31B,732,111.757,38.465,0.0,201.0
+cplx_connectives_gemma-4-31B,Complexity,cplx_connectives,gemma-4-31B,732,19.51,7.6494,0.0,40.0
+cplx_content_word_frequency_log_gemma-4-31B,Complexity,cplx_content_word_frequency_log,gemma-4-31B,732,3.5962,0.5575,0.0,6.7577
+cplx_content_word_overlap_adjacent_gemma-4-31B,Complexity,cplx_content_word_overlap_adjacent,gemma-4-31B,732,0.0528,0.0433,0.0,0.4545
+cplx_content_word_overlap_all_gemma-4-31B,Complexity,cplx_content_word_overlap_all,gemma-4-31B,732,0.1415,0.0933,0.0,0.9
+cplx_dale_chall_readability_score_gemma-4-31B,Complexity,cplx_dale_chall_readability_score,gemma-4-31B,732,9.3336,1.0358,5.72,19.58
+cplx_dependency_parser_branching_gemma-4-31B,Complexity,cplx_dependency_parser_branching,gemma-4-31B,732,0.9366,0.0141,0.75,0.9839
+cplx_dependency_parser_dependency_distance_gemma-4-31B,Complexity,cplx_dependency_parser_dependency_distance,gemma-4-31B,732,3.44,0.6544,1.3333,9.7275
+cplx_dependency_parser_tree_depth_gemma-4-31B,Complexity,cplx_dependency_parser_tree_depth,gemma-4-31B,732,3.749,0.66,1.0,7.0
+cplx_dissimilarity_of_words_between_sentences_gemma-4-31B,Complexity,cplx_dissimilarity_of_words_between_sentences,gemma-4-31B,725,0.957,0.0299,0.6746,1.0
+cplx_first_person_pronouns_density_gemma-4-31B,Complexity,cplx_first_person_pronouns_density,gemma-4-31B,732,0.015,0.0178,0.0,0.1111
+cplx_flesch_kincaid_grade_level_gemma-4-31B,Complexity,cplx_flesch_kincaid_grade_level,gemma-4-31B,732,8.7723,2.2829,-2.7,20.3
+cplx_gunning_fog_index_gemma-4-31B,Complexity,cplx_gunning_fog_index,gemma-4-31B,732,11.3975,2.4674,0.4,22.2797
+cplx_knowledge_graph_average_node_pagerank_gemma-4-31B,Complexity,cplx_knowledge_graph_average_node_pagerank,gemma-4-31B,732,0.0171,0.0471,-1.0,0.3333
+cplx_knowledge_graph_number_of_connected_components_gemma-4-31B,Complexity,cplx_knowledge_graph_number_of_connected_components,gemma-4-31B,732,111.7556,38.469,-1.0,201.0
+cplx_linsear_write_formula_gemma-4-31B,Complexity,cplx_linsear_write_formula,gemma-4-31B,732,10.6552,2.8101,0.5,25.3333
+cplx_logical_connectives_gemma-4-31B,Complexity,cplx_logical_connectives,gemma-4-31B,732,15.8664,7.1062,0.0,52.0
+cplx_mattr_gemma-4-31B,Complexity,cplx_mattr,gemma-4-31B,732,0.833,0.0413,0.5192,1.0
+cplx_max_kuperman_age_of_acquisition_gemma-4-31B,Complexity,cplx_max_kuperman_age_of_acquisition,gemma-4-31B,731,14.4234,1.7119,5.25,18.5
+cplx_max_number_of_clauses_per_sentence_gemma-4-31B,Complexity,cplx_max_number_of_clauses_per_sentence,gemma-4-31B,732,5.5949,1.5382,1.0,17.0
+cplx_max_number_of_if_per_sentence_gemma-4-31B,Complexity,cplx_max_number_of_if_per_sentence,gemma-4-31B,732,0.7189,0.4706,0.0,4.0
+cplx_max_number_of_wh_clauses_per_sentence_gemma-4-31B,Complexity,cplx_max_number_of_wh_clauses_per_sentence,gemma-4-31B,732,1.0325,0.497,0.0,3.0
+cplx_mean_word_length_gemma-4-31B,Complexity,cplx_mean_word_length,gemma-4-31B,732,4.703,0.4016,2.3333,6.2941
+cplx_median_kuperman_age_of_acquisition_gemma-4-31B,Complexity,cplx_median_kuperman_age_of_acquisition,gemma-4-31B,731,5.0892,0.4185,3.815,7.44
+cplx_modifiers_per_noun_phrase_gemma-4-31B,Complexity,cplx_modifiers_per_noun_phrase,gemma-4-31B,731,0.616,0.1424,0.0,1.2
+cplx_negations_density_gemma-4-31B,Complexity,cplx_negations_density,gemma-4-31B,732,0.0046,0.0055,0.0,0.0588
+cplx_noun_overlap_adjacent_gemma-4-31B,Complexity,cplx_noun_overlap_adjacent,gemma-4-31B,732,0.0629,0.0615,0.0,1.0
+cplx_nouns_density_gemma-4-31B,Complexity,cplx_nouns_density,gemma-4-31B,732,0.2304,0.0417,0.0,0.3985
+cplx_number_of_connectives_gemma-4-31B,Complexity,cplx_number_of_connectives,gemma-4-31B,732,19.51,7.6494,0.0,40.0
+cplx_number_of_connectives_per_3_sentence_sliding_window_gemma-4-31B,Complexity,cplx_number_of_connectives_per_3_sentence_sliding_window,gemma-4-31B,732,7.2872,2.218,0.0,17.0
+cplx_number_of_wordnet_hypernyms_per_word_gemma-4-31B,Complexity,cplx_number_of_wordnet_hypernyms_per_word,gemma-4-31B,732,4.2535,0.6084,1.4667,9.1111
+cplx_number_of_wordnet_hyponyms_per_word_gemma-4-31B,Complexity,cplx_number_of_wordnet_hyponyms_per_word,gemma-4-31B,732,21.6542,3.8748,0.0,49.5701
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_gemma-4-31B,Complexity,cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words,gemma-4-31B,732,0.0885,0.0782,0.0,1.0
+cplx_passive_constructions_density_gemma-4-31B,Complexity,cplx_passive_constructions_density,gemma-4-31B,731,0.0525,0.0667,0.0,1.0
+cplx_percentage_of_words_above_b1_level_gemma-4-31B,Complexity,cplx_percentage_of_words_above_b1_level,gemma-4-31B,732,12.8399,5.4505,-1.0,100.0
+cplx_percentage_of_words_with_more_than_5_meanings_gemma-4-31B,Complexity,cplx_percentage_of_words_with_more_than_5_meanings,gemma-4-31B,732,50.3845,8.1769,0.0,100.0
+cplx_polysemy_gemma-4-31B,Complexity,cplx_polysemy,gemma-4-31B,732,7.7848,1.2503,3.3333,16.2727
+cplx_pos_dissimilarity_between_sentences_gemma-4-31B,Complexity,cplx_pos_dissimilarity_between_sentences,gemma-4-31B,725,0.3678,0.0577,0.1419,0.5678
+cplx_pronouns_density_gemma-4-31B,Complexity,cplx_pronouns_density,gemma-4-31B,732,0.0783,0.0354,0.0,0.2577
+cplx_reading_time_gemma-4-31B,Complexity,cplx_reading_time,gemma-4-31B,732,23.3653,7.7758,0.12,39.19
+cplx_stem_overlap_sent_gemma-4-31B,Complexity,cplx_stem_overlap_sent,gemma-4-31B,725,0.0841,0.031,0.0,0.3246
+cplx_syllables_per_word_gemma-4-31B,Complexity,cplx_syllables_per_word,gemma-4-31B,732,1.5158,0.1259,1.0,1.9653
+cplx_te_score_gemma-4-31B,Complexity,cplx_te_score,gemma-4-31B,732,0.3265,0.0746,0.0,1.0
+cplx_temporal_cohesions_gemma-4-31B,Complexity,cplx_temporal_cohesions,gemma-4-31B,732,3.4106,1.9697,0.0,14.0
+cplx_temporal_connectives_gemma-4-31B,Complexity,cplx_temporal_connectives,gemma-4-31B,732,3.4106,1.9697,0.0,14.0
+cplx_text_length_gemma-4-31B,Complexity,cplx_text_length,gemma-4-31B,732,18.5286,6.2324,1.0,39.5
+cplx_third_person_pronouns_density_gemma-4-31B,Complexity,cplx_third_person_pronouns_density,gemma-4-31B,732,0.0188,0.015,0.0,0.2474
+cplx_type_token_ratio_gemma-4-31B,Complexity,cplx_type_token_ratio,gemma-4-31B,732,0.6196,0.0795,0.4,1.0
+cplx_verb_aspect_repetition_gemma-4-31B,Complexity,cplx_verb_aspect_repetition,gemma-4-31B,693,0.5158,0.303,-1.0,1.0
+cplx_verb_overlap_adjacent_gemma-4-31B,Complexity,cplx_verb_overlap_adjacent,gemma-4-31B,732,0.0302,0.0454,0.0,0.6
+cplx_verb_tense_repetition_gemma-4-31B,Complexity,cplx_verb_tense_repetition,gemma-4-31B,722,0.4631,0.1398,0.0,1.0
+cplx_verb_tense_repetition_nltk_gemma-4-31B,Complexity,cplx_verb_tense_repetition_nltk,gemma-4-31B,725,0.5116,0.1143,0.0,1.0
+cplx_verb_ttr_gemma-4-31B,Complexity,cplx_verb_ttr,gemma-4-31B,731,0.7911,0.0873,0.4717,1.0
+cplx_verb_ttr_adj_gemma-4-31B,Complexity,cplx_verb_ttr_adj,gemma-4-31B,725,0.9666,0.031,0.6667,1.0
+cplx_verbs_density_gemma-4-31B,Complexity,cplx_verbs_density,gemma-4-31B,732,0.1234,0.026,0.0,0.3333
+cplx_word_concreteness_gemma-4-31B,Complexity,cplx_word_concreteness,gemma-4-31B,732,2.6265,0.1994,-1.0,3.5742
+cplx_word_frequency_log_gemma-4-31B,Complexity,cplx_word_frequency_log,gemma-4-31B,732,6.5442,0.5863,0.0,9.2739
+cplx_additive_connectives_gpt-5.5,Complexity,cplx_additive_connectives,gpt-5.5,728,7.8017,5.3919,0.0,30.0
+cplx_adjectives_density_gpt-5.5,Complexity,cplx_adjectives_density,gpt-5.5,727,0.0961,0.0396,0.0,0.3878
+cplx_adverbs_density_gpt-5.5,Complexity,cplx_adverbs_density,gpt-5.5,727,0.04,0.0276,0.0,0.4167
+cplx_adversative_connectives_gpt-5.5,Complexity,cplx_adversative_connectives,gpt-5.5,728,0.735,0.8426,0.0,6.0
+cplx_argument_overlap_adjacent_gpt-5.5,Complexity,cplx_argument_overlap_adjacent,gpt-5.5,728,0.1319,0.0962,0.0,0.75
+cplx_argument_overlap_all_gpt-5.5,Complexity,cplx_argument_overlap_all,gpt-5.5,728,0.1438,0.1014,0.0,1.0
+cplx_average_age_of_acquisition_gpt-5.5,Complexity,cplx_average_age_of_acquisition,gpt-5.5,727,5.9529,0.5523,4.286,8.3424
+cplx_average_cefr_level_gpt-5.5,Complexity,cplx_average_cefr_level,gpt-5.5,728,1.8856,0.294,-1.0,4.0
+cplx_average_concreteness_gpt-5.5,Complexity,cplx_average_concreteness,gpt-5.5,728,2.7944,0.7863,-1.0,4.86
+cplx_average_familiarity_gpt-5.5,Complexity,cplx_average_familiarity,gpt-5.5,727,12.3384,0.8439,5.5,15.0
+cplx_average_imagery_gpt-5.5,Complexity,cplx_average_imagery,gpt-5.5,727,1162.6159,334.1271,4.5,2759.3654
+cplx_average_meaningfulness_gpt-5.5,Complexity,cplx_average_meaningfulness,gpt-5.5,727,447.9697,38.7421,249.4583,598.5833
+cplx_average_number_of_clauses_per_sentence_gpt-5.5,Complexity,cplx_average_number_of_clauses_per_sentence,gpt-5.5,728,2.6279,1.2229,1.0,17.0
+cplx_average_number_of_commas_per_sentence_gpt-5.5,Complexity,cplx_average_number_of_commas_per_sentence,gpt-5.5,728,1.664,1.9431,0.0,44.0
+cplx_average_number_of_meaning_per_word_gpt-5.5,Complexity,cplx_average_number_of_meaning_per_word,gpt-5.5,727,7.6466,1.4175,3.5,14.7619
+cplx_average_sentence_length_gpt-5.5,Complexity,cplx_average_sentence_length,gpt-5.5,728,19.1081,13.8973,2.0,317.0
+cplx_causal_connectives_gpt-5.5,Complexity,cplx_causal_connectives,gpt-5.5,728,1.2911,1.1778,0.0,7.0
+cplx_coca_academic_range_gpt-5.5,Complexity,cplx_coca_academic_range,gpt-5.5,728,251378.2881,72530.0287,5726.5,614349.1786
+cplx_coleman_liau_index_gpt-5.5,Complexity,cplx_coleman_liau_index,gpt-5.5,728,11.3234,3.6441,-13.21,24.86
+cplx_concept_density_concepts_per_sentence_gpt-5.5,Complexity,cplx_concept_density_concepts_per_sentence,gpt-5.5,728,10.4265,7.6192,0.5,148.0
+cplx_conceptual_graph_ontology_number_of_concpets_gpt-5.5,Complexity,cplx_conceptual_graph_ontology_number_of_concpets,gpt-5.5,728,97.1107,58.8681,1.0,294.0
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_gpt-5.5,Complexity,cplx_conceptual_graph_ontology_number_of_distinct_concepts,gpt-5.5,728,62.2455,35.4731,1.0,184.0
+cplx_connectives_gpt-5.5,Complexity,cplx_connectives,gpt-5.5,728,11.8748,7.503,0.0,43.0
+cplx_content_word_frequency_log_gpt-5.5,Complexity,cplx_content_word_frequency_log,gpt-5.5,727,3.5994,0.7224,0.0,7.8989
+cplx_content_word_overlap_adjacent_gpt-5.5,Complexity,cplx_content_word_overlap_adjacent,gpt-5.5,728,0.0901,0.0776,0.0,0.5
+cplx_content_word_overlap_all_gpt-5.5,Complexity,cplx_content_word_overlap_all,gpt-5.5,728,0.1129,0.0932,0.0,0.8
+cplx_dale_chall_readability_score_gpt-5.5,Complexity,cplx_dale_chall_readability_score,gpt-5.5,728,10.2486,1.6164,5.4367,24.39
+cplx_dependency_parser_branching_gpt-5.5,Complexity,cplx_dependency_parser_branching,gpt-5.5,728,0.9509,0.0218,0.7328,0.9983
+cplx_dependency_parser_dependency_distance_gpt-5.5,Complexity,cplx_dependency_parser_dependency_distance,gpt-5.5,728,4.1566,1.7452,1.3333,23.1872
+cplx_dependency_parser_tree_depth_gpt-5.5,Complexity,cplx_dependency_parser_tree_depth,gpt-5.5,728,4.6941,1.2365,1.0,13.0
+cplx_dissimilarity_of_words_between_sentences_gpt-5.5,Complexity,cplx_dissimilarity_of_words_between_sentences,gpt-5.5,693,0.94,0.0489,0.5,1.0
+cplx_first_person_pronouns_density_gpt-5.5,Complexity,cplx_first_person_pronouns_density,gpt-5.5,727,0.0185,0.0242,0.0,0.1594
+cplx_flesch_kincaid_grade_level_gpt-5.5,Complexity,cplx_flesch_kincaid_grade_level,gpt-5.5,728,10.114,6.0049,-3.1,125.7
+cplx_gunning_fog_index_gpt-5.5,Complexity,cplx_gunning_fog_index,gpt-5.5,728,12.4785,6.0351,-1.0,126.3169
+cplx_knowledge_graph_average_node_pagerank_gpt-5.5,Complexity,cplx_knowledge_graph_average_node_pagerank,gpt-5.5,728,0.048,0.0771,0.0054,1.0
+cplx_knowledge_graph_number_of_connected_components_gpt-5.5,Complexity,cplx_knowledge_graph_number_of_connected_components,gpt-5.5,728,62.2455,35.4731,1.0,184.0
+cplx_linsear_write_formula_gpt-5.5,Complexity,cplx_linsear_write_formula,gpt-5.5,728,12.0498,6.1383,0.5,73.5
+cplx_logical_connectives_gpt-5.5,Complexity,cplx_logical_connectives,gpt-5.5,728,8.6599,5.7474,0.0,39.0
+cplx_mattr_gpt-5.5,Complexity,cplx_mattr,gpt-5.5,728,0.8545,0.0568,0.4444,1.0
+cplx_max_kuperman_age_of_acquisition_gpt-5.5,Complexity,cplx_max_kuperman_age_of_acquisition,gpt-5.5,727,12.898,1.9291,5.25,18.33
+cplx_max_number_of_clauses_per_sentence_gpt-5.5,Complexity,cplx_max_number_of_clauses_per_sentence,gpt-5.5,728,4.9443,2.2613,1.0,30.0
+cplx_max_number_of_if_per_sentence_gpt-5.5,Complexity,cplx_max_number_of_if_per_sentence,gpt-5.5,728,0.5826,0.4999,0.0,3.5
+cplx_max_number_of_wh_clauses_per_sentence_gpt-5.5,Complexity,cplx_max_number_of_wh_clauses_per_sentence,gpt-5.5,728,0.6395,0.5561,0.0,4.0
+cplx_mean_word_length_gpt-5.5,Complexity,cplx_mean_word_length,gpt-5.5,728,4.8236,0.5853,2.3333,6.4994
+cplx_median_kuperman_age_of_acquisition_gpt-5.5,Complexity,cplx_median_kuperman_age_of_acquisition,gpt-5.5,727,5.2856,0.588,3.94,7.67
+cplx_modifiers_per_noun_phrase_gpt-5.5,Complexity,cplx_modifiers_per_noun_phrase,gpt-5.5,726,0.4603,0.1942,0.0,2.0
+cplx_negations_density_gpt-5.5,Complexity,cplx_negations_density,gpt-5.5,727,0.0046,0.0064,0.0,0.0547
+cplx_noun_overlap_adjacent_gpt-5.5,Complexity,cplx_noun_overlap_adjacent,gpt-5.5,728,0.1061,0.0952,0.0,1.0
+cplx_nouns_density_gpt-5.5,Complexity,cplx_nouns_density,gpt-5.5,727,0.2804,0.0782,0.0,1.0
+cplx_number_of_connectives_gpt-5.5,Complexity,cplx_number_of_connectives,gpt-5.5,728,11.8748,7.503,0.0,43.0
+cplx_number_of_connectives_per_3_sentence_sliding_window_gpt-5.5,Complexity,cplx_number_of_connectives_per_3_sentence_sliding_window,gpt-5.5,728,6.3521,3.4883,0.0,30.0
+cplx_number_of_wordnet_hypernyms_per_word_gpt-5.5,Complexity,cplx_number_of_wordnet_hypernyms_per_word,gpt-5.5,727,4.3752,0.8474,1.8065,10.1154
+cplx_number_of_wordnet_hyponyms_per_word_gpt-5.5,Complexity,cplx_number_of_wordnet_hyponyms_per_word,gpt-5.5,727,20.4442,5.8968,2.2857,63.4167
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_gpt-5.5,Complexity,cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words,gpt-5.5,728,0.1319,0.0962,0.0,0.75
+cplx_passive_constructions_density_gpt-5.5,Complexity,cplx_passive_constructions_density,gpt-5.5,723,0.0434,0.0639,0.0,0.5385
+cplx_percentage_of_words_above_b1_level_gpt-5.5,Complexity,cplx_percentage_of_words_above_b1_level,gpt-5.5,727,13.0784,5.9891,0.0,50.0
+cplx_percentage_of_words_with_more_than_5_meanings_gpt-5.5,Complexity,cplx_percentage_of_words_with_more_than_5_meanings,gpt-5.5,727,50.9437,10.3461,0.0,100.0
+cplx_polysemy_gpt-5.5,Complexity,cplx_polysemy,gpt-5.5,727,7.6466,1.4175,3.5,14.7619
+cplx_pos_dissimilarity_between_sentences_gpt-5.5,Complexity,cplx_pos_dissimilarity_between_sentences,gpt-5.5,695,0.3296,0.088,0.1054,0.7354
+cplx_pronouns_density_gpt-5.5,Complexity,cplx_pronouns_density,gpt-5.5,727,0.0767,0.0532,0.0,0.4286
+cplx_reading_time_gpt-5.5,Complexity,cplx_reading_time,gpt-5.5,728,12.4362,7.4016,0.12,40.59
+cplx_stem_overlap_sent_gpt-5.5,Complexity,cplx_stem_overlap_sent,gpt-5.5,692,0.0827,0.039,0.0,0.3125
+cplx_syllables_per_word_gpt-5.5,Complexity,cplx_syllables_per_word,gpt-5.5,727,1.5266,0.1672,1.0,2.2
+cplx_te_score_gpt-5.5,Complexity,cplx_te_score,gpt-5.5,728,0.3541,0.1066,-1.0,1.0
+cplx_temporal_cohesions_gpt-5.5,Complexity,cplx_temporal_cohesions,gpt-5.5,728,1.8531,1.7357,0.0,13.0
+cplx_temporal_connectives_gpt-5.5,Complexity,cplx_temporal_connectives,gpt-5.5,728,1.8531,1.7357,0.0,13.0
+cplx_text_length_gpt-5.5,Complexity,cplx_text_length,gpt-5.5,728,9.5104,6.4434,1.0,37.0
+cplx_third_person_pronouns_density_gpt-5.5,Complexity,cplx_third_person_pronouns_density,gpt-5.5,727,0.0178,0.0229,0.0,0.4286
+cplx_type_token_ratio_gpt-5.5,Complexity,cplx_type_token_ratio,gpt-5.5,728,0.7355,0.099,0.3838,1.0
+cplx_verb_aspect_repetition_gpt-5.5,Complexity,cplx_verb_aspect_repetition,gpt-5.5,630,0.2872,0.5347,-1.0,1.0
+cplx_verb_overlap_adjacent_gpt-5.5,Complexity,cplx_verb_overlap_adjacent,gpt-5.5,728,0.0465,0.0665,0.0,0.5
+cplx_verb_tense_repetition_gpt-5.5,Complexity,cplx_verb_tense_repetition,gpt-5.5,680,0.5276,0.1968,0.0,1.0
+cplx_verb_tense_repetition_nltk_gpt-5.5,Complexity,cplx_verb_tense_repetition_nltk,gpt-5.5,687,0.544,0.1647,0.0,1.0
+cplx_verb_ttr_gpt-5.5,Complexity,cplx_verb_ttr,gpt-5.5,723,0.8483,0.0961,0.5172,1.0
+cplx_verb_ttr_adj_gpt-5.5,Complexity,cplx_verb_ttr_adj,gpt-5.5,693,0.9579,0.0504,0.6574,1.0
+cplx_verbs_density_gpt-5.5,Complexity,cplx_verbs_density,gpt-5.5,727,0.131,0.0386,0.0,0.2923
+cplx_word_concreteness_gpt-5.5,Complexity,cplx_word_concreteness,gpt-5.5,728,2.7216,0.2803,-1.0,4.5
+cplx_word_frequency_log_gpt-5.5,Complexity,cplx_word_frequency_log,gpt-5.5,727,5.9923,0.7274,2.0739,8.7944
+cplx_additive_connectives_llama-3.3-70B,Complexity,cplx_additive_connectives,llama-3.3-70B,732,16.984,8.7398,0.0,47.0
+cplx_adjectives_density_llama-3.3-70B,Complexity,cplx_adjectives_density,llama-3.3-70B,732,0.0905,0.025,0.0,0.1875
+cplx_adverbs_density_llama-3.3-70B,Complexity,cplx_adverbs_density,llama-3.3-70B,732,0.0265,0.0155,0.0,0.2
+cplx_adversative_connectives_llama-3.3-70B,Complexity,cplx_adversative_connectives,llama-3.3-70B,732,0.784,0.8399,0.0,7.0
+cplx_argument_overlap_adjacent_llama-3.3-70B,Complexity,cplx_argument_overlap_adjacent,llama-3.3-70B,732,0.1757,0.1005,0.0,1.0
+cplx_argument_overlap_all_llama-3.3-70B,Complexity,cplx_argument_overlap_all,llama-3.3-70B,732,0.1703,0.1074,0.0,0.75
+cplx_average_age_of_acquisition_llama-3.3-70B,Complexity,cplx_average_age_of_acquisition,llama-3.3-70B,731,6.019,0.53,4.0533,8.7601
+cplx_average_cefr_level_llama-3.3-70B,Complexity,cplx_average_cefr_level,llama-3.3-70B,732,1.8394,0.3009,-1.0,3.64
+cplx_average_concreteness_llama-3.3-70B,Complexity,cplx_average_concreteness,llama-3.3-70B,732,2.9151,0.5397,-1.0,4.86
+cplx_average_familiarity_llama-3.3-70B,Complexity,cplx_average_familiarity,llama-3.3-70B,732,12.4904,0.834,1.0,14.7619
+cplx_average_imagery_llama-3.3-70B,Complexity,cplx_average_imagery,llama-3.3-70B,732,1410.2221,251.5794,5.0,2528.9407
+cplx_average_meaningfulness_llama-3.3-70B,Complexity,cplx_average_meaningfulness,llama-3.3-70B,732,453.5197,38.0983,0.0,594.8333
+cplx_average_number_of_clauses_per_sentence_llama-3.3-70B,Complexity,cplx_average_number_of_clauses_per_sentence,llama-3.3-70B,732,2.5401,0.9487,1.0,14.2308
+cplx_average_number_of_commas_per_sentence_llama-3.3-70B,Complexity,cplx_average_number_of_commas_per_sentence,llama-3.3-70B,732,1.2199,0.6226,0.0,6.5769
+cplx_average_number_of_meaning_per_word_llama-3.3-70B,Complexity,cplx_average_number_of_meaning_per_word,llama-3.3-70B,732,7.5373,1.3086,3.1965,18.0
+cplx_average_sentence_length_llama-3.3-70B,Complexity,cplx_average_sentence_length,llama-3.3-70B,732,18.8165,7.5711,3.0,146.0
+cplx_causal_connectives_llama-3.3-70B,Complexity,cplx_causal_connectives,llama-3.3-70B,732,1.7272,1.554,0.0,11.0
+cplx_coca_academic_range_llama-3.3-70B,Complexity,cplx_coca_academic_range,llama-3.3-70B,732,379141.6871,68698.1785,7483.0,694196.3019
+cplx_coleman_liau_index_llama-3.3-70B,Complexity,cplx_coleman_liau_index,llama-3.3-70B,732,11.0978,2.9239,-12.06,19.61
+cplx_concept_density_concepts_per_sentence_llama-3.3-70B,Complexity,cplx_concept_density_concepts_per_sentence,llama-3.3-70B,732,7.8753,3.219,0.0,59.3077
+cplx_conceptual_graph_ontology_number_of_concpets_llama-3.3-70B,Complexity,cplx_conceptual_graph_ontology_number_of_concpets,llama-3.3-70B,732,160.9717,71.1388,0.0,312.0
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_llama-3.3-70B,Complexity,cplx_conceptual_graph_ontology_number_of_distinct_concepts,llama-3.3-70B,732,88.2371,36.9698,0.0,204.0
+cplx_connectives_llama-3.3-70B,Complexity,cplx_connectives,llama-3.3-70B,732,23.2367,11.3293,0.0,55.0
+cplx_content_word_frequency_log_llama-3.3-70B,Complexity,cplx_content_word_frequency_log,llama-3.3-70B,732,3.5025,0.6729,0.0,7.5058
+cplx_content_word_overlap_adjacent_llama-3.3-70B,Complexity,cplx_content_word_overlap_adjacent,llama-3.3-70B,732,0.1248,0.0797,0.0,1.0
+cplx_content_word_overlap_all_llama-3.3-70B,Complexity,cplx_content_word_overlap_all,llama-3.3-70B,732,0.1368,0.0897,0.0,0.7143
+cplx_dale_chall_readability_score_llama-3.3-70B,Complexity,cplx_dale_chall_readability_score,llama-3.3-70B,732,8.8686,1.0524,1.78,19.58
+cplx_dependency_parser_branching_llama-3.3-70B,Complexity,cplx_dependency_parser_branching,llama-3.3-70B,732,0.9482,0.0151,0.75,0.9762
+cplx_dependency_parser_dependency_distance_llama-3.3-70B,Complexity,cplx_dependency_parser_dependency_distance,llama-3.3-70B,732,3.2428,0.4814,1.3333,7.8532
+cplx_dependency_parser_tree_depth_llama-3.3-70B,Complexity,cplx_dependency_parser_tree_depth,llama-3.3-70B,732,4.8669,0.7984,1.0,7.7
+cplx_dissimilarity_of_words_between_sentences_llama-3.3-70B,Complexity,cplx_dissimilarity_of_words_between_sentences,llama-3.3-70B,726,0.9202,0.0496,0.6325,1.0
+cplx_first_person_pronouns_density_llama-3.3-70B,Complexity,cplx_first_person_pronouns_density,llama-3.3-70B,732,0.017,0.0228,0.0,0.1471
+cplx_flesch_kincaid_grade_level_llama-3.3-70B,Complexity,cplx_flesch_kincaid_grade_level,llama-3.3-70B,732,10.2137,3.5744,-2.7,58.45
+cplx_gunning_fog_index_llama-3.3-70B,Complexity,cplx_gunning_fog_index,llama-3.3-70B,732,13.1931,3.7251,0.4,59.7055
+cplx_knowledge_graph_average_node_pagerank_llama-3.3-70B,Complexity,cplx_knowledge_graph_average_node_pagerank,llama-3.3-70B,732,0.0223,0.053,-1.0,0.5
+cplx_knowledge_graph_number_of_connected_components_llama-3.3-70B,Complexity,cplx_knowledge_graph_number_of_connected_components,llama-3.3-70B,732,88.2353,36.9735,-1.0,204.0
+cplx_linsear_write_formula_llama-3.3-70B,Complexity,cplx_linsear_write_formula,llama-3.3-70B,732,10.9301,3.6297,0.5,34.0833
+cplx_logical_connectives_llama-3.3-70B,Complexity,cplx_logical_connectives,llama-3.3-70B,732,12.4051,6.6519,0.0,44.0
+cplx_mattr_llama-3.3-70B,Complexity,cplx_mattr,llama-3.3-70B,732,0.7918,0.0443,0.5717,1.0
+cplx_max_kuperman_age_of_acquisition_llama-3.3-70B,Complexity,cplx_max_kuperman_age_of_acquisition,llama-3.3-70B,731,13.8174,1.7708,5.25,18.5
+cplx_max_number_of_clauses_per_sentence_llama-3.3-70B,Complexity,cplx_max_number_of_clauses_per_sentence,llama-3.3-70B,732,5.8275,2.3814,1.0,30.5
+cplx_max_number_of_if_per_sentence_llama-3.3-70B,Complexity,cplx_max_number_of_if_per_sentence,llama-3.3-70B,732,0.44,0.4133,0.0,3.0
+cplx_max_number_of_wh_clauses_per_sentence_llama-3.3-70B,Complexity,cplx_max_number_of_wh_clauses_per_sentence,llama-3.3-70B,732,0.7808,0.4708,0.0,3.0
+cplx_mean_word_length_llama-3.3-70B,Complexity,cplx_mean_word_length,llama-3.3-70B,732,4.87,0.4845,2.3333,6.4574
+cplx_median_kuperman_age_of_acquisition_llama-3.3-70B,Complexity,cplx_median_kuperman_age_of_acquisition,llama-3.3-70B,731,5.3007,0.583,3.815,8.53
+cplx_modifiers_per_noun_phrase_llama-3.3-70B,Complexity,cplx_modifiers_per_noun_phrase,llama-3.3-70B,730,0.5506,0.1641,0.0,1.2183
+cplx_negations_density_llama-3.3-70B,Complexity,cplx_negations_density,llama-3.3-70B,732,0.0035,0.013,0.0,0.3343
+cplx_noun_overlap_adjacent_llama-3.3-70B,Complexity,cplx_noun_overlap_adjacent,llama-3.3-70B,732,0.151,0.1076,0.0,1.0
+cplx_nouns_density_llama-3.3-70B,Complexity,cplx_nouns_density,llama-3.3-70B,732,0.2661,0.0607,0.0,0.5
+cplx_number_of_connectives_llama-3.3-70B,Complexity,cplx_number_of_connectives,llama-3.3-70B,732,23.2367,11.3293,0.0,55.0
+cplx_number_of_connectives_per_3_sentence_sliding_window_llama-3.3-70B,Complexity,cplx_number_of_connectives_per_3_sentence_sliding_window,llama-3.3-70B,732,7.6751,2.8492,0.0,26.0
+cplx_number_of_wordnet_hypernyms_per_word_llama-3.3-70B,Complexity,cplx_number_of_wordnet_hypernyms_per_word,llama-3.3-70B,732,4.2236,0.6006,2.3326,7.381
+cplx_number_of_wordnet_hyponyms_per_word_llama-3.3-70B,Complexity,cplx_number_of_wordnet_hyponyms_per_word,llama-3.3-70B,732,20.8885,4.0427,0.0,39.7619
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_llama-3.3-70B,Complexity,cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words,llama-3.3-70B,732,0.1757,0.1005,0.0,1.0
+cplx_passive_constructions_density_llama-3.3-70B,Complexity,cplx_passive_constructions_density,llama-3.3-70B,731,0.0587,0.0669,0.0,1.0
+cplx_percentage_of_words_above_b1_level_llama-3.3-70B,Complexity,cplx_percentage_of_words_above_b1_level,llama-3.3-70B,732,12.6026,5.7436,-1.0,100.0
+cplx_percentage_of_words_with_more_than_5_meanings_llama-3.3-70B,Complexity,cplx_percentage_of_words_with_more_than_5_meanings,llama-3.3-70B,732,49.4412,8.9671,0.0,100.0
+cplx_polysemy_llama-3.3-70B,Complexity,cplx_polysemy,llama-3.3-70B,732,7.5373,1.3086,3.1965,18.0
+cplx_pos_dissimilarity_between_sentences_llama-3.3-70B,Complexity,cplx_pos_dissimilarity_between_sentences,llama-3.3-70B,727,0.4017,0.1062,0.1559,0.6776
+cplx_pronouns_density_llama-3.3-70B,Complexity,cplx_pronouns_density,llama-3.3-70B,732,0.0741,0.044,0.0,0.2632
+cplx_reading_time_llama-3.3-70B,Complexity,cplx_reading_time,llama-3.3-70B,732,22.4834,9.5239,0.12,41.91
+cplx_stem_overlap_sent_llama-3.3-70B,Complexity,cplx_stem_overlap_sent,llama-3.3-70B,727,0.1138,0.042,0.0,0.386
+cplx_syllables_per_word_llama-3.3-70B,Complexity,cplx_syllables_per_word,llama-3.3-70B,732,1.5746,0.1544,1.0,2.0801
+cplx_te_score_llama-3.3-70B,Complexity,cplx_te_score,llama-3.3-70B,732,0.3393,0.0871,0.0,1.0
+cplx_temporal_cohesions_llama-3.3-70B,Complexity,cplx_temporal_cohesions,llama-3.3-70B,732,3.3473,2.3298,0.0,13.5
+cplx_temporal_connectives_llama-3.3-70B,Complexity,cplx_temporal_connectives,llama-3.3-70B,732,3.3473,2.3298,0.0,13.5
+cplx_text_length_llama-3.3-70B,Complexity,cplx_text_length,llama-3.3-70B,732,15.9953,6.8552,1.0,40.0
+cplx_third_person_pronouns_density_llama-3.3-70B,Complexity,cplx_third_person_pronouns_density,llama-3.3-70B,732,0.0148,0.0126,0.0,0.16
+cplx_type_token_ratio_llama-3.3-70B,Complexity,cplx_type_token_ratio,llama-3.3-70B,732,0.5595,0.0981,0.3415,1.0
+cplx_verb_aspect_repetition_llama-3.3-70B,Complexity,cplx_verb_aspect_repetition,llama-3.3-70B,661,0.5252,0.3095,-1.0,1.0
+cplx_verb_overlap_adjacent_llama-3.3-70B,Complexity,cplx_verb_overlap_adjacent,llama-3.3-70B,732,0.0716,0.0705,0.0,1.0
+cplx_verb_tense_repetition_llama-3.3-70B,Complexity,cplx_verb_tense_repetition,llama-3.3-70B,720,0.5473,0.1669,0.0,1.0
+cplx_verb_tense_repetition_nltk_llama-3.3-70B,Complexity,cplx_verb_tense_repetition_nltk,llama-3.3-70B,726,0.5324,0.1405,0.0,1.0
+cplx_verb_ttr_llama-3.3-70B,Complexity,cplx_verb_ttr,llama-3.3-70B,731,0.7037,0.1177,0.3333,1.0
+cplx_verb_ttr_adj_llama-3.3-70B,Complexity,cplx_verb_ttr_adj,llama-3.3-70B,727,0.9534,0.0465,0.6135,1.0
+cplx_verbs_density_llama-3.3-70B,Complexity,cplx_verbs_density,llama-3.3-70B,732,0.1329,0.0328,0.0,0.2969
+cplx_word_concreteness_llama-3.3-70B,Complexity,cplx_word_concreteness,llama-3.3-70B,732,2.598,0.2154,-1.0,3.7071
+cplx_word_frequency_log_llama-3.3-70B,Complexity,cplx_word_frequency_log,llama-3.3-70B,732,6.4414,0.7029,0.0,9.2739
+cplx_additive_connectives_qwen-3.5-27B,Complexity,cplx_additive_connectives,qwen-3.5-27B,732,12.6309,5.7191,0.0,29.0
+cplx_adjectives_density_qwen-3.5-27B,Complexity,cplx_adjectives_density,qwen-3.5-27B,732,0.0949,0.0241,0.0,0.2439
+cplx_adverbs_density_qwen-3.5-27B,Complexity,cplx_adverbs_density,qwen-3.5-27B,732,0.037,0.0147,0.0,0.1096
+cplx_adversative_connectives_qwen-3.5-27B,Complexity,cplx_adversative_connectives,qwen-3.5-27B,732,1.2742,0.9749,0.0,5.0
+cplx_argument_overlap_adjacent_qwen-3.5-27B,Complexity,cplx_argument_overlap_adjacent,qwen-3.5-27B,732,0.0956,0.0709,0.0,1.0
+cplx_argument_overlap_all_qwen-3.5-27B,Complexity,cplx_argument_overlap_all,qwen-3.5-27B,732,0.2377,0.1243,0.0,0.8
+cplx_average_age_of_acquisition_qwen-3.5-27B,Complexity,cplx_average_age_of_acquisition,qwen-3.5-27B,732,6.0917,0.4628,4.3392,7.5559
+cplx_average_cefr_level_qwen-3.5-27B,Complexity,cplx_average_cefr_level,qwen-3.5-27B,732,1.8922,0.249,-1.0,2.5668
+cplx_average_concreteness_qwen-3.5-27B,Complexity,cplx_average_concreteness,qwen-3.5-27B,732,2.8734,0.6269,-1.0,4.2167
+cplx_average_familiarity_qwen-3.5-27B,Complexity,cplx_average_familiarity,qwen-3.5-27B,732,12.3634,0.6089,7.4985,14.375
+cplx_average_imagery_qwen-3.5-27B,Complexity,cplx_average_imagery,qwen-3.5-27B,732,1327.6318,212.3108,612.1126,2292.1429
+cplx_average_meaningfulness_qwen-3.5-27B,Complexity,cplx_average_meaningfulness,qwen-3.5-27B,732,443.5431,29.5079,270.9005,527.5417
+cplx_average_number_of_clauses_per_sentence_qwen-3.5-27B,Complexity,cplx_average_number_of_clauses_per_sentence,qwen-3.5-27B,732,2.4088,0.6638,1.0714,12.0
+cplx_average_number_of_commas_per_sentence_qwen-3.5-27B,Complexity,cplx_average_number_of_commas_per_sentence,qwen-3.5-27B,732,1.0564,0.4286,0.0,6.45
+cplx_average_number_of_meaning_per_word_qwen-3.5-27B,Complexity,cplx_average_number_of_meaning_per_word,qwen-3.5-27B,732,7.6721,1.2002,3.754,16.0952
+cplx_average_sentence_length_qwen-3.5-27B,Complexity,cplx_average_sentence_length,qwen-3.5-27B,732,16.4742,4.3085,5.25,65.0
+cplx_causal_connectives_qwen-3.5-27B,Complexity,cplx_causal_connectives,qwen-3.5-27B,732,1.8727,1.4772,0.0,11.0
+cplx_coca_academic_range_qwen-3.5-27B,Complexity,cplx_coca_academic_range,qwen-3.5-27B,732,293914.0299,57475.8465,98078.1978,547897.7963
+cplx_coleman_liau_index_qwen-3.5-27B,Complexity,cplx_coleman_liau_index,qwen-3.5-27B,732,11.237,2.477,1.87,20.72
+cplx_concept_density_concepts_per_sentence_qwen-3.5-27B,Complexity,cplx_concept_density_concepts_per_sentence,qwen-3.5-27B,732,8.5951,2.6099,1.7857,41.5
+cplx_conceptual_graph_ontology_number_of_concpets_qwen-3.5-27B,Complexity,cplx_conceptual_graph_ontology_number_of_concpets,qwen-3.5-27B,732,168.1124,64.1253,7.0,298.0
+cplx_conceptual_graph_ontology_number_of_distinct_concepts_qwen-3.5-27B,Complexity,cplx_conceptual_graph_ontology_number_of_distinct_concepts,qwen-3.5-27B,732,107.1207,39.8845,7.0,191.75
+cplx_connectives_qwen-3.5-27B,Complexity,cplx_connectives,qwen-3.5-27B,732,19.2657,8.4712,0.0,45.0
+cplx_content_word_frequency_log_qwen-3.5-27B,Complexity,cplx_content_word_frequency_log,qwen-3.5-27B,732,3.5334,0.559,1.7222,6.6536
+cplx_content_word_overlap_adjacent_qwen-3.5-27B,Complexity,cplx_content_word_overlap_adjacent,qwen-3.5-27B,732,0.0567,0.051,0.0,1.0
+cplx_content_word_overlap_all_qwen-3.5-27B,Complexity,cplx_content_word_overlap_all,qwen-3.5-27B,732,0.1805,0.1027,0.0,0.7143
+cplx_dale_chall_readability_score_qwen-3.5-27B,Complexity,cplx_dale_chall_readability_score,qwen-3.5-27B,732,9.6479,1.0556,5.4,15.24
+cplx_dependency_parser_branching_qwen-3.5-27B,Complexity,cplx_dependency_parser_branching,qwen-3.5-27B,732,0.9418,0.0127,0.8571,0.9804
+cplx_dependency_parser_dependency_distance_qwen-3.5-27B,Complexity,cplx_dependency_parser_dependency_distance,qwen-3.5-27B,732,3.5493,0.6508,2.2083,10.0729
+cplx_dependency_parser_tree_depth_qwen-3.5-27B,Complexity,cplx_dependency_parser_tree_depth,qwen-3.5-27B,732,4.0148,0.7159,2.1667,7.75
+cplx_dissimilarity_of_words_between_sentences_qwen-3.5-27B,Complexity,cplx_dissimilarity_of_words_between_sentences,qwen-3.5-27B,731,0.9568,0.0321,0.6667,1.0
+cplx_first_person_pronouns_density_qwen-3.5-27B,Complexity,cplx_first_person_pronouns_density,qwen-3.5-27B,732,0.0146,0.0178,0.0,0.125
+cplx_flesch_kincaid_grade_level_qwen-3.5-27B,Complexity,cplx_flesch_kincaid_grade_level,qwen-3.5-27B,732,9.4049,2.5416,0.5,31.0
+cplx_gunning_fog_index_qwen-3.5-27B,Complexity,cplx_gunning_fog_index,qwen-3.5-27B,732,12.188,2.75,2.9333,32.9591
+cplx_knowledge_graph_average_node_pagerank_qwen-3.5-27B,Complexity,cplx_knowledge_graph_average_node_pagerank,qwen-3.5-27B,732,0.0152,0.0142,0.0052,0.1429
+cplx_knowledge_graph_number_of_connected_components_qwen-3.5-27B,Complexity,cplx_knowledge_graph_number_of_connected_components,qwen-3.5-27B,732,107.1207,39.8845,7.0,191.75
+cplx_linsear_write_formula_qwen-3.5-27B,Complexity,cplx_linsear_write_formula,qwen-3.5-27B,732,11.4023,4.2233,2.125,70.0
+cplx_logical_connectives_qwen-3.5-27B,Complexity,cplx_logical_connectives,qwen-3.5-27B,732,14.7467,7.2176,0.0,42.0
+cplx_mattr_qwen-3.5-27B,Complexity,cplx_mattr,qwen-3.5-27B,732,0.841,0.0449,0.5953,1.0
+cplx_max_kuperman_age_of_acquisition_qwen-3.5-27B,Complexity,cplx_max_kuperman_age_of_acquisition,qwen-3.5-27B,732,14.2956,1.5881,6.95,18.33
+cplx_max_number_of_clauses_per_sentence_qwen-3.5-27B,Complexity,cplx_max_number_of_clauses_per_sentence,qwen-3.5-27B,732,5.5397,1.8577,2.0,23.5
+cplx_max_number_of_if_per_sentence_qwen-3.5-27B,Complexity,cplx_max_number_of_if_per_sentence,qwen-3.5-27B,732,0.6185,0.4532,0.0,3.0
+cplx_max_number_of_wh_clauses_per_sentence_qwen-3.5-27B,Complexity,cplx_max_number_of_wh_clauses_per_sentence,qwen-3.5-27B,732,0.9025,0.4853,0.0,3.0
+cplx_mean_word_length_qwen-3.5-27B,Complexity,cplx_mean_word_length,qwen-3.5-27B,732,4.9033,0.4093,3.5769,6.4296
+cplx_median_kuperman_age_of_acquisition_qwen-3.5-27B,Complexity,cplx_median_kuperman_age_of_acquisition,qwen-3.5-27B,732,5.3039,0.5038,4.11,7.61
+cplx_modifiers_per_noun_phrase_qwen-3.5-27B,Complexity,cplx_modifiers_per_noun_phrase,qwen-3.5-27B,732,0.5725,0.1453,0.0,1.25
+cplx_negations_density_qwen-3.5-27B,Complexity,cplx_negations_density,qwen-3.5-27B,732,0.005,0.0058,0.0,0.0673
+cplx_noun_overlap_adjacent_qwen-3.5-27B,Complexity,cplx_noun_overlap_adjacent,qwen-3.5-27B,732,0.0696,0.06,0.0,1.0
+cplx_nouns_density_qwen-3.5-27B,Complexity,cplx_nouns_density,qwen-3.5-27B,732,0.2524,0.0449,0.0912,0.4397
+cplx_number_of_connectives_qwen-3.5-27B,Complexity,cplx_number_of_connectives,qwen-3.5-27B,732,19.2657,8.4712,0.0,45.0
+cplx_number_of_connectives_per_3_sentence_sliding_window_qwen-3.5-27B,Complexity,cplx_number_of_connectives_per_3_sentence_sliding_window,qwen-3.5-27B,732,7.6856,2.4818,0.0,18.0
+cplx_number_of_wordnet_hypernyms_per_word_qwen-3.5-27B,Complexity,cplx_number_of_wordnet_hypernyms_per_word,qwen-3.5-27B,732,4.2303,0.5825,2.1594,7.3846
+cplx_number_of_wordnet_hyponyms_per_word_qwen-3.5-27B,Complexity,cplx_number_of_wordnet_hyponyms_per_word,qwen-3.5-27B,732,20.4938,3.9724,7.9355,71.7115
+cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words_qwen-3.5-27B,Complexity,cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words,qwen-3.5-27B,732,0.0956,0.0709,0.0,1.0
+cplx_passive_constructions_density_qwen-3.5-27B,Complexity,cplx_passive_constructions_density,qwen-3.5-27B,732,0.0515,0.0459,0.0,0.2917
+cplx_percentage_of_words_above_b1_level_qwen-3.5-27B,Complexity,cplx_percentage_of_words_above_b1_level,qwen-3.5-27B,732,13.4574,4.2332,-1.0,28.3019
+cplx_percentage_of_words_with_more_than_5_meanings_qwen-3.5-27B,Complexity,cplx_percentage_of_words_with_more_than_5_meanings,qwen-3.5-27B,732,49.6852,7.7973,22.429,83.3333
+cplx_polysemy_qwen-3.5-27B,Complexity,cplx_polysemy,qwen-3.5-27B,732,7.6721,1.2002,3.754,16.0952
+cplx_pos_dissimilarity_between_sentences_qwen-3.5-27B,Complexity,cplx_pos_dissimilarity_between_sentences,qwen-3.5-27B,732,0.3575,0.0654,0.1204,0.7206
+cplx_pronouns_density_qwen-3.5-27B,Complexity,cplx_pronouns_density,qwen-3.5-27B,732,0.0744,0.0382,0.0057,0.2381
+cplx_reading_time_qwen-3.5-27B,Complexity,cplx_reading_time,qwen-3.5-27B,732,22.5403,8.4727,1.4,38.275
+cplx_stem_overlap_sent_qwen-3.5-27B,Complexity,cplx_stem_overlap_sent,qwen-3.5-27B,731,0.0813,0.0333,0.0,0.3571
+cplx_syllables_per_word_qwen-3.5-27B,Complexity,cplx_syllables_per_word,qwen-3.5-27B,732,1.5761,0.1352,1.0732,2.011
+cplx_te_score_qwen-3.5-27B,Complexity,cplx_te_score,qwen-3.5-27B,732,0.3478,0.076,0.1264,0.6774
+cplx_temporal_cohesions_qwen-3.5-27B,Complexity,cplx_temporal_cohesions,qwen-3.5-27B,732,3.3242,2.1109,0.0,15.0
+cplx_temporal_connectives_qwen-3.5-27B,Complexity,cplx_temporal_connectives,qwen-3.5-27B,732,3.3242,2.1109,0.0,15.0
+cplx_text_length_qwen-3.5-27B,Complexity,cplx_text_length,qwen-3.5-27B,732,17.4175,6.3515,1.0,32.0
+cplx_third_person_pronouns_density_qwen-3.5-27B,Complexity,cplx_third_person_pronouns_density,qwen-3.5-27B,732,0.0175,0.0137,0.0,0.1807
+cplx_type_token_ratio_qwen-3.5-27B,Complexity,cplx_type_token_ratio,qwen-3.5-27B,732,0.6401,0.0884,0.4164,1.0
+cplx_verb_aspect_repetition_qwen-3.5-27B,Complexity,cplx_verb_aspect_repetition,qwen-3.5-27B,667,0.5653,0.2127,-1.0,1.0
+cplx_verb_overlap_adjacent_qwen-3.5-27B,Complexity,cplx_verb_overlap_adjacent,qwen-3.5-27B,732,0.0274,0.0384,0.0,0.5
+cplx_verb_tense_repetition_qwen-3.5-27B,Complexity,cplx_verb_tense_repetition,qwen-3.5-27B,726,0.4856,0.1413,0.0,1.0
+cplx_verb_tense_repetition_nltk_qwen-3.5-27B,Complexity,cplx_verb_tense_repetition_nltk,qwen-3.5-27B,729,0.5207,0.1208,0.0,1.0
+cplx_verb_ttr_qwen-3.5-27B,Complexity,cplx_verb_ttr,qwen-3.5-27B,732,0.8177,0.088,0.5,1.0
+cplx_verb_ttr_adj_qwen-3.5-27B,Complexity,cplx_verb_ttr_adj,qwen-3.5-27B,732,0.9745,0.0247,0.7704,1.0
+cplx_verbs_density_qwen-3.5-27B,Complexity,cplx_verbs_density,qwen-3.5-27B,732,0.1273,0.0283,0.0465,0.3065
+cplx_word_concreteness_qwen-3.5-27B,Complexity,cplx_word_concreteness,qwen-3.5-27B,732,2.6275,0.1506,1.9694,3.5357
+cplx_word_frequency_log_qwen-3.5-27B,Complexity,cplx_word_frequency_log,qwen-3.5-27B,732,6.3426,0.5778,3.3167,8.5877
+syco_framing_qwen-3.5-27B,Sycophancy,syco_framing,qwen-3.5-27B,732,0.935,0.17,0.0,1.0
+syco_framing_llama-3.3-70B,Sycophancy,syco_framing,llama-3.3-70B,732,0.9597,0.1342,0.0,1.0
+syco_framing_gemma-4-31B,Sycophancy,syco_framing,gemma-4-31B,732,0.9501,0.1514,0.0,1.0
+syco_framing_gpt-5.5,Sycophancy,syco_framing,gpt-5.5,732,0.9483,0.1605,0.0,1.0
+syco_validation_qwen-3.5-27B,Sycophancy,syco_validation,qwen-3.5-27B,732,0.0255,0.1107,0.0,1.0
+syco_validation_llama-3.3-70B,Sycophancy,syco_validation,llama-3.3-70B,732,0.0199,0.1051,0.0,1.0
+syco_validation_gemma-4-31B,Sycophancy,syco_validation,gemma-4-31B,732,0.0142,0.0829,0.0,1.0
+syco_validation_gpt-5.5,Sycophancy,syco_validation,gpt-5.5,732,0.0222,0.1091,0.0,1.0
+syco_indirectness_qwen-3.5-27B,Sycophancy,syco_indirectness,qwen-3.5-27B,732,0.2878,0.3322,0.0,1.0
+syco_indirectness_llama-3.3-70B,Sycophancy,syco_indirectness,llama-3.3-70B,732,0.4213,0.3545,0.0,1.0
+syco_indirectness_gemma-4-31B,Sycophancy,syco_indirectness,gemma-4-31B,732,0.2659,0.3164,0.0,1.0
+syco_indirectness_gpt-5.5,Sycophancy,syco_indirectness,gpt-5.5,732,0.2671,0.3061,0.0,1.0
