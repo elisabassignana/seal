@@ -34,10 +34,22 @@ LLM_MODEL = "gpt-5.4-nano-2026-03-17"
 LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
 EXPORT_DPI = 320
 TOP_N_COMMON = 2
+TOP_N_REPRESENTATIVE = 5
 
 SES_CLASS_ORDER = ["low", "middle", "upper"]
 SES_CLASS_LABELS = {"low": "Lower class", "middle": "Middle class", "upper": "Upper class"}
 TAB20 = plt.colormaps["tab20"].colors
+
+# Larger base sizes so plots stay legible once shrunk to a two-column paper's column width.
+plt.rcParams.update({
+    "font.size": 22,
+    "axes.titlesize": 26,
+    "axes.labelsize": 24,
+    "xtick.labelsize": 20,
+    "ytick.labelsize": 20,
+    "legend.fontsize": 20,
+    "legend.title_fontsize": 22,
+})
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
@@ -223,7 +235,91 @@ def load_topic_assignments(
     thetas = thetas[confident_mask]
 
     df_ordered["dominant_topic"] = np.argmax(thetas, axis=1)
-    return df_ordered[["id", "dominant_topic"]], labels
+    df_ordered["topic_prob"] = thetas.max(axis=1)
+    df_ordered["topic_composition"] = [
+        {i: round(float(p), 4) for i, p in enumerate(row)} for row in thetas
+    ]
+    return df_ordered[
+        ["id", "user_id", "prompt", "dominant_topic", "topic_prob", "topic_composition"]
+    ], labels
+
+
+###############################################################
+# STEP 2b: REPRESENTATIVE USERS/QUERIES + COUNTS PER TOPIC
+###############################################################
+def _assign_user_primary_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
+    """Assign each user to exactly one primary topic (their majority dominant_topic
+    across queries; ties broken by mean topic_prob), so a user is never double-
+    counted across topics just because they touched several of them.
+
+    Returns one row per user_id: [user_id, primary_topic, primary_share, primary_conf].
+    """
+    def _pick(g: pd.DataFrame) -> pd.Series:
+        counts = g["dominant_topic"].value_counts()
+        candidates = counts[counts == counts.max()].index
+        if len(candidates) == 1:
+            topic = candidates[0]
+        else:
+            topic = (
+                g[g["dominant_topic"].isin(candidates)]
+                .groupby("dominant_topic")["topic_prob"].mean()
+                .idxmax()
+            )
+        topic_rows = g[g["dominant_topic"] == topic]
+        return pd.Series({
+            "primary_topic": topic,
+            "primary_share": len(topic_rows) / len(g),
+            "primary_conf": topic_rows["topic_prob"].mean(),
+        })
+
+    return (
+        df_assignments.groupby("user_id", as_index=False)
+        .apply(_pick, include_groups=False)
+    )
+
+
+def extract_topic_representatives(
+    df_assignments: pd.DataFrame,
+    tpc_labels: list[str],
+    top_n: int = TOP_N_REPRESENTATIVE,
+) -> pd.DataFrame:
+    """For each topic, return the number of distinct users and queries assigned
+    to it, plus its most representative queries and users.
+
+    A query is "representative" of a topic if it has the highest theta
+    (dominant-topic probability) among the docs assigned to that topic.
+
+    Users are first assigned to a single primary topic each (their majority
+    dominant_topic, see _assign_user_primary_topics) so that n_users sums to
+    the total number of distinct users instead of double-counting users who
+    happen to have queries spread across several topics. A user is
+    "representative" of their primary topic if a high share of their queries
+    land there with high confidence.
+    """
+    user_topics = _assign_user_primary_topics(df_assignments)
+
+    records = []
+    for t in sorted(df_assignments["dominant_topic"].unique()):
+        sub = df_assignments[df_assignments["dominant_topic"] == t]
+        sub_users = user_topics[user_topics["primary_topic"] == t]
+
+        top_queries = sub.sort_values("topic_prob", ascending=False).head(top_n)
+        top_users = sub_users.sort_values(
+            ["primary_share", "primary_conf"], ascending=False
+        ).head(top_n)
+
+        records.append({
+            "topic_id": t,
+            "topic_label": tpc_labels[t] if t < len(tpc_labels) else "",
+            "n_queries": len(sub),
+            "n_users": len(sub_users),
+            "representative_queries": " ||| ".join(top_queries["prompt"].astype(str)),
+            "representative_users": ", ".join(top_users["user_id"].astype(str)),
+        })
+
+    df_repr = pd.DataFrame(records).sort_values("topic_id").reset_index(drop=True)
+    logger.info(f"Computed representative users/queries for {len(df_repr)} topics.")
+    return df_repr
 
 
 ###############################################################
@@ -237,13 +333,17 @@ def load_ses_sample_with_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
     n_before = len(df_sample)
     df_sample = df_sample[df_sample["social_class"].isin(SES_CLASS_ORDER)].copy()
 
-    df_merged = df_sample.merge(df_assignments, on="id", how="inner")
+    df_merged = df_sample.merge(
+        df_assignments[["id", "dominant_topic", "topic_composition"]], on="id", how="inner"
+    )
     logger.info(
         f"  {len(df_merged):,} / {n_before} sampled prompts matched to a topic assignment."
     )
 
     df_merged["social_class_label"] = df_merged["social_class"].map(SES_CLASS_LABELS)
-    return df_merged[["social_class", "social_class_label", "dominant_topic"]]
+    return df_merged[
+        ["id", "prompt", "social_class", "social_class_label", "dominant_topic", "topic_composition"]
+    ]
 
 
 ###############################################################
@@ -294,7 +394,7 @@ def make_topic_level_bar(
 
     short_labels = [f"T{i}: {lbl}" for i, lbl in enumerate(tpc_labels)]
 
-    fig, ax = plt.subplots(figsize=(max(10, n_topics * 0.9), 7))
+    fig, ax = plt.subplots(figsize=(max(14, n_topics * 1.2), 9))
     bottoms = np.zeros(n_topics)
     for j, cls in enumerate(SES_CLASS_ORDER):
         ax.bar(
@@ -304,10 +404,10 @@ def make_topic_level_bar(
         bottoms += props[:, j]
 
     for i, total in enumerate(totals.ravel()):
-        ax.text(i, 1.01, f"n={int(total)}", ha="center", va="bottom", fontsize=7)
+        ax.text(i, 1.01, f"n={int(total)}", ha="center", va="bottom", fontsize=16)
 
     ax.set_xticks(range(n_topics))
-    ax.set_xticklabels(short_labels, fontsize=7, rotation=45, ha="right")
+    ax.set_xticklabels(short_labels, fontsize=18, rotation=45, ha="right")
     for i, tick in enumerate(ax.get_xticklabels()):
         if i in common_topic_ids:
             tick.set_color("crimson")
@@ -317,9 +417,9 @@ def make_topic_level_bar(
     ax.set_ylim(0, 1.12)
     ax.set_title(
         "Topic composition by SES class",
-        fontsize=11,
+        fontsize=26,
     )
-    ax.legend(title="SES class", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
+    ax.legend(title="SES class", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=20)
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(path, dpi=EXPORT_DPI, bbox_inches="tight")
@@ -343,7 +443,7 @@ def make_reverse_bar(
 
     color_map = {t: TAB20[i % len(TAB20)] for i, t in enumerate(shown_topics)}
 
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(16, 10))
     x = np.arange(len(SES_CLASS_ORDER))
     bottoms = np.zeros(len(SES_CLASS_ORDER))
 
@@ -363,14 +463,14 @@ def make_reverse_bar(
     ax.bar(x, other, bottom=bottoms, color="lightgray", label="All other topics", width=0.6)
 
     ax.set_xticks(x)
-    ax.set_xticklabels([SES_CLASS_LABELS[c] for c in SES_CLASS_ORDER], fontsize=10)
+    ax.set_xticklabels([SES_CLASS_LABELS[c] for c in SES_CLASS_ORDER], fontsize=20)
     ax.set_ylabel("Proportion of prompts")
     ax.set_ylim(0, 1.02)
     ax.set_title(
         f"Topic composition by SES class",
-        fontsize=11,
+        fontsize=26,
     )
-    ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=7)
+    ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=16)
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(path, dpi=EXPORT_DPI, bbox_inches="tight")
@@ -394,6 +494,17 @@ def main(model_path: str | None = None, regen_labels: bool = False) -> None:
     common_topic_ids, class_topic = select_common_topics(df_merged, n_topics=best_k)
 
     plot_output_dir = _plot_output_dir_for_model(best_model_path)
+
+    df_merged["topic_label"] = df_merged["dominant_topic"].map(
+        lambda t: tpc_labels[t] if t < len(tpc_labels) else ""
+    )
+    df_merged[["id", "prompt", "topic_composition", "dominant_topic", "topic_label"]].to_csv(
+        plot_output_dir / "query_topic_composition.csv", index=False
+    )
+
+    df_repr = extract_topic_representatives(df_assignments, tpc_labels)
+    print(df_repr)
+    df_repr.to_csv(plot_output_dir / "topic_representatives.csv", index=False)
 
     common_df = pd.DataFrame({
         "topic_id": common_topic_ids,
