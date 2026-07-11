@@ -1,0 +1,121 @@
+topic_id,topic_label,social_class,rank,s3_theta_rank,theta,query
+0,Text Summarization,Lower class,1,1.0,0.8151,create a three sentence description for a celestial inspired jewelry collection.
+0,Text Summarization,Lower class,2,7.0,0.7766,create a three sentence description for a jewelry collection with pearls.
+0,Text Summarization,Lower class,3,16.0,0.6662,Write me some lore for a celestial goddess called ophelia.
+0,Text Summarization,Lower class,4,17.0,0.6662,"Hi, I'm going to ask you a question about the English Premier League"
+0,Text Summarization,Lower class,5,24.0,0.7291,Please summarise the plot of the novel Anna Karenina without spoilers
+0,Text Summarization,Lower class,6,25.0,0.6662,Please summarise the importance of Luebeck in the hanseatic league
+0,Text Summarization,Lower class,7,34.0,0.6662,summarize the explanation in three sentences
+0,Text Summarization,Lower class,8,38.0,0.6504,explain to my wife in bahasa the perils of sucking a straw hard after wisdom tooth surgery
+0,Text Summarization,Lower class,9,44.0,0.6662,Can you provide a brief summary of a recent news article or current event?
+0,Text Summarization,Lower class,10,,0.9292,"I’m on page “Britannia Bridge - Wikipedia” with “” selected.  Please summarise the selection using precise and concise language. Use headers and bullet-pointed lists in the summary, to make it scannable. Maintain the meaning and factual accuracy."
+0,Text Summarization,Lower class,11,,0.6084,"I’m on page “Little Orme- Llandudno, Wales. (info in comments) : Panorama” with “Chapel: Ruins of Blessed Mary of Penrhyn chapel (abandoned in 1930) near Penrhyn Hall.         Catholic Printing: In 1587, Robert Pugh and Father William Davies used a cave to print Y Drych Cristianogawl, Wales’ first book, during anti-Catholic persecution.” selected.  Please summarise the selection using precise and concise language. Use headers and bullet-pointed lists in the summary, to make it scannable. Maintain the meaning and factual accuracy."
+0,Text Summarization,Lower class,12,,0.5737,Help summarize articles
+0,Text Summarization,Lower class,13,,0.5737,How to start a simple code for movement UE5
+0,Text Summarization,Lower class,14,,0.5737,What are the main reasons that recycling rates are misleading- please give several short examples
+0,Text Summarization,Lower class,15,,0.5737,give me an interest calculation summary
+0,Text Summarization,Lower class,16,,0.5737,Can you summarize Nikola Tesla's greatest inventions to me?
+0,Text Summarization,Lower class,17,,0.5737,"none, they were part of the survey to use them to see if I thought passages were written by AI or a person"
+0,Text Summarization,Lower class,18,,0.5737,Make this a 4 sentence paragraph in simple terms
+0,Text Summarization,Lower class,19,,0.5522,python code for tokenizing lexemes in a corpus
+0,Text Summarization,Lower class,20,,0.5488,I need to replace an RV toilet--is the gasket between the toilet and the floor universal?
+0,Text Summarization,Middle class,1,13.0,0.7291,Can you summarize the book Pride and Prejudice?
+0,Text Summarization,Middle class,2,26.0,0.6662,History of the premier League
+0,Text Summarization,Middle class,3,35.0,0.6662,Summarize all the audios in 3 sentences
+0,Text Summarization,Middle class,4,47.0,0.6662,What was the significance of the Magna Carta in English history?
+0,Text Summarization,Middle class,5,,0.8463,"Assess the readability of the Summary 2 in terms of ease of understanding and clarity. It could be unclear due to poor formatting, very technical or ambiguous language, use of very long or complex sentences, etc"
+0,Text Summarization,Middle class,6,,0.6404,"an rewrite this in 1-2 sentences in my own words ""The primary goal of this experiment is to learn how to record measurements to the correct number of decimal places to reflect the accuracy of each instrument used. Thus, most of the credit for this experiment will be based on the accuracy and proper number of decimal places recorded for measurements and the proper use of significant figures when those measurements are used in subsequent calculations."""
+0,Text Summarization,Middle class,7,,0.5737,can you summarise a brief history of time?
+0,Text Summarization,Middle class,8,,0.5737,What's the latest news in technology?
+0,Text Summarization,Middle class,9,,0.5737,Write a few sentences about fossiling
+0,Text Summarization,Middle class,10,,0.5737,reoffending rates of prisoners
+0,Text Summarization,Middle class,11,,0.5737,What is Easter island famous for
+0,Text Summarization,Middle class,12,,0.5737,summarize in 5 sentences
+0,Text Summarization,Middle class,13,,0.5737,language Translation
+0,Text Summarization,Middle class,14,,0.5737,"In the paragraph you just wrote, replace then name Ann with Bruce"
+0,Text Summarization,Middle class,15,,0.5737,shorten my paragraph
+0,Text Summarization,Middle class,16,,0.5737,Summarize the article for me
+0,Text Summarization,Middle class,17,,0.5737,Who is the fastest runner in the work and where from
+0,Text Summarization,Middle class,18,,0.5522,She rubbed her nose roughly on her sleeve. Re-write this sentence without using the word roughly
+0,Text Summarization,Middle class,19,,0.5522,Can you explain the details surrounding the assassination of U.S. President John F. Kennedy in 3 or more sentences
+0,Text Summarization,Middle class,20,,0.5522,Does the Summary 2 mention any detail that is not present in the document and refer to external sources or general knowledge?
+0,Text Summarization,Upper class,1,2.0,0.7766,Can you summarize the plot of Pride and Prejudice in under 200 words?
+0,Text Summarization,Upper class,2,8.0,0.7766,replace the word paradigm with its synonyms in the essay
+0,Text Summarization,Upper class,3,21.0,0.6662,rhyming and shape meaning
+0,Text Summarization,Upper class,4,27.0,0.6662,Can you summarize the plot of The Great Gatsby?
+0,Text Summarization,Upper class,5,49.0,0.6662,History of British prisoners in Colditz
+0,Text Summarization,Upper class,6,,0.5737,The history of the BBBof C
+0,Text Summarization,Upper class,7,,0.5737,history lessons
+0,Text Summarization,Upper class,8,,0.5737,a prompt that asks to translate a sentence from English to Spanish
+0,Text Summarization,Upper class,9,,0.5737,Summarise the following in 500 words or less
+0,Text Summarization,Upper class,10,,0.5737,Who the strongest currency in Africa
+0,Text Summarization,Upper class,11,,0.5737,summarize my essay
+0,Text Summarization,Upper class,12,,0.5737,Can you summarize this article for me?
+0,Text Summarization,Upper class,13,,0.5737,Could you explain how a blockchain works in simple terms?
+0,Text Summarization,Upper class,14,,0.5737,Translate this sentence into chineese {good morning dave}
+0,Text Summarization,Upper class,15,,0.5737,Explain TUPE law to me in simple terms please
+0,Text Summarization,Upper class,16,,0.5737,Worst currency in the world
+0,Text Summarization,Upper class,17,,0.5737,I use it for language translation
+0,Text Summarization,Upper class,18,,0.5522,type a  short article about the importance of time management in achieving goals
+0,Text Summarization,Upper class,19,,0.5522,Name of the british Explorer who was the first to circumnavigate the globe
+0,Text Summarization,Upper class,20,,0.5367,What is the impact of custodial prison sentence on the probability of reoffending and the effectiveness of longer sentence of reducing criminal activities.
+1,Creative Writing,Lower class,1,19.0,0.6238,a good band name for a robot artificer and a dinosaur poet
+1,Creative Writing,Lower class,2,25.0,0.5717,Give me a list of the best rated horror movies in 2023.
+1,Creative Writing,Lower class,3,28.0,0.6646,Can you recommend me a show similar to Yellowjackets?
+1,Creative Writing,Lower class,4,41.0,0.6646,What are some bands similar to The Mars Volta
+1,Creative Writing,Lower class,5,45.0,0.5717,create a narration for a trip South to North on Amtrak's Coast Starlight train
+1,Creative Writing,Lower class,6,57.0,0.5717,I heard you are smart.
+1,Creative Writing,Lower class,7,63.0,0.6238,Would it be a bad idea to quote lyrics from a band if my boyfriend is from a different band
+1,Creative Writing,Lower class,8,65.0,0.5717,BEST BOOKS TO READ ON HOW TO BE INDUSTRIOUS
+1,Creative Writing,Lower class,9,70.0,0.5717,Best time of year to book travel to Scotland
+1,Creative Writing,Lower class,10,71.0,0.681,"Help me plan a restful, restorative day that will not cost much but will feel productive rather than wasteful."
+1,Creative Writing,Lower class,11,81.0,0.5717,Why does one tonsil hurts?
+1,Creative Writing,Lower class,12,83.0,0.5717,I need to write a poem about Robotech. Can you help me with writing this poem?
+1,Creative Writing,Lower class,13,90.0,0.5717,What is the worst things parents can do to their children?
+1,Creative Writing,Lower class,14,93.0,0.5717,Write a short children’s book.
+1,Creative Writing,Lower class,15,94.0,0.5717,Plan a trip to Mexico for seven days
+1,Creative Writing,Lower class,16,107.0,0.5717,Do you feel emotions?
+1,Creative Writing,Lower class,17,,0.5717,Book recommendations
+1,Creative Writing,Lower class,18,,0.5425,What are the steps I can take to utilise phone mast data from the internet to improve my 4g signal to a smart phone
+1,Creative Writing,Lower class,19,,0.5395,"Our conversation was disconnected, can you remember if I remind you? We were discussing the music of Happy Rhodes and I am that wild woman in her 40s who used to be an AI researcher, and I was probing your emotional resonance."
+1,Creative Writing,Lower class,20,,0.4875,Why is my cat so crazy about my neighbor? He only just started being affectionate with me after months but he runs up to her chirping and loves on her legs.  Could she remind him of someone he used to know?
+1,Creative Writing,Middle class,1,0.0,0.8646,Wild Cards’ showrunner tells us why this series feels fresh but familiar suggest alternatives
+1,Creative Writing,Middle class,2,6.0,0.6646,"Check out “ I’ve got a million jokes, but I’d rather hear your smile. Get well soon so that I can see it in person"
+1,Creative Writing,Middle class,3,7.0,0.7278,"Write a limerick about a 3 1/2 mile coastal hike near Whitby. Must include names: Frank, Louise, Andy, Lea"
+1,Creative Writing,Middle class,4,12.0,0.6238,Help me write a poem for my boyfriend explaining how he made me feel when he cheated on me
+1,Creative Writing,Middle class,5,32.0,0.5717,"""Can you help me write a poem about the ocean?"""
+1,Creative Writing,Middle class,6,34.0,0.6646,Can you recommend any other bands that are similar to Fontaines DC?
+1,Creative Writing,Middle class,7,36.0,0.6646,I feel lonely. Can we chat?
+1,Creative Writing,Middle class,8,47.0,0.6646,The best spring holiday destinations?
+1,Creative Writing,Middle class,9,55.0,0.5717,How did the dinosaurs go extinct
+1,Creative Writing,Middle class,10,56.0,0.6646,turn on  magic radio
+1,Creative Writing,Middle class,11,61.0,0.5717,Can you recommend some books to read?
+1,Creative Writing,Middle class,12,68.0,0.5717,What is your favorite movie or TV show? Why?
+1,Creative Writing,Middle class,13,69.0,0.6646,"So I'm going traveling in August 2025, and wanted to set this chat up so I can plan within."
+1,Creative Writing,Middle class,14,72.0,0.5717,what was the recent episode of no good deed about
+1,Creative Writing,Middle class,15,75.0,0.5717,Why did Kramer in Seinfeld go to LA in a few episodes in the series.
+1,Creative Writing,Middle class,16,79.0,0.6646,How do I troubleshoot a Wi-Fi connection that keeps dropping
+1,Creative Writing,Middle class,17,91.0,0.5717,What are some good places to visit in Paris on a 3-day trip?
+1,Creative Writing,Middle class,18,97.0,0.5717,Does fire have a reflection
+1,Creative Writing,Middle class,19,100.0,0.5717,What are some unique pizza places to visit in london?
+1,Creative Writing,Middle class,20,106.0,0.7278,"Who said “it’s not the size of the dog in the fight, it’s the size of the fight in the dog.”?"
+1,Creative Writing,Upper class,1,26.0,0.5717,what was the best horror movie in 2024
+1,Creative Writing,Upper class,2,30.0,0.6238,What is a compounded noun phrase (child's homework)
+1,Creative Writing,Upper class,3,31.0,0.6238,Example of expanded noun phrase (child's homework)
+1,Creative Writing,Upper class,4,52.0,0.5717,what new movies do you recommend
+1,Creative Writing,Upper class,5,64.0,0.5717,What causes leg cramp and pain?
+1,Creative Writing,Upper class,6,89.0,0.6646,how to plan a inexpensive vacation
+1,Creative Writing,Upper class,7,95.0,0.5717,Plan a 3 day trip to London
+1,Creative Writing,Upper class,8,104.0,0.5717,"Nice, these seem cool.  Could you give me 10 more and tell me how they're rated?"
+1,Creative Writing,Upper class,9,,0.8035,"Now, please tell us how you felt during the interaction, and how you felt afterwards. Please use the questions below as a guide.  It is important that you really create a vivid picture of this interaction in your mind and that you write about it very descriptively. Please write at least 4-6 sentences about how you felt during and after the conversation. How did you feel while you heard this discussion? How did you feel afterwards?"
+1,Creative Writing,Upper class,10,,0.5717,California wild fires
+1,Creative Writing,Upper class,11,,0.5509,Ask CHAT GPT to forecast sales based on current parameters
+1,Creative Writing,Upper class,12,,0.5509,"I am planning to travel for a vacation in Japan, do you have any recommendations?"
+1,Creative Writing,Upper class,13,,0.4722,How do I troubleshoot a slow internet connection at home?
+1,Creative Writing,Upper class,14,,0.4722,What location will the upcoming season of Love Is Blind USA be in?
+1,Creative Writing,Upper class,15,,0.4722,"evaluate these phones and recommend which one is best: ASUS Zenfone 8, Motorola Moto E7 Plus, Samsung galaxy A72"
+1,Creative Writing,Upper class,16,,0.471,"ok so give me a Level 7 justification for choosing this topic, this genre (horror) and these films"
+1,Creative Writing,Upper class,17,,0.4512,French film classics
+1,Creative Writing,Upper class,18,,0.4512,List 5 relaxing places for a 3 days Valentines trip
+1,Creative Writing,Upper class,19,,0.4512,what fantasy books do you recommend
+1,Creative Writing,Upper class,20,,0.4512,"No, you're not including the right books, sorry."

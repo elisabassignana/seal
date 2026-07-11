@@ -11,8 +11,9 @@ import sys
 import warnings
 import multiprocessing as mp
 from functools import lru_cache
-from huggingface_hub import hf_hub_download # type: ignore
-
+from huggingface_hub import hf_hub_download  # type: ignore
+from scipy import sparse
+import ast
 import matplotlib
 matplotlib.use("Agg")
 
@@ -21,7 +22,8 @@ warnings.filterwarnings("ignore")
 ###############################################################
 # CONFIGURATION
 ###############################################################
-HF_REPO_ID = "MilaNLProc/survey-language-technologies"  # we use the complete dtset for training
+# we use the complete dtset for training
+HF_REPO_ID = "MilaNLProc/survey-language-technologies"
 HF_FILENAME = "survey-language-technologies.csv"
 SES_DATA_PATH = "data_Elisa/sampled_dataset.csv"        # plots only use this
 OUTPUT_DIR = "data/output/ses_plots"
@@ -35,12 +37,13 @@ LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
 EXPORT_DPI = 320
 TOP_N_COMMON = 2
 TOP_N_REPRESENTATIVE = 5
+TOP_N_SHORTLIST = 20
 
 SES_CLASS_ORDER = ["low", "middle", "upper"]
-SES_CLASS_LABELS = {"low": "Lower class", "middle": "Middle class", "upper": "Upper class"}
+SES_CLASS_LABELS = {"low": "Lower class",
+                    "middle": "Middle class", "upper": "Upper class"}
 TAB20 = plt.colormaps["tab20"].colors
 
-# Larger base sizes so plots stay legible once shrunk to a two-column paper's column width.
 plt.rcParams.update({
     "font.size": 22,
     "axes.titlesize": 26,
@@ -59,7 +62,8 @@ logging.basicConfig(
     format="%(asctime)s  %(levelname)s  %(message)s",
     handlers=[
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler(os.path.join(OUTPUT_DIR, "pipeline.log"), mode="w"),
+        logging.FileHandler(os.path.join(
+            OUTPUT_DIR, "pipeline.log"), mode="w"),
     ],
 )
 logger = logging.getLogger("ses_topic_pipeline")
@@ -77,7 +81,8 @@ def _plot_output_dir_for_model(best_model_path: str) -> Path:
 @lru_cache(maxsize=1)
 def load_full_dataset() -> pd.DataFrame:
     """Download dataset from hugging face and reshape it into the long form used by the rest of the pipeline: one row per prompt, with user_id + prompt columns."""
-    logger.info(f"Downloading {HF_REPO_ID}/{HF_FILENAME} from the Hugging Face Hub ...")
+    logger.info(
+        f"Downloading {HF_REPO_ID}/{HF_FILENAME} from the Hugging Face Hub ...")
     local_path = hf_hub_download(
         repo_id=HF_REPO_ID, filename=HF_FILENAME, repo_type="dataset"
     )
@@ -89,12 +94,14 @@ def load_full_dataset() -> pd.DataFrame:
         id_vars=id_vars, value_vars=prompt_cols, var_name="_prompt_col", value_name="prompt"
     )
     df = df.dropna(subset=["prompt"]).reset_index(drop=True)
-    df = df.drop_duplicates(subset=["prompt"], keep="first").reset_index(drop=True)
+    df = df.drop_duplicates(
+        subset=["prompt"], keep="first").reset_index(drop=True)
     prompt_num = df["_prompt_col"].str.removeprefix("prompt").astype(int)
     df = df.drop(columns=["_prompt_col"]).rename(columns={"id": "user_id"})
     # use as id the same one used in the sample: uXXXpY where XXX = user_id and Y = prompt number
     df["id"] = "u" + df["user_id"].astype(str) + "p" + prompt_num.astype(str)
-    logger.info(f"Loaded {len(df):,} prompts from {df['user_id'].nunique():,} respondents.")
+    logger.info(
+        f"Loaded {len(df):,} prompts from {df['user_id'].nunique():,} respondents.")
     return df
 
 
@@ -150,7 +157,8 @@ def get_or_train_model() -> tuple[int, str]:
     selected = opt_results["selected"]
     best_k = selected[0]["k"]
     best_model_path = selected[0]["model_path"]
-    logger.info(f"Optimal K = {best_k}  (mean coherence = {selected[0]['mean_coherence']:.4f})")
+    logger.info(
+        f"Optimal K = {best_k}  (mean coherence = {selected[0]['mean_coherence']:.4f})")
     return best_k, best_model_path
 
 
@@ -164,7 +172,8 @@ def get_or_generate_labels(
     labels_file = Path(best_model_path) / "TMmodel" / "tpc_labels.txt"
     if labels_file.exists() and not force:
         labels = labels_file.read_text(encoding="utf-8").splitlines()
-        logger.info(f"Found existing tpc_labels.txt ({len(labels)} labels) - skipping labeling.")
+        logger.info(
+            f"Found existing tpc_labels.txt ({len(labels)} labels) - skipping labeling.")
         return labels
 
     logger.info(f"  [{LLM_PROVIDER}] Generating topic labels ...")
@@ -188,10 +197,12 @@ def _align_df_to_thetas(
     """Align raw dataframe rows to the theta order stored by the model."""
     if doc_ids is not None and len(doc_ids) == len(thetas):
         doc_id_strs = [str(d) for d in doc_ids]
-        order_df = pd.DataFrame({"id": doc_id_strs, "_theta_pos": range(len(doc_id_strs))})
+        order_df = pd.DataFrame(
+            {"id": doc_id_strs, "_theta_pos": range(len(doc_id_strs))})
         df_merged = order_df.merge(df, on="id", how="inner")
         theta_positions = df_merged["_theta_pos"].values
-        df_ordered = df_merged.drop(columns=["_theta_pos"]).reset_index(drop=True)
+        df_ordered = df_merged.drop(
+            columns=["_theta_pos"]).reset_index(drop=True)
         thetas_ordered = thetas[theta_positions]
     else:
         n = min(len(df), len(thetas))
@@ -202,11 +213,11 @@ def _align_df_to_thetas(
 
 def load_topic_assignments(
     best_model_path: str, regen_labels: bool = False
-) -> tuple[pd.DataFrame, list[str]]:
+) -> tuple[pd.DataFrame, list[str], list[list[str]]]:
     """Load the trained model, compute per-prompt dominant topic assignments
     for the full training dataset, and return them keyed by row id.
 
-    Prompt dominant topic = argmax(theta) for each prompt, after filtering out any prompts whose max(theta) is below the uniform-fallback threshold (1/K + 1e-4).  The returned dataframe has columns ["id", "dominant_topic"].
+    Prompt dominant topic = argmax(theta) for each prompt, after filtering out any prompts whose max(theta) is below the uniform-fallback threshold (1/K + 1e-4). The returned dataframe has columns ["id", "dominant_topic"].
     """
     logger.info(
         "Loading full dataset & model to compute topic assignments ...")
@@ -217,12 +228,23 @@ def load_topic_assignments(
 
     lda = LDATopicModel.load(best_model_path, corpus=df_prompts)
     labels = get_or_generate_labels(lda, best_model_path, force=regen_labels)
+    topic_words = lda.get_topic_keys()
 
     thetas = lda.get_thetas()
     lda.tm._load_doc_ids()
+
+    lda.tm.get_most_representative_per_tpc(
+        sparse.csr_matrix(thetas), topn=thetas.shape[0], get_text=False
+    )
+    s3_theta_rank_by_id: dict[tuple[str, int], int] = {
+        (str(doc_id), k): rank
+        for k, docs in enumerate(lda.tm._most_representative_docs)
+        for rank, (doc_id, _text, _theta) in enumerate(docs)
+    }
+
     df_ordered, thetas = _align_df_to_thetas(df, thetas, lda.tm._doc_ids)
 
-    # drop uniform-fallback docs (keyword-based inference, i.e., flat theta row)
+    # drop uniform-fallback docs
     K = thetas.shape[1]
     uniform_threshold = (1.0 / K) + 1e-4
     confident_mask = thetas.max(axis=1) > uniform_threshold
@@ -239,20 +261,22 @@ def load_topic_assignments(
     df_ordered["topic_composition"] = [
         {i: round(float(p), 4) for i, p in enumerate(row)} for row in thetas
     ]
+    # Lower rank = more representative of its dominant topic per S3+theta scoring; if None, the query didn't pass the candidate filters.
+    df_ordered["s3_theta_rank"] = [
+        s3_theta_rank_by_id.get((doc_id, topic))
+        for doc_id, topic in zip(df_ordered["id"], df_ordered["dominant_topic"])
+    ]
     return df_ordered[
-        ["id", "user_id", "prompt", "dominant_topic", "topic_prob", "topic_composition"]
-    ], labels
+        ["id", "user_id", "prompt", "dominant_topic", "topic_prob",
+         "topic_composition", "s3_theta_rank"]
+    ], labels, topic_words
 
 
 ###############################################################
 # STEP 2b: REPRESENTATIVE USERS/QUERIES + COUNTS PER TOPIC
 ###############################################################
 def _assign_user_primary_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
-    """Assign each user to exactly one primary topic (their majority dominant_topic
-    across queries; ties broken by mean topic_prob), so a user is never double-
-    counted across topics just because they touched several of them.
-
-    Returns one row per user_id: [user_id, primary_topic, primary_share, primary_conf].
+    """Assign each user to its primary topic (their majority dominant_topic across queries; ties broken by mean topic_prob).
     """
     def _pick(g: pd.DataFrame) -> pd.Series:
         counts = g["dominant_topic"].value_counts()
@@ -284,17 +308,7 @@ def extract_topic_representatives(
     top_n: int = TOP_N_REPRESENTATIVE,
 ) -> pd.DataFrame:
     """For each topic, return the number of distinct users and queries assigned
-    to it, plus its most representative queries and users.
-
-    A query is "representative" of a topic if it has the highest theta
-    (dominant-topic probability) among the docs assigned to that topic.
-
-    Users are first assigned to a single primary topic each (their majority
-    dominant_topic, see _assign_user_primary_topics) so that n_users sums to
-    the total number of distinct users instead of double-counting users who
-    happen to have queries spread across several topics. A user is
-    "representative" of their primary topic if a high share of their queries
-    land there with high confidence.
+    to it, plus its most representative queries and users. Queries are ranked by s3_theta_rank, falling back to raw theta for docs that lack a rank .
     """
     user_topics = _assign_user_primary_topics(df_assignments)
 
@@ -303,7 +317,9 @@ def extract_topic_representatives(
         sub = df_assignments[df_assignments["dominant_topic"] == t]
         sub_users = user_topics[user_topics["primary_topic"] == t]
 
-        top_queries = sub.sort_values("topic_prob", ascending=False).head(top_n)
+        top_queries = sub.sort_values(
+            ["s3_theta_rank", "topic_prob"], ascending=[True, False], na_position="last"
+        ).head(top_n)
         top_users = sub_users.sort_values(
             ["primary_share", "primary_conf"], ascending=False
         ).head(top_n)
@@ -317,8 +333,10 @@ def extract_topic_representatives(
             "representative_users": ", ".join(top_users["user_id"].astype(str)),
         })
 
-    df_repr = pd.DataFrame(records).sort_values("topic_id").reset_index(drop=True)
-    logger.info(f"Computed representative users/queries for {len(df_repr)} topics.")
+    df_repr = pd.DataFrame(records).sort_values(
+        "topic_id").reset_index(drop=True)
+    logger.info(
+        f"Computed representative users/queries for {len(df_repr)} topics.")
     return df_repr
 
 
@@ -331,18 +349,23 @@ def load_ses_sample_with_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
     df_sample = pd.read_csv(SES_DATA_PATH)
 
     n_before = len(df_sample)
-    df_sample = df_sample[df_sample["social_class"].isin(SES_CLASS_ORDER)].copy()
+    df_sample = df_sample[df_sample["social_class"].isin(
+        SES_CLASS_ORDER)].copy()
 
     df_merged = df_sample.merge(
-        df_assignments[["id", "dominant_topic", "topic_composition"]], on="id", how="inner"
+        df_assignments[["id", "dominant_topic",
+                        "topic_composition", "s3_theta_rank"]],
+        on="id", how="inner",
     )
     logger.info(
         f"  {len(df_merged):,} / {n_before} sampled prompts matched to a topic assignment."
     )
 
-    df_merged["social_class_label"] = df_merged["social_class"].map(SES_CLASS_LABELS)
+    df_merged["social_class_label"] = df_merged["social_class"].map(
+        SES_CLASS_LABELS)
     return df_merged[
-        ["id", "prompt", "social_class", "social_class_label", "dominant_topic", "topic_composition"]
+        ["id", "prompt", "social_class", "social_class_label", "dominant_topic",
+         "topic_composition", "s3_theta_rank"]
     ]
 
 
@@ -352,23 +375,151 @@ def load_ses_sample_with_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
 def select_common_topics(
     df_merged: pd.DataFrame, n_topics: int, top_n: int = TOP_N_COMMON
 ) -> tuple[list[int], pd.DataFrame]:
-    """Return the top_n topics shared by all three SES classes.
-    
-    Each topic gets a score: out of its share in the working, middle, and upper class prompts, we keep only the smallest of the three numbers. A topic that is big in one class but almost not present in another will score low, even if it looks big on average, so ranking topics by this score (instead of by their average share) picks out topics that show up in all three classes, not ones popular in just one. Also returns the full class x topic proportion table.
+    """Return the top_n topics shared by all three SES classes. Each topic gets a score: out of its share in the working, middle, and upper class prompts, we keep only the smallest of the three numbers. A topic that is big in one class but almost not present in another will score low, even if it looks big on average, so ranking topics by this score (instead of by their average share) picks out topics that show up in all three classes, not ones popular in just one. Also returns the full class x topic proportion table.
     """
     class_topic = pd.crosstab(
         df_merged["social_class"], df_merged["dominant_topic"], normalize="index"
     ).reindex(index=SES_CLASS_ORDER, columns=range(n_topics), fill_value=0.0)
 
     min_share = class_topic.min(axis=0)
-    common_topic_ids = min_share.sort_values(ascending=False).head(top_n).index.tolist()
+    common_topic_ids = min_share.sort_values(
+        ascending=False).head(top_n).index.tolist()
 
     logger.info(f"Top {top_n} topics common across all 3 SES classes:")
     for t in common_topic_ids:
-        shares = "  ".join(f"{SES_CLASS_LABELS[c]}={class_topic.loc[c, t]:.1%}" for c in SES_CLASS_ORDER)
+        shares = "  ".join(
+            f"{SES_CLASS_LABELS[c]}={class_topic.loc[c, t]:.1%}" for c in SES_CLASS_ORDER)
         logger.info(f"    T{t}:  {shares}  (min share={min_share[t]:.1%})")
 
     return common_topic_ids, class_topic
+
+
+###############################################################
+# STEP 4b: REPRESENTATIVE QUERIES PER TOPIC, BROKEN DOWN BY SES CLASS
+###############################################################
+_LATEX_ESCAPES = {
+    "\\": r"\textbackslash{}",
+    "&": r"\&",
+    "%": r"\%",
+    "$": r"\$",
+    "#": r"\#",
+    "_": r"\_",
+    "{": r"\{",
+    "}": r"\}",
+    "~": r"\textasciitilde{}",
+    "^": r"\textasciicircum{}",
+}
+
+
+def _latex_escape(text: str) -> str:
+    return "".join(_LATEX_ESCAPES.get(ch, ch) for ch in text)
+
+
+def _rank_candidates(
+    df_merged: pd.DataFrame, topic_id: int, social_class: str, top_n: int
+) -> pd.DataFrame:
+    """Rank a (topic, SES class) cell's queries by s3_theta_rank, falling back to that topic's raw theta for docs that lack a rank."""
+    sub = df_merged[
+        (df_merged["dominant_topic"] == topic_id) & (
+            df_merged["social_class"] == social_class)
+    ].copy()
+    sub["_theta_t"] = sub["topic_composition"].apply(
+        lambda comp: comp.get(topic_id, 0.0))
+    return sub.sort_values(
+        ["s3_theta_rank", "_theta_t"], ascending=[True, False], na_position="last"
+    ).head(top_n)
+
+
+def get_representative_queries_by_class(
+    df_merged: pd.DataFrame, topic_ids: list[int], top_n: int = 3
+) -> dict[int, dict[str, list[str]]]:
+    """For each topic in topic_ids, return its top_n most representative
+    queries within each SES class. See _rank_candidates for the ranking."""
+    return {
+        t: {
+            cls: _rank_candidates(df_merged, t, cls, top_n)["prompt"].tolist()
+            for cls in SES_CLASS_ORDER
+        }
+        for t in topic_ids
+    }
+
+
+def export_representative_shortlist(
+    df_merged: pd.DataFrame,
+    topic_ids: list[int],
+    tpc_labels: list[str],
+    shortlist_n: int = TOP_N_SHORTLIST,
+) -> pd.DataFrame:
+    """Build a wider ranked shortlist of candidate queries per topic x SES."""
+    records = []
+    for t in topic_ids:
+        label = tpc_labels[t] if t < len(tpc_labels) else ""
+        for cls in SES_CLASS_ORDER:
+            top = _rank_candidates(df_merged, t, cls, shortlist_n)
+            for rank, (_, row) in enumerate(top.iterrows(), start=1):
+                records.append({
+                    "topic_id": t,
+                    "topic_label": label,
+                    "social_class": SES_CLASS_LABELS[cls],
+                    "rank": rank,
+                    "s3_theta_rank": row["s3_theta_rank"],
+                    "theta": round(row["_theta_t"], 4),
+                    "query": row["prompt"],
+                })
+    return pd.DataFrame(records)
+
+
+def make_representative_queries_latex(
+    df_merged: pd.DataFrame,
+    topic_ids: list[int],
+    tpc_labels: list[str],
+    topic_words: list[list[str]] | None = None,
+    top_n: int = 3,
+    n_words: int = 10,
+) -> str:
+    """Build one LaTeX table per topic: columns = SES classes, rows = that class's top_n most representative queries for the topic."""
+    reps = get_representative_queries_by_class(
+        df_merged, topic_ids, top_n=top_n)
+    n_cols = len(SES_CLASS_ORDER)
+
+    blocks = []
+    for t in topic_ids:
+        label = tpc_labels[t] if t < len(tpc_labels) else ""
+        per_class = reps[t]
+
+        lines = [
+            r"\begin{table}[ht]",
+            r"\centering",
+            r"\small",
+            r"\begin{tabular}{" + "p{4.3cm}" * n_cols + "}",
+            r"\toprule",
+        ]
+        if topic_words is not None and t < len(topic_words):
+            words = ", ".join(topic_words[t][:n_words])
+            header_text = _latex_escape(f"{label}: {words}")
+            lines.append(
+                rf"\multicolumn{{{n_cols}}}{{c}}{{\textbf{{{header_text}}}}} \\")
+            lines.append(r"\midrule")
+        lines.append(" & ".join(SES_CLASS_LABELS[c]
+                     for c in SES_CLASS_ORDER) + r" \\")
+        lines.append(r"\midrule")
+        for i in range(top_n):
+            row = []
+            for c in SES_CLASS_ORDER:
+                queries = per_class[c]
+                row.append(_latex_escape(
+                    queries[i]) if i < len(queries) else "")
+            lines.append(" & ".join(row) + r" \\[4pt]")
+        lines += [
+            r"\bottomrule",
+            r"\end{tabular}",
+            rf"\caption{{Representative queries for Topic {t} ({_latex_escape(label)}) by SES class.}}",
+            rf"\label{{tab:repr_queries_topic{t}}}",
+            r"\end{table}",
+        ]
+        blocks.append("\n".join(lines))
+
+    return "\n\n".join(blocks) + "\n"
 
 
 ###############################################################
@@ -383,7 +534,8 @@ def make_topic_level_bar(
     """x-axis = topics, each bar stacked by the proportion of prompts from
     each of the 3 SES classes (proportions normalized within topic)."""
     n_topics = len(tpc_labels)
-    color_map = {c: TAB20[i % len(TAB20)] for i, c in enumerate(SES_CLASS_ORDER)}
+    color_map = {c: TAB20[i % len(TAB20)]
+                 for i, c in enumerate(SES_CLASS_ORDER)}
 
     counts = np.zeros((n_topics, len(SES_CLASS_ORDER)))
     for tpc, cls in zip(df_merged["dominant_topic"], df_merged["social_class"]):
@@ -404,7 +556,8 @@ def make_topic_level_bar(
         bottoms += props[:, j]
 
     for i, total in enumerate(totals.ravel()):
-        ax.text(i, 1.01, f"n={int(total)}", ha="center", va="bottom", fontsize=16)
+        ax.text(i, 1.01, f"{int(total)}",
+                ha="center", va="bottom", fontsize=16)
 
     ax.set_xticks(range(n_topics))
     ax.set_xticklabels(short_labels, fontsize=18, rotation=45, ha="right")
@@ -419,7 +572,8 @@ def make_topic_level_bar(
         "Topic composition by SES class",
         fontsize=26,
     )
-    ax.legend(title="SES class", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=20)
+    ax.legend(title="SES class", bbox_to_anchor=(
+        1.02, 1), loc="upper left", fontsize=20)
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(path, dpi=EXPORT_DPI, bbox_inches="tight")
@@ -438,7 +592,8 @@ def make_reverse_bar(
     Common topics are hatched so they're easy to spot across all 3 bars."""
     top_topics_per_class = set()
     for cls in SES_CLASS_ORDER:
-        top_topics_per_class.update(class_topic.loc[cls].sort_values(ascending=False).head(top_n_per_class).index)
+        top_topics_per_class.update(class_topic.loc[cls].sort_values(
+            ascending=False).head(top_n_per_class).index)
     shown_topics = sorted(top_topics_per_class)
 
     color_map = {t: TAB20[i % len(TAB20)] for i, t in enumerate(shown_topics)}
@@ -460,10 +615,12 @@ def make_reverse_bar(
         bottoms += vals
 
     other = 1.0 - bottoms
-    ax.bar(x, other, bottom=bottoms, color="lightgray", label="All other topics", width=0.6)
+    ax.bar(x, other, bottom=bottoms, color="lightgray",
+           label="All other topics", width=0.6)
 
     ax.set_xticks(x)
-    ax.set_xticklabels([SES_CLASS_LABELS[c] for c in SES_CLASS_ORDER], fontsize=20)
+    ax.set_xticklabels([SES_CLASS_LABELS[c]
+                       for c in SES_CLASS_ORDER], fontsize=20)
     ax.set_ylabel("Proportion of prompts")
     ax.set_ylim(0, 1.02)
     ax.set_title(
@@ -482,16 +639,19 @@ def make_reverse_bar(
 ###############################################################
 def main(model_path: str | None = None, regen_labels: bool = False) -> None:
     if model_path:
-        logger.info(f"Using explicitly provided model path: {model_path} (skipping training/optimization).")
+        logger.info(
+            f"Using explicitly provided model path: {model_path} (skipping training/optimization).")
         best_model_path = model_path
     else:
         _, best_model_path = get_or_train_model()
 
-    df_assignments, tpc_labels = load_topic_assignments(best_model_path, regen_labels=regen_labels)
+    df_assignments, tpc_labels, tpc_words = load_topic_assignments(
+        best_model_path, regen_labels=regen_labels)
     best_k = len(tpc_labels)
     df_merged = load_ses_sample_with_topics(df_assignments)
 
-    common_topic_ids, class_topic = select_common_topics(df_merged, n_topics=best_k)
+    common_topic_ids, class_topic = select_common_topics(
+        df_merged, n_topics=best_k)
 
     plot_output_dir = _plot_output_dir_for_model(best_model_path)
 
@@ -513,6 +673,16 @@ def main(model_path: str | None = None, regen_labels: bool = False) -> None:
     })
     common_df.to_csv(plot_output_dir / "common_topics_ses.csv", index=False)
 
+    repr_queries_latex = make_representative_queries_latex(
+        df_merged, common_topic_ids, tpc_labels, topic_words=tpc_words, top_n=TOP_N_SHORTLIST
+    )
+    (plot_output_dir / "representative_queries_by_ses.tex").write_text(repr_queries_latex, encoding="utf-8")
+
+    shortlist_df = export_representative_shortlist(
+        df_merged, common_topic_ids, tpc_labels)
+    shortlist_df.to_csv(
+        plot_output_dir / "representative_queries_shortlist.csv", index=False)
+
     make_topic_level_bar(
         df_merged, tpc_labels, common_topic_ids,
         (plot_output_dir / "bar_ses_topic_level.png").as_posix(),
@@ -523,7 +693,8 @@ def main(model_path: str | None = None, regen_labels: bool = False) -> None:
     )
 
     labels_str = ", ".join(f"T{t}: {tpc_labels[t]}" for t in common_topic_ids)
-    logger.info(f"\nDone. Topics most common across all 3 SES classes: {labels_str}")
+    logger.info(
+        f"\nDone. Topics most common across all 3 SES classes: {labels_str}")
     logger.info(f"All outputs saved to '{plot_output_dir.as_posix()}/'")
 
 
@@ -542,6 +713,77 @@ if __name__ == "__main__":
         action="store_true",
         help="Recompute topic labels via LLM even if tpc_labels.txt already exists.",
     )
+    parser.add_argument(
+        "--add_topic_info",
+        action="store_true",
+        default=False,
+        help="Add topic info.",
+    )
+    parser.add_argument(
+        "--path_metrics",
+        type=str,
+        default="evaluation/all_metrics/all_metrics.csv",
+        help="Path to the metrics CSV file.",
+    )
+    parser.add_argument(
+        "--path_topics",
+        type=str,
+        default="evaluation/topic_modeling/ses_plots/model_15_topics",
+        help="Path to the topics CSV file.",
+    )
+    parser.add_argument(
+        "--topic-ids",
+        type=int,
+        nargs="+",
+        default=[0, 3],
+        help="Dominant topic ids to keep when adding topic info to the metrics CSV.",
+    )
+    parser.add_argument(
+        "--threshold",
+        type=float,
+        default=0.4,
+        help="Minimum topic_composition score (for any of --topic-ids) required to keep a row in the thresholded export.",
+    )
     args = parser.parse_args()
+
+    if args.add_topic_info:
+
+        df_metrics = pd.read_csv(args.path_metrics)
+        df_topics = pd.read_csv(args.path_topics)
+        topic_ids = args.topic_ids
+        threshold = args.threshold
+        suffix = "_".join(str(int(t)) for t in topic_ids)
+        print(len(df_metrics), len(df_topics))
+
+        df_metrics_topics = pd.merge(
+            df_metrics, df_topics, how="left", on="id")
+        print(len(df_metrics_topics))
+
+        df_metrics_topics["topic_composition"] = df_metrics_topics["topic_composition"].apply(
+            lambda x: ast.literal_eval(x) if isinstance(x, str) else {}
+        )
+
+        # keep all
+        all_topics = \
+            df_metrics_topics[df_metrics_topics.dominant_topic.isin(
+                topic_ids)]
+        all_topics.to_csv(
+            f"evaluation/all_metrics/all_metrics_topic_{suffix}.csv", index=False)
+        print(len(all_topics))
+
+        # keep all larger than threshold
+        above_threshold = pd.Series(False, index=df_metrics_topics.index)
+        for tid in topic_ids:
+            above_threshold |= df_metrics_topics.topic_composition.apply(
+                lambda d, tid=int(tid): d.get(tid, 0)
+            ) > threshold
+        larger_than_threshold = \
+            df_metrics_topics[
+                df_metrics_topics.dominant_topic.isin(
+                    topic_ids) & above_threshold
+            ]
+        larger_than_threshold.to_csv(
+            f"evaluation/all_metrics/all_metrics_topic_{suffix}_larger_than_threshold.csv", index=False)
+        print(len(larger_than_threshold))
 
     main(model_path=args.regen_plots, regen_labels=args.regen_labels)

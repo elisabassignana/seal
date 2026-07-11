@@ -1,0 +1,121 @@
+topic_id,topic_label,social_class,rank,s3_theta_rank,theta,query
+2,Travel Booking,Lower class,1,8.0,0.7964,Hello....are you able to tell me dates and times for the movie A Complete Unknown at Ashland Theater in Ashland ohio 44850
+2,Travel Booking,Lower class,2,17.0,0.7662,"I am an only child.  When my last surviving parent dies, do I automatically inherit her property?"
+2,Travel Booking,Lower class,3,33.0,0.6655,Write me a gym plan for the next 3 months for a newbie
+2,Travel Booking,Lower class,4,37.0,0.6178,"Please can you plan this route round Rome including these stops, where we want to go, our hotel and flight times"
+2,Travel Booking,Lower class,5,38.0,0.7255,"What is the best possible outcome of engaging in this activity, for you in particular?"
+2,Travel Booking,Lower class,6,48.0,0.6655,Please list the top selling horror authors of all time
+2,Travel Booking,Lower class,7,75.0,0.6178,What is the best way for a complete beginner to become involved in game development
+2,Travel Booking,Lower class,8,78.0,0.5762,Tell me about the new covid vaccinations
+2,Travel Booking,Lower class,9,85.0,0.6655,What size beds are in the Luxor Hotel VIP suite?
+2,Travel Booking,Lower class,10,88.0,0.5762,Best time of year to book travel to Scotland
+2,Travel Booking,Lower class,11,89.0,0.6655,Is a space trip to Mars plausible in the next fifty years?
+2,Travel Booking,Lower class,12,90.0,0.5762,Write me a fanfic of Shadow the Hedgehog x Barack Obama
+2,Travel Booking,Lower class,13,93.0,0.5762,What is the best form of iron supplement to take?
+2,Travel Booking,Lower class,14,106.0,0.5762,How can I be most helpful to my neighbor who has dementia?
+2,Travel Booking,Lower class,15,107.0,0.5762,Give me a list of the best rated horror movies in 2023.
+2,Travel Booking,Lower class,16,110.0,0.5762,Write a short children’s book.
+2,Travel Booking,Lower class,17,111.0,0.5762,how to make catfish less fishy
+2,Travel Booking,Lower class,18,113.0,0.5762,Plan a trip to Mexico for seven days
+2,Travel Booking,Lower class,19,117.0,0.5762,What is the worst things parents can do to their children?
+2,Travel Booking,Lower class,20,149.0,0.5762,Which room is the most expensive?
+2,Travel Booking,Middle class,1,2.0,0.7255,"Write a limerick about a 3 1/2 mile coastal hike near Whitby. Must include names: Frank, Louise, Andy, Lea"
+2,Travel Booking,Middle class,2,7.0,0.6655,The best spring holiday destinations?
+2,Travel Booking,Middle class,3,28.0,0.6655,My 8th house is in Gemini and an astrologer said this is where “your money Is at”. What does this mean for me?
+2,Travel Booking,Middle class,4,29.0,0.6655,would it be better to walk 1 mile or run a half mile?
+2,Travel Booking,Middle class,5,45.0,0.5762,How long does a mile take to walk
+2,Travel Booking,Middle class,6,47.0,0.6178,Where is the best online site that do free e-courses with certificates at the end?
+2,Travel Booking,Middle class,7,60.0,0.6178,what is the recommended daily dose of DHA to not be deficient? I can't imagine people get enough in their diet
+2,Travel Booking,Middle class,8,62.0,0.5762,What are some good places to visit in Paris on a 3-day trip?
+2,Travel Booking,Middle class,9,70.0,0.5762,Can you recommend some books to read?
+2,Travel Booking,Middle class,10,73.0,0.6655,"So I'm going traveling in August 2025, and wanted to set this chat up so I can plan within."
+2,Travel Booking,Middle class,11,76.0,0.6178,Can you suggest some engaging books or articles on personal development?
+2,Travel Booking,Middle class,12,101.0,0.5762,What are some unique pizza places to visit in london?
+2,Travel Booking,Middle class,13,120.0,0.5762,best rated movies on apple plus imdb
+2,Travel Booking,Middle class,14,121.0,0.5762,Create a bucket list with 50 items on it
+2,Travel Booking,Middle class,15,122.0,0.5762,Please name some relaxation techniques
+2,Travel Booking,Middle class,16,123.0,0.5762,what should I look out for when investing in crypto
+2,Travel Booking,Middle class,17,141.0,0.5762,Suppose you invest $100 at 5% interest per year. How much will you have after 2 years?
+2,Travel Booking,Middle class,18,153.0,0.5762,Who is playing in the NFL finals?
+2,Travel Booking,Middle class,19,154.0,0.5762,"A man buys a pig for $60, sells it for $70, buys it back for $80, and sells it finally for $90. How much has he made?"
+2,Travel Booking,Middle class,20,,0.7962,"I NEED TO GO BOOK A RESERVATION IN AFRICA KENYA,WHERE DO I START? ChatGPT said: ChatGPT That sounds exciting! Booking a reservation in Kenya depends on what you're planning to do and where you're staying. Here’s a general guide to get you started:  Flights: The first thing you’ll want to sort is your flight. Major airports in Kenya include Nairobi’s Jomo Kenyatta International Airport (NBO) and Moi International Airport in Mombasa (MBA). You can check flights through airline websites or travel booking platforms like Skyscanner, Expedia, or Google Flights.  Accommodation: There are a variety of accommodation options, depending on your interests. If you're heading to Nairobi, you’ll find everything from luxury hotels to charming guesthouses. For safaris or beach holidays, you might want to consider booking lodges or resorts. Websites like Booking.com, Airbnb, or local services like SafariBookings for safari lodges could be helpful. If you’re going on safari, it’s worth booking early, as these can fill up quickly.  Activities: If you're planning a safari, check out Kenya's national parks such as Maasai Mara, Amboseli, or Tsavo. You could book a guided safari through a tour operator like Gamewatchers Safaris or any local agencies that offer these tours. For other activities, there are plenty of things like hiking Mount Kenya or visiting the beaches along the Indian Ocean, and these can often be arranged directly through your accommodation.  Visas & Health: Check whether you need a visa before you go and make sure you're up to date on vaccinations. The Kenyan government’s website or your local embassy will have more information.  Local Transport: Depending on where you’re going, you might need to book local flights (for example, to get to the Maasai Mara or Mombasa), or consider renting a car, especially if you're planning on exploring on your own.  If you’re not sure about what to book first, let me know more details about your trip, and I can help narrow things down for you!       ChatGPT can make m"
+2,Travel Booking,Upper class,1,4.0,0.7255,"I am planning to travel for a vacation in Japan, do you have any recommendations?"
+2,Travel Booking,Upper class,2,5.0,0.6655,AI is used in recommendation systems and online shopping.
+2,Travel Booking,Upper class,3,16.0,0.7255,Is the next hurricane season supposed to be active?
+2,Travel Booking,Upper class,4,23.0,0.7255,Can you recommend some good books on personal development?
+2,Travel Booking,Upper class,5,25.0,0.7255,Can you recommend any books on personal development?
+2,Travel Booking,Upper class,6,30.0,0.6655,In the Uk how do I sell a house I own outright to the tenant
+2,Travel Booking,Upper class,7,32.0,0.6655,how to plan a inexpensive vacation
+2,Travel Booking,Upper class,8,43.0,0.6655,travel insurance for residents of cyprus over 80
+2,Travel Booking,Upper class,9,51.0,0.5762,A verse about giving back what you lost
+2,Travel Booking,Upper class,10,63.0,0.5762,"What is the monthly cost of $32,000 at 3.3% for 72 months?"
+2,Travel Booking,Upper class,11,64.0,0.5762,"What is the monthly cost of $45,000 at 2.9% for 60 months?"
+2,Travel Booking,Upper class,12,65.0,0.5762,"What is the monthly cost of $45,000 at 3.2% for 72 months?"
+2,Travel Booking,Upper class,13,66.0,0.5762,"What is the monthly cost of $45,000 at 3.3% for 60 months?"
+2,Travel Booking,Upper class,14,67.0,0.5762,"What is the monthly cost of $34,000 at 3.3% for 60 months?"
+2,Travel Booking,Upper class,15,68.0,0.5762,"What is the monthly cost of $34,000 at 2.9% for 60 months?"
+2,Travel Booking,Upper class,16,82.0,0.5762,How to make money online
+2,Travel Booking,Upper class,17,86.0,0.5762,What was Elon musk criticized for
+2,Travel Booking,Upper class,18,102.0,0.5762,Can you help me create a workout plan?
+2,Travel Booking,Upper class,19,108.0,0.5762,what was the best horror movie in 2024
+2,Travel Booking,Upper class,20,112.0,0.5762,Plan a 3 day trip to London
+0,Document Summarization,Lower class,1,7.0,0.6193,Can you summarize the first chapter of this book for my research paper?
+0,Document Summarization,Lower class,2,8.0,0.7273,Please proofread and correct any errors on this essay.
+0,Document Summarization,Lower class,3,9.0,0.7273,Please summarise the plot of the novel Anna Karenina without spoilers
+0,Document Summarization,Lower class,4,28.0,0.6677,summarize the explanation in three sentences
+0,Document Summarization,Lower class,5,51.0,0.6677,Define the 5 main arguments against trans people.
+0,Document Summarization,Lower class,6,53.0,0.6677,Can you provide a brief summary of a recent news article or current event?
+0,Document Summarization,Lower class,7,54.0,0.5791,Can you summarize Nikola Tesla's greatest inventions to me?
+0,Document Summarization,Lower class,8,56.0,0.5791,Give me ideas for pediatric case presentation
+0,Document Summarization,Lower class,9,59.0,0.6685,Javascript error detection and cleaning up of code in conjunction with codecademy lessons
+0,Document Summarization,Lower class,10,66.0,0.6677,Generate a Doctor Who story summary for me.
+0,Document Summarization,Lower class,11,69.0,0.5791,why is there so much uproar regarding China's deepseek ai
+0,Document Summarization,Lower class,12,78.0,0.5791,Make this a 4 sentence paragraph in simple terms
+0,Document Summarization,Lower class,13,82.0,0.5791,give me an interest calculation summary
+0,Document Summarization,Lower class,14,89.0,0.5791,Can you answer a complex question about  the theory of relativity?
+0,Document Summarization,Lower class,15,93.0,0.5791,do you think AI can make mistakes leading  disaster
+0,Document Summarization,Lower class,16,95.0,0.5791,Can you spell check this document
+0,Document Summarization,Lower class,17,97.0,0.5791,Give me a brief summary of the US election
+0,Document Summarization,Lower class,18,98.0,0.5791,Give me a brief summary of the UK local election process
+0,Document Summarization,Lower class,19,104.0,0.5791,What are other words for stink
+0,Document Summarization,Lower class,20,113.0,0.5791,What are the main reasons that recycling rates are misleading- please give several short examples
+0,Document Summarization,Middle class,1,0.0,0.7678,Summarise this article and extract any information necessary for my presentation
+0,Document Summarization,Middle class,2,23.0,0.6677,Summarize all the audios in 3 sentences
+0,Document Summarization,Middle class,3,35.0,0.5791,Summarize the article for me
+0,Document Summarization,Middle class,4,40.0,0.7085,explain how El Niño will be impacted by climate change. Write in a scientific style and refer to the Great Barrier Reef
+0,Document Summarization,Middle class,5,44.0,0.6677,Please generate a thesis statement for tax law
+0,Document Summarization,Middle class,6,45.0,0.5791,What does my birth chart say about me?
+0,Document Summarization,Middle class,7,57.0,0.5791,please summarize the 2024 USA election
+0,Document Summarization,Middle class,8,58.0,0.5791,summarize in 5 sentences
+0,Document Summarization,Middle class,9,68.0,0.6677,What are some common data visualization best practices
+0,Document Summarization,Middle class,10,70.0,0.5791,Sure! Please share the text you'd like me to summarize.
+0,Document Summarization,Middle class,11,74.0,0.5791,what is hyperactivity in psychology
+0,Document Summarization,Middle class,12,76.0,0.5791,What can I do differently as a data analyst
+0,Document Summarization,Middle class,13,79.0,0.5791,How can I develop myself as the best data analyst
+0,Document Summarization,Middle class,14,91.0,0.5791,Grammar and spell check the following text
+0,Document Summarization,Middle class,15,108.0,0.5791,Forestry and its components
+0,Document Summarization,Middle class,16,121.0,0.5791,Write a summary about sport
+0,Document Summarization,Middle class,17,,0.7544,"an rewrite this in 1-2 sentences in my own words ""The primary goal of this experiment is to learn how to record measurements to the correct number of decimal places to reflect the accuracy of each instrument used. Thus, most of the credit for this experiment will be based on the accuracy and proper number of decimal places recorded for measurements and the proper use of significant figures when those measurements are used in subsequent calculations."""
+0,Document Summarization,Middle class,18,,0.6606,"What is research methods  ChatGPT said: ChatGPT Research methods are systematic techniques, strategies, or approaches used to collect, analyze, and interpret data in order to answer research questions or test hypotheses. They are essential in academic, scientific, and applied research to ensure that findings are valid, reliable, and credible.  Types of Research Methods Qualitative Research Focus: Understanding concepts, experiences, or phenomena. Data Collection: Interviews, focus groups, observations, document analysis. Data Type: Non-numerical (text,"
+0,Document Summarization,Middle class,19,,0.5791,language Translation
+0,Document Summarization,Middle class,20,,0.5791,shorten my paragraph
+0,Document Summarization,Upper class,1,3.0,0.7678,Please extract the key notes and takeaways from the attached PDF document
+0,Document Summarization,Upper class,2,4.0,0.7273,Can you summarize the main takeaways from Atomic Habits by James Clear?
+0,Document Summarization,Upper class,3,6.0,0.6677,What are the latest trends in artificial intelligence?
+0,Document Summarization,Upper class,4,12.0,0.7273,Can you explain the latest advancements in artificial intelligence?
+0,Document Summarization,Upper class,5,19.0,0.6677,Can you summarize the plot of The Great Gatsby?
+0,Document Summarization,Upper class,6,21.0,0.6677,Can you summarize the main ideas from Atomic Habits by James Clear?
+0,Document Summarization,Upper class,7,22.0,0.6677,"in not more 200 words, i would like to know about the asian tigers"
+0,Document Summarization,Upper class,8,34.0,0.5791,Can you summarize this article for me?
+0,Document Summarization,Upper class,9,46.0,0.6193,replace the word paradigm with its synonyms in the essay
+0,Document Summarization,Upper class,10,48.0,0.6677,Mets free agent signings
+0,Document Summarization,Upper class,11,50.0,0.5791,What is the meaning of kinky?
+0,Document Summarization,Upper class,12,64.0,0.6677,"Using an appropriate diagram, explain how RPC is implemented"
+0,Document Summarization,Upper class,13,65.0,0.6677,crime analysis with data
+0,Document Summarization,Upper class,14,67.0,0.5791,I use it for language translation
+0,Document Summarization,Upper class,15,75.0,0.5937,Backpacks vs. Briefcases: Steps toward Rhetorical Analysis Laura Bolin Carroll                                                                                                                                                                                         Write summary of this Rehtorical Analysis
+0,Document Summarization,Upper class,16,81.0,0.5791,Summarise the following in 500 words or less
+0,Document Summarization,Upper class,17,86.0,0.5791,Could you explain how a blockchain works in simple terms?
+0,Document Summarization,Upper class,18,96.0,0.5791,Explain to me what a TFSA is like I'm 10
+0,Document Summarization,Upper class,19,109.0,0.5791,What are the best practices for philosophy
+0,Document Summarization,Upper class,20,110.0,0.5791,What are the most common mistakes people make in interviews?
