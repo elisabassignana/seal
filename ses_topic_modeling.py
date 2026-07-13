@@ -39,20 +39,26 @@ TOP_N_COMMON = 2
 TOP_N_REPRESENTATIVE = 5
 TOP_N_SHORTLIST = 20
 
-SES_CLASS_ORDER = ["low", "middle", "upper"]
-SES_CLASS_LABELS = {"low": "Lower class",
-                    "middle": "Middle class", "upper": "Upper class"}
 TAB20 = plt.colormaps["tab20"].colors
 
 plt.rcParams.update({
-    "font.size": 22,
-    "axes.titlesize": 26,
-    "axes.labelsize": 24,
-    "xtick.labelsize": 20,
-    "ytick.labelsize": 20,
-    "legend.fontsize": 20,
-    "legend.title_fontsize": 22,
+    "font.size": 24,
+    "axes.titlesize": 30,
+    "axes.labelsize": 30,
+    "xtick.labelsize": 28,
+    "ytick.labelsize": 28,
+    "legend.fontsize": 28,
+    "legend.title_fontsize": 30,
 })
+
+# SES bucketing --------------------------------------------------------------
+# Edit BIN_EDGES / BIN_LABELS to change the buckets.
+BIN_EDGES  = [0, 3, 7, 10]          # (0,3] -> Low, (3,7] -> Middle, (7,10] -> High
+BIN_LABELS = ["Low", "Middle", "High"]
+SES_ORDER  = BIN_LABELS
+
+SES_CLASS_ORDER = SES_ORDER
+SES_CLASS_LABELS = {lbl: lbl for lbl in SES_CLASS_ORDER}
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
@@ -349,8 +355,11 @@ def load_ses_sample_with_topics(df_assignments: pd.DataFrame) -> pd.DataFrame:
     df_sample = pd.read_csv(SES_DATA_PATH)
 
     n_before = len(df_sample)
-    df_sample = df_sample[df_sample["social_class"].isin(
-        SES_CLASS_ORDER)].copy()
+    df_sample = df_sample.copy()
+    df_sample["social_class"] = pd.cut(
+        df_sample["ses"], bins=BIN_EDGES, labels=BIN_LABELS, include_lowest=True
+    )
+    df_sample = df_sample[df_sample["social_class"].isin(SES_CLASS_ORDER)].copy()
 
     df_merged = df_sample.merge(
         df_assignments[["id", "dominant_topic",
@@ -546,7 +555,7 @@ def make_topic_level_bar(
 
     short_labels = [f"T{i}: {lbl}" for i, lbl in enumerate(tpc_labels)]
 
-    fig, ax = plt.subplots(figsize=(max(14, n_topics * 1.2), 9))
+    fig, ax = plt.subplots(figsize=(max(16, n_topics * 1.3), 10))
     bottoms = np.zeros(n_topics)
     for j, cls in enumerate(SES_CLASS_ORDER):
         ax.bar(
@@ -557,23 +566,23 @@ def make_topic_level_bar(
 
     for i, total in enumerate(totals.ravel()):
         ax.text(i, 1.01, f"{int(total)}",
-                ha="center", va="bottom", fontsize=16)
+                ha="center", va="bottom", fontsize=20)
 
     ax.set_xticks(range(n_topics))
-    ax.set_xticklabels(short_labels, fontsize=18, rotation=45, ha="right")
+    ax.set_xticklabels(short_labels, fontsize=26, rotation=45, ha="right",
+                        rotation_mode="anchor")
     for i, tick in enumerate(ax.get_xticklabels()):
         if i in common_topic_ids:
             tick.set_color("crimson")
             tick.set_fontweight("bold")
 
     ax.set_ylabel("Proportion of prompts")
-    ax.set_ylim(0, 1.12)
-    ax.set_title(
-        "Topic composition by SES class",
-        fontsize=26,
-    )
-    ax.legend(title="SES class", bbox_to_anchor=(
-        1.02, 1), loc="upper left", fontsize=20)
+    ax.set_ylim(0, 1.22)
+    #ax.set_title(
+    #    "Topic composition by SES class",
+    #    fontsize=26, pad=60,
+    #)
+    ax.legend(title="SES bucket", bbox_to_anchor=(0.5, 1.02), loc="lower center",ncol=len(SES_CLASS_ORDER))
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(path, dpi=EXPORT_DPI, bbox_inches="tight")
@@ -598,7 +607,7 @@ def make_reverse_bar(
 
     color_map = {t: TAB20[i % len(TAB20)] for i, t in enumerate(shown_topics)}
 
-    fig, ax = plt.subplots(figsize=(16, 10))
+    fig, ax = plt.subplots(figsize=(18, 12))
     x = np.arange(len(SES_CLASS_ORDER))
     bottoms = np.zeros(len(SES_CLASS_ORDER))
 
@@ -620,14 +629,14 @@ def make_reverse_bar(
 
     ax.set_xticks(x)
     ax.set_xticklabels([SES_CLASS_LABELS[c]
-                       for c in SES_CLASS_ORDER], fontsize=20)
+                       for c in SES_CLASS_ORDER], fontsize=28)
     ax.set_ylabel("Proportion of prompts")
     ax.set_ylim(0, 1.02)
-    ax.set_title(
-        f"Topic composition by SES class",
-        fontsize=26,
-    )
-    ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=16)
+    #ax.set_title(
+    #    f"Topic composition by SES class",
+    #    fontsize=26, pad=100,
+    # )
+    ax.legend(title="Topic", bbox_to_anchor=(0.5, 1.02), loc="lower center", ncol=2)
     ax.grid(axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(path, dpi=EXPORT_DPI, bbox_inches="tight")

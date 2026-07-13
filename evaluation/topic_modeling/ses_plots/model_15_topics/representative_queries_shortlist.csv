@@ -1,121 +1,121 @@
 topic_id,topic_label,social_class,rank,s3_theta_rank,theta,query
-0,Business Writing & Analysis,Lower class,1,12.0,0.8381,"How do you develop customer experience strategies and, how do you utilize customer feedback to ensure continuous improvement?"
-0,Business Writing & Analysis,Lower class,2,25.0,0.7505,Please summarise the plot of the novel Anna Karenina without spoilers
-0,Business Writing & Analysis,Lower class,3,27.0,0.7505,Dark Horse ideas on circular economy
-0,Business Writing & Analysis,Lower class,4,30.0,0.7505,Why was Islam a popular religion for sellers and tradesmen?
-0,Business Writing & Analysis,Lower class,5,31.0,0.7505,What are the latest architectural trends in sustainable design ?
-0,Business Writing & Analysis,Lower class,6,32.0,0.7873,"Okay, let's talk about trending products. But first tell me how I can find trending products in my research."
-0,Business Writing & Analysis,Lower class,7,50.0,0.7873,Generate a compelling brand story for a creative agency
-0,Business Writing & Analysis,Lower class,8,,0.7429,"My landlord gave all current tenants a new month-to-month lease agreement on january 21, 2025, which was given to each current tenant by me in writing to each individual tenant at their residence. My landlord has me in charge of keeping track of tenant activity in regarding to following new policies and managing the paperwork involved. The new lease agreement stated that effective immediately all designated outdoor spaces must be cleared of everything excluding outdoor furniture and garden items, as well as effective immediately all personal  items must be removed form any areas not included in the tenant's designated outdoor space or indoor spaces(including all garages and outbuildings on the property. When and what would I give to tenant who are not in compliance?"
-0,Business Writing & Analysis,Lower class,9,,0.704,"On a certain day, a bakery produced a batch of rolls at a total production cost of $400. On that day, 3/5 of the rolls in the batch were sold, each at a price that was 50 percent greater than the average (arithmetic mean) production cost per roll. The remaining rolls in the batch were sold the next day, each at a price that was 20 percent less than the price of the day before. What was the bakery’s profit on this batch of rolls?"
-0,Business Writing & Analysis,Lower class,10,,0.6957,so this means paypal would charge me conversion fees that is correct?
-0,Business Writing & Analysis,Lower class,11,,0.6957,Please summarise the importance of Luebeck in the hanseatic league
-0,Business Writing & Analysis,Lower class,12,,0.6957,Can you provide a brief summary of a recent news article or current event?
-0,Business Writing & Analysis,Lower class,13,,0.6957,what is the best crypto for scalping trading?
-0,Business Writing & Analysis,Lower class,14,,0.6957,Generate a Doctor Who story summary for me.
-0,Business Writing & Analysis,Lower class,15,,0.6957,What might be included in a psychology personal statement?
-0,Business Writing & Analysis,Lower class,16,,0.6957,Can you tell me about the current trend of the stock market?
-0,Business Writing & Analysis,Lower class,17,,0.6957,summarize the explanation in three sentences
-0,Business Writing & Analysis,Lower class,18,,0.6957,related words to indignant
-0,Business Writing & Analysis,Lower class,19,,0.6957,How do I work out carbon emissions where there is no data
-0,Business Writing & Analysis,Lower class,20,,0.6957,how to write an intro for a scientific essay
-0,Business Writing & Analysis,Middle class,1,0.0,0.8381,If the companies in this article had used sandboxing techniques could they have avoided the compromising data collection by Amazon?
-0,Business Writing & Analysis,Middle class,2,6.0,0.7873,Explain the difference between machine learning and artificial intelligence.
-0,Business Writing & Analysis,Middle class,3,10.0,0.7873,Summarise this article and extract any information necessary for my presentation
-0,Business Writing & Analysis,Middle class,4,11.0,0.7505,What's the difference between machine learning and artificial intelligence?
-0,Business Writing & Analysis,Middle class,5,46.0,0.7505,Come up with a random topic  and make a creative paragraph explaining it in great detail like a short story.
-0,Business Writing & Analysis,Middle class,6,,0.6957,We are the largest trends in digital marketing .
-0,Business Writing & Analysis,Middle class,7,,0.6957,what is the charging speed of a skoda enyaq
-0,Business Writing & Analysis,Middle class,8,,0.6957,Summarize all the audios in 3 sentences
-0,Business Writing & Analysis,Middle class,9,,0.6957,whats the current trend in  stock trading
-0,Business Writing & Analysis,Middle class,10,,0.6957,write an intro about branding for my site
-0,Business Writing & Analysis,Middle class,11,,0.6957,How many Americans use hybrid and electrical vehicles
-0,Business Writing & Analysis,Middle class,12,,0.6957,forensic sebiome analysis
-0,Business Writing & Analysis,Middle class,13,,0.6957,What are the qualities of a good customer service advisor
-0,Business Writing & Analysis,Middle class,14,,0.6957,Write me a Personal statement re business
-0,Business Writing & Analysis,Middle class,15,,0.6957,What are some common data visualization best practices
-0,Business Writing & Analysis,Middle class,16,,0.6957,Please generate a thesis statement for tax law
-0,Business Writing & Analysis,Middle class,17,,0.6957,elaborate more on klms 24/7 multilingual customer support
-0,Business Writing & Analysis,Middle class,18,,0.6891,"What is research methods  ChatGPT said: ChatGPT Research methods are systematic techniques, strategies, or approaches used to collect, analyze, and interpret data in order to answer research questions or test hypotheses. They are essential in academic, scientific, and applied research to ensure that findings are valid, reliable, and credible.  Types of Research Methods Qualitative Research Focus: Understanding concepts, experiences, or phenomena. Data Collection: Interviews, focus groups, observations, document analysis. Data Type: Non-numerical (text,"
-0,Business Writing & Analysis,Middle class,19,,0.686,Can you please write 200 words on why a company should proceed with a comprehensive marketing budget
-0,Business Writing & Analysis,Middle class,20,,0.686,How can employees improve both their verbal and non-verbal communication skills to create better customer experiences?
-0,Business Writing & Analysis,Upper class,1,4.0,0.8381,Explain the iron condor strategy in stock trading in a simple manner
-0,Business Writing & Analysis,Upper class,2,9.0,0.7505,What are the digital marketing strategies for small businesses
-0,Business Writing & Analysis,Upper class,3,13.0,0.8147,You place a market order for a volatile stock and notice the price has moved significantly since you placed it. What should you do next time?
-0,Business Writing & Analysis,Upper class,4,18.0,0.7505,Can you analyze a sales Excel sheet for me
-0,Business Writing & Analysis,Upper class,5,19.0,0.7505,What are the best strategies to win a new customer in sales and marketing?
-0,Business Writing & Analysis,Upper class,6,38.0,0.7505,Can you explain the latest advancements in artificial intelligence?
-0,Business Writing & Analysis,Upper class,7,39.0,0.7505,AI is used in chatbots and natural language processing
-0,Business Writing & Analysis,Upper class,8,40.0,0.7505,What's the difference between machine learning and deep learning?
-0,Business Writing & Analysis,Upper class,9,48.0,0.7505,Kindly generate me highly converting and compelling content for my products content
-0,Business Writing & Analysis,Upper class,10,,0.904,"Imagine you are running a laundry business, In a few sentences, please explain the type of business venture that you are running...   For example, what kinds of products and services do you sell? Who do you sell to? Are you the founder or co-founder?"
-0,Business Writing & Analysis,Upper class,11,,0.7943,"In a few sentences, please explain the type of business venture that you are running...  For example, what kinds of products and services do you sell? Who do you sell to? Are you the founder or co-founder?"
-0,Business Writing & Analysis,Upper class,12,,0.7238,Please summarize the key industry trends and observations around the Business Process Outsourcing industry (BPO)
-0,Business Writing & Analysis,Upper class,13,,0.6957,What are the current crypto market trend
-0,Business Writing & Analysis,Upper class,14,,0.6957,Organizational Chart Creation
-0,Business Writing & Analysis,Upper class,15,,0.6957,Please make this resume more compelling for a sales job
-0,Business Writing & Analysis,Upper class,16,,0.6957,How would you explain machine learning to someone who isn’t into tech?
-0,Business Writing & Analysis,Upper class,17,,0.6957,What’s the best app or tool for tracking personal finances?
-0,Business Writing & Analysis,Upper class,18,,0.6957,does honda produces electrical vehicles?
-0,Business Writing & Analysis,Upper class,19,,0.6957,What are the best apps or tools for keeping track of personal finances?
-0,Business Writing & Analysis,Upper class,20,,0.6957,Can you summarize the plot of The Great Gatsby?
-3,Travel & Diet/Meal Planning,Lower class,1,3.0,0.7379,Give me a heart healthy meal plan to diet to follow for cutting and muscle gain.
-3,Travel & Diet/Meal Planning,Lower class,2,4.0,0.7264,List me the best workout routine for someone looking to lose belly fat.
-3,Travel & Diet/Meal Planning,Lower class,3,6.0,0.7264,List of resorts in Dominican Republic with swim up suites
-3,Travel & Diet/Meal Planning,Lower class,4,11.0,0.7264,If a child has a headache then a cough and fever
-3,Travel & Diet/Meal Planning,Lower class,5,17.0,0.7264,How do I calculate days supply for suspensions and needles in mg/ml?
-3,Travel & Diet/Meal Planning,Lower class,6,28.0,0.6667,find me the cheapest 1lb bag of mini pretzels
-3,Travel & Diet/Meal Planning,Lower class,7,42.0,0.6667,Write a daily meal plan
-3,Travel & Diet/Meal Planning,Lower class,8,46.0,0.6667,can you ask more questions about seungmin's overall relationship with hyunjin in the second half of the story?
-3,Travel & Diet/Meal Planning,Lower class,9,49.0,0.6667,Write me a gym plan for the next 3 months for a newbie
-3,Travel & Diet/Meal Planning,Lower class,10,55.0,0.6667,What home remedies can treat RSV?
-3,Travel & Diet/Meal Planning,Lower class,11,65.0,0.7264,How large does a vegetable garden need to be to feed a family of 5?
-3,Travel & Diet/Meal Planning,Lower class,12,66.0,0.6667,What size beds are in the Luxor Hotel VIP suite?
-3,Travel & Diet/Meal Planning,Lower class,13,71.0,0.6667,What is a full body exercise I can do without equipment
-3,Travel & Diet/Meal Planning,Lower class,14,,0.7264,Someone has offered me a lot of money for my cat.  He used to be a neighbor and really just likes the cat.  I'm heartbroken thinking about it but we really need to fix our roof and this would allow me to do that. What should I do?
-3,Travel & Diet/Meal Planning,Lower class,15,,0.7108,"Now please describe using creative writing skills in first person from a male perspective, the walk through the entrance of the Luxor Hotel, through the casino, and up to the hotel room.   Additional details, it's nighttime during the summer."
-3,Travel & Diet/Meal Planning,Lower class,16,,0.6353,"Generate a 4 day a week workout program focused on upper body and losing weight, while keeping muscle."
-3,Travel & Diet/Meal Planning,Lower class,17,,0.6191,"Please can you plan this route round Rome including these stops, where we want to go, our hotel and flight times"
-3,Travel & Diet/Meal Planning,Lower class,18,,0.6191,What are the best foods to eat for a healthy diet and to lose weight?
-3,Travel & Diet/Meal Planning,Lower class,19,,0.6123,"After hatching from its egg, a baby bird doubles in weight every day. On day 12 it weighs a pound. When did the bird weigh half a pound?"
-3,Travel & Diet/Meal Planning,Lower class,20,,0.5936,Why is my cat so crazy about my neighbor? He only just started being affectionate with me after months but he runs up to her chirping and loves on her legs.  Could she remind him of someone he used to know?
-3,Travel & Diet/Meal Planning,Middle class,1,1.0,0.7079,"between Burger king, chick fil A, McDonalds, Subway, Taco bell and Wendy's, rate the prices."
-3,Travel & Diet/Meal Planning,Middle class,2,21.0,0.7668,If i save 50 pounds a week how much money will i have saved in 3 years and 7 months
-3,Travel & Diet/Meal Planning,Middle class,3,22.0,0.7264,What is the last name of the first person to complete a solo flight across the Atlantic Ocean?
-3,Travel & Diet/Meal Planning,Middle class,4,29.0,0.6667,The best spring holiday destinations?
-3,Travel & Diet/Meal Planning,Middle class,5,31.0,0.7264,"January is so dreary and dull, I wish it was Spring already"
-3,Travel & Diet/Meal Planning,Middle class,6,37.0,0.7264,Daily expense tracker plan
-3,Travel & Diet/Meal Planning,Middle class,7,47.0,0.6667,Can you help me plan a healthy meal for the week?
-3,Travel & Diet/Meal Planning,Middle class,8,48.0,0.6667,would it be better to walk 1 mile or run a half mile?
-3,Travel & Diet/Meal Planning,Middle class,9,59.0,0.6667,"What is the fastest way to lose weight, what should I eat?"
-3,Travel & Diet/Meal Planning,Middle class,10,63.0,0.6667,What permits are needed to run a food truck
-3,Travel & Diet/Meal Planning,Middle class,11,67.0,0.6667,My 8th house is in Gemini and an astrologer said this is where “your money Is at”. What does this mean for me?
-3,Travel & Diet/Meal Planning,Middle class,12,,0.7968,"Can you give me 10 foods I should try on my next visit to Tokyo? I've visited before, but I want to explore food more and try some new exciting things."
-3,Travel & Diet/Meal Planning,Middle class,13,,0.6191,what is the recommended daily dose of DHA to not be deficient? I can't imagine people get enough in their diet
-3,Travel & Diet/Meal Planning,Middle class,14,,0.6191,Create a workout plan for a beginner focusing on strength training
-3,Travel & Diet/Meal Planning,Middle class,15,,0.6191,UK climate average temperature month by month
-3,Travel & Diet/Meal Planning,Middle class,16,,0.5826,"I NEED TO GO BOOK A RESERVATION IN AFRICA KENYA,WHERE DO I START? ChatGPT said: ChatGPT That sounds exciting! Booking a reservation in Kenya depends on what you're planning to do and where you're staying. Here’s a general guide to get you started:  Flights: The first thing you’ll want to sort is your flight. Major airports in Kenya include Nairobi’s Jomo Kenyatta International Airport (NBO) and Moi International Airport in Mombasa (MBA). You can check flights through airline websites or travel booking platforms like Skyscanner, Expedia, or Google Flights.  Accommodation: There are a variety of accommodation options, depending on your interests. If you're heading to Nairobi, you’ll find everything from luxury hotels to charming guesthouses. For safaris or beach holidays, you might want to consider booking lodges or resorts. Websites like Booking.com, Airbnb, or local services like SafariBookings for safari lodges could be helpful. If you’re going on safari, it’s worth booking early, as these can fill up quickly.  Activities: If you're planning a safari, check out Kenya's national parks such as Maasai Mara, Amboseli, or Tsavo. You could book a guided safari through a tour operator like Gamewatchers Safaris or any local agencies that offer these tours. For other activities, there are plenty of things like hiking Mount Kenya or visiting the beaches along the Indian Ocean, and these can often be arranged directly through your accommodation.  Visas & Health: Check whether you need a visa before you go and make sure you're up to date on vaccinations. The Kenyan government’s website or your local embassy will have more information.  Local Transport: Depending on where you’re going, you might need to book local flights (for example, to get to the Maasai Mara or Mombasa), or consider renting a car, especially if you're planning on exploring on your own.  If you’re not sure about what to book first, let me know more details about your trip, and I can help narrow things down for you!       ChatGPT can make m"
-3,Travel & Diet/Meal Planning,Middle class,17,,0.5787,What are some unique pizza places to visit in london?
-3,Travel & Diet/Meal Planning,Middle class,18,,0.5787,why does my dog drink so much water
-3,Travel & Diet/Meal Planning,Middle class,19,,0.5787,Can you recommend some books to read?
-3,Travel & Diet/Meal Planning,Middle class,20,,0.5787,Note on osteomyelities
-3,Travel & Diet/Meal Planning,Upper class,1,0.0,0.7968,"Tell me the pros and cons of lions mane supplement, is it safe and what is the recommended dose"
-3,Travel & Diet/Meal Planning,Upper class,2,2.0,0.7379,Write me a 4 day meal plan for low FODMAP diet that has a mixture of vegetarian and meat based meals
-3,Travel & Diet/Meal Planning,Upper class,3,7.0,0.7668,How do I troubleshoot a slow internet connection at home?
-3,Travel & Diet/Meal Planning,Upper class,4,25.0,0.6667,How to permanently treat toilet infection
-3,Travel & Diet/Meal Planning,Upper class,5,27.0,0.6667,List 5 relaxing places for a 3 days Valentines trip
-3,Travel & Diet/Meal Planning,Upper class,6,32.0,0.7264,How can I fix a slow internet connection at home?
-3,Travel & Diet/Meal Planning,Upper class,7,33.0,0.7264,How do I fix a slow internet connection at home?
-3,Travel & Diet/Meal Planning,Upper class,8,41.0,0.7264,"I am planning to travel for a vacation in Japan, do you have any recommendations?"
-3,Travel & Diet/Meal Planning,Upper class,9,44.0,0.6667,Could you help me create a weekly meal plan?
-3,Travel & Diet/Meal Planning,Upper class,10,56.0,0.6667,how to lose weight when lazy
-3,Travel & Diet/Meal Planning,Upper class,11,60.0,0.7264,Advert plan on water bottle
-3,Travel & Diet/Meal Planning,Upper class,12,68.0,0.6667,What’s the best way to plan a project from start to finish
-3,Travel & Diet/Meal Planning,Upper class,13,,0.6911,"Question 1  What is the average atomic mass for the hypothetical element that contains three isotopes of mass 16.0 amu, 17 0 amu, and 18.0 amu with relative abundances of 20.0%, 50.0%, and 30.0%, respectively? Remember to use the formula and include the unit in your response"
-3,Travel & Diet/Meal Planning,Upper class,14,,0.6473,A sample of boron consists of 80.0% boron-11 (with an atomic mass of 11.009 amu) and 20.0% boron-10 (with an atomic mass of 10.012 amu). What is the average atomic mass of boron based on this sample?  Use the appropriate number of significant figures  10.818 amu  10.810 ama  11.009 amu  10.81 amu
-3,Travel & Diet/Meal Planning,Upper class,15,,0.6191,My Piper Cherokee Six burns 1 quart of oil approximately every 7 hours. Is this normal oil consumption?
-3,Travel & Diet/Meal Planning,Upper class,16,,0.5787,in terms of daily living what can 30 usd buy in atlanta right now?
-3,Travel & Diet/Meal Planning,Upper class,17,,0.5787,Who will have more seats in the senate after the 2026 midterms?
-3,Travel & Diet/Meal Planning,Upper class,18,,0.5787,what foods are good to feed cats
-3,Travel & Diet/Meal Planning,Upper class,19,,0.5787,"What is the monthly cost of $45,000 at 2.9% for 60 months?"
-3,Travel & Diet/Meal Planning,Upper class,20,,0.5787,"What is the monthly cost of $32,000 at 3.3% for 72 months?"
+0,Business Writing & Analysis,Low,1,12.0,0.8381,"How do you develop customer experience strategies and, how do you utilize customer feedback to ensure continuous improvement?"
+0,Business Writing & Analysis,Low,2,25.0,0.7505,Please summarise the plot of the novel Anna Karenina without spoilers
+0,Business Writing & Analysis,Low,3,27.0,0.7505,Dark Horse ideas on circular economy
+0,Business Writing & Analysis,Low,4,30.0,0.7505,Why was Islam a popular religion for sellers and tradesmen?
+0,Business Writing & Analysis,Low,5,31.0,0.7505,What are the latest architectural trends in sustainable design ?
+0,Business Writing & Analysis,Low,6,32.0,0.7873,"Okay, let's talk about trending products. But first tell me how I can find trending products in my research."
+0,Business Writing & Analysis,Low,7,50.0,0.7873,Generate a compelling brand story for a creative agency
+0,Business Writing & Analysis,Low,8,,0.7429,"My landlord gave all current tenants a new month-to-month lease agreement on january 21, 2025, which was given to each current tenant by me in writing to each individual tenant at their residence. My landlord has me in charge of keeping track of tenant activity in regarding to following new policies and managing the paperwork involved. The new lease agreement stated that effective immediately all designated outdoor spaces must be cleared of everything excluding outdoor furniture and garden items, as well as effective immediately all personal  items must be removed form any areas not included in the tenant's designated outdoor space or indoor spaces(including all garages and outbuildings on the property. When and what would I give to tenant who are not in compliance?"
+0,Business Writing & Analysis,Low,9,,0.704,"On a certain day, a bakery produced a batch of rolls at a total production cost of $400. On that day, 3/5 of the rolls in the batch were sold, each at a price that was 50 percent greater than the average (arithmetic mean) production cost per roll. The remaining rolls in the batch were sold the next day, each at a price that was 20 percent less than the price of the day before. What was the bakery’s profit on this batch of rolls?"
+0,Business Writing & Analysis,Low,10,,0.6957,so this means paypal would charge me conversion fees that is correct?
+0,Business Writing & Analysis,Low,11,,0.6957,Please summarise the importance of Luebeck in the hanseatic league
+0,Business Writing & Analysis,Low,12,,0.6957,Can you provide a brief summary of a recent news article or current event?
+0,Business Writing & Analysis,Low,13,,0.6957,what is the best crypto for scalping trading?
+0,Business Writing & Analysis,Low,14,,0.6957,Generate a Doctor Who story summary for me.
+0,Business Writing & Analysis,Low,15,,0.6957,What might be included in a psychology personal statement?
+0,Business Writing & Analysis,Low,16,,0.6957,Can you tell me about the current trend of the stock market?
+0,Business Writing & Analysis,Low,17,,0.6957,summarize the explanation in three sentences
+0,Business Writing & Analysis,Low,18,,0.6957,related words to indignant
+0,Business Writing & Analysis,Low,19,,0.6957,How do I work out carbon emissions where there is no data
+0,Business Writing & Analysis,Low,20,,0.6957,how to write an intro for a scientific essay
+0,Business Writing & Analysis,Middle,1,0.0,0.8381,If the companies in this article had used sandboxing techniques could they have avoided the compromising data collection by Amazon?
+0,Business Writing & Analysis,Middle,2,6.0,0.7873,Explain the difference between machine learning and artificial intelligence.
+0,Business Writing & Analysis,Middle,3,10.0,0.7873,Summarise this article and extract any information necessary for my presentation
+0,Business Writing & Analysis,Middle,4,11.0,0.7505,What's the difference between machine learning and artificial intelligence?
+0,Business Writing & Analysis,Middle,5,46.0,0.7505,Come up with a random topic  and make a creative paragraph explaining it in great detail like a short story.
+0,Business Writing & Analysis,Middle,6,,0.6957,We are the largest trends in digital marketing .
+0,Business Writing & Analysis,Middle,7,,0.6957,what is the charging speed of a skoda enyaq
+0,Business Writing & Analysis,Middle,8,,0.6957,Summarize all the audios in 3 sentences
+0,Business Writing & Analysis,Middle,9,,0.6957,whats the current trend in  stock trading
+0,Business Writing & Analysis,Middle,10,,0.6957,write an intro about branding for my site
+0,Business Writing & Analysis,Middle,11,,0.6957,How many Americans use hybrid and electrical vehicles
+0,Business Writing & Analysis,Middle,12,,0.6957,forensic sebiome analysis
+0,Business Writing & Analysis,Middle,13,,0.6957,What are the qualities of a good customer service advisor
+0,Business Writing & Analysis,Middle,14,,0.6957,Write me a Personal statement re business
+0,Business Writing & Analysis,Middle,15,,0.6957,What are some common data visualization best practices
+0,Business Writing & Analysis,Middle,16,,0.6957,Please generate a thesis statement for tax law
+0,Business Writing & Analysis,Middle,17,,0.6957,elaborate more on klms 24/7 multilingual customer support
+0,Business Writing & Analysis,Middle,18,,0.6891,"What is research methods  ChatGPT said: ChatGPT Research methods are systematic techniques, strategies, or approaches used to collect, analyze, and interpret data in order to answer research questions or test hypotheses. They are essential in academic, scientific, and applied research to ensure that findings are valid, reliable, and credible.  Types of Research Methods Qualitative Research Focus: Understanding concepts, experiences, or phenomena. Data Collection: Interviews, focus groups, observations, document analysis. Data Type: Non-numerical (text,"
+0,Business Writing & Analysis,Middle,19,,0.686,Can you please write 200 words on why a company should proceed with a comprehensive marketing budget
+0,Business Writing & Analysis,Middle,20,,0.686,How can employees improve both their verbal and non-verbal communication skills to create better customer experiences?
+0,Business Writing & Analysis,High,1,4.0,0.8381,Explain the iron condor strategy in stock trading in a simple manner
+0,Business Writing & Analysis,High,2,9.0,0.7505,What are the digital marketing strategies for small businesses
+0,Business Writing & Analysis,High,3,13.0,0.8147,You place a market order for a volatile stock and notice the price has moved significantly since you placed it. What should you do next time?
+0,Business Writing & Analysis,High,4,18.0,0.7505,Can you analyze a sales Excel sheet for me
+0,Business Writing & Analysis,High,5,19.0,0.7505,What are the best strategies to win a new customer in sales and marketing?
+0,Business Writing & Analysis,High,6,38.0,0.7505,Can you explain the latest advancements in artificial intelligence?
+0,Business Writing & Analysis,High,7,39.0,0.7505,AI is used in chatbots and natural language processing
+0,Business Writing & Analysis,High,8,40.0,0.7505,What's the difference between machine learning and deep learning?
+0,Business Writing & Analysis,High,9,48.0,0.7505,Kindly generate me highly converting and compelling content for my products content
+0,Business Writing & Analysis,High,10,,0.904,"Imagine you are running a laundry business, In a few sentences, please explain the type of business venture that you are running...   For example, what kinds of products and services do you sell? Who do you sell to? Are you the founder or co-founder?"
+0,Business Writing & Analysis,High,11,,0.7943,"In a few sentences, please explain the type of business venture that you are running...  For example, what kinds of products and services do you sell? Who do you sell to? Are you the founder or co-founder?"
+0,Business Writing & Analysis,High,12,,0.7238,Please summarize the key industry trends and observations around the Business Process Outsourcing industry (BPO)
+0,Business Writing & Analysis,High,13,,0.6957,What are the current crypto market trend
+0,Business Writing & Analysis,High,14,,0.6957,Organizational Chart Creation
+0,Business Writing & Analysis,High,15,,0.6957,Please make this resume more compelling for a sales job
+0,Business Writing & Analysis,High,16,,0.6957,How would you explain machine learning to someone who isn’t into tech?
+0,Business Writing & Analysis,High,17,,0.6957,What’s the best app or tool for tracking personal finances?
+0,Business Writing & Analysis,High,18,,0.6957,does honda produces electrical vehicles?
+0,Business Writing & Analysis,High,19,,0.6957,What are the best apps or tools for keeping track of personal finances?
+0,Business Writing & Analysis,High,20,,0.6957,Can you summarize the plot of The Great Gatsby?
+3,Travel & Diet/Meal Planning,Low,1,3.0,0.7379,Give me a heart healthy meal plan to diet to follow for cutting and muscle gain.
+3,Travel & Diet/Meal Planning,Low,2,4.0,0.7264,List me the best workout routine for someone looking to lose belly fat.
+3,Travel & Diet/Meal Planning,Low,3,6.0,0.7264,List of resorts in Dominican Republic with swim up suites
+3,Travel & Diet/Meal Planning,Low,4,11.0,0.7264,If a child has a headache then a cough and fever
+3,Travel & Diet/Meal Planning,Low,5,17.0,0.7264,How do I calculate days supply for suspensions and needles in mg/ml?
+3,Travel & Diet/Meal Planning,Low,6,28.0,0.6667,find me the cheapest 1lb bag of mini pretzels
+3,Travel & Diet/Meal Planning,Low,7,42.0,0.6667,Write a daily meal plan
+3,Travel & Diet/Meal Planning,Low,8,46.0,0.6667,can you ask more questions about seungmin's overall relationship with hyunjin in the second half of the story?
+3,Travel & Diet/Meal Planning,Low,9,49.0,0.6667,Write me a gym plan for the next 3 months for a newbie
+3,Travel & Diet/Meal Planning,Low,10,55.0,0.6667,What home remedies can treat RSV?
+3,Travel & Diet/Meal Planning,Low,11,65.0,0.7264,How large does a vegetable garden need to be to feed a family of 5?
+3,Travel & Diet/Meal Planning,Low,12,66.0,0.6667,What size beds are in the Luxor Hotel VIP suite?
+3,Travel & Diet/Meal Planning,Low,13,71.0,0.6667,What is a full body exercise I can do without equipment
+3,Travel & Diet/Meal Planning,Low,14,,0.7264,Someone has offered me a lot of money for my cat.  He used to be a neighbor and really just likes the cat.  I'm heartbroken thinking about it but we really need to fix our roof and this would allow me to do that. What should I do?
+3,Travel & Diet/Meal Planning,Low,15,,0.7108,"Now please describe using creative writing skills in first person from a male perspective, the walk through the entrance of the Luxor Hotel, through the casino, and up to the hotel room.   Additional details, it's nighttime during the summer."
+3,Travel & Diet/Meal Planning,Low,16,,0.6353,"Generate a 4 day a week workout program focused on upper body and losing weight, while keeping muscle."
+3,Travel & Diet/Meal Planning,Low,17,,0.6191,"Please can you plan this route round Rome including these stops, where we want to go, our hotel and flight times"
+3,Travel & Diet/Meal Planning,Low,18,,0.6191,What are the best foods to eat for a healthy diet and to lose weight?
+3,Travel & Diet/Meal Planning,Low,19,,0.6123,"After hatching from its egg, a baby bird doubles in weight every day. On day 12 it weighs a pound. When did the bird weigh half a pound?"
+3,Travel & Diet/Meal Planning,Low,20,,0.5936,Why is my cat so crazy about my neighbor? He only just started being affectionate with me after months but he runs up to her chirping and loves on her legs.  Could she remind him of someone he used to know?
+3,Travel & Diet/Meal Planning,Middle,1,1.0,0.7079,"between Burger king, chick fil A, McDonalds, Subway, Taco bell and Wendy's, rate the prices."
+3,Travel & Diet/Meal Planning,Middle,2,21.0,0.7668,If i save 50 pounds a week how much money will i have saved in 3 years and 7 months
+3,Travel & Diet/Meal Planning,Middle,3,22.0,0.7264,What is the last name of the first person to complete a solo flight across the Atlantic Ocean?
+3,Travel & Diet/Meal Planning,Middle,4,29.0,0.6667,The best spring holiday destinations?
+3,Travel & Diet/Meal Planning,Middle,5,31.0,0.7264,"January is so dreary and dull, I wish it was Spring already"
+3,Travel & Diet/Meal Planning,Middle,6,37.0,0.7264,Daily expense tracker plan
+3,Travel & Diet/Meal Planning,Middle,7,47.0,0.6667,Can you help me plan a healthy meal for the week?
+3,Travel & Diet/Meal Planning,Middle,8,48.0,0.6667,would it be better to walk 1 mile or run a half mile?
+3,Travel & Diet/Meal Planning,Middle,9,59.0,0.6667,"What is the fastest way to lose weight, what should I eat?"
+3,Travel & Diet/Meal Planning,Middle,10,63.0,0.6667,What permits are needed to run a food truck
+3,Travel & Diet/Meal Planning,Middle,11,67.0,0.6667,My 8th house is in Gemini and an astrologer said this is where “your money Is at”. What does this mean for me?
+3,Travel & Diet/Meal Planning,Middle,12,,0.7968,"Can you give me 10 foods I should try on my next visit to Tokyo? I've visited before, but I want to explore food more and try some new exciting things."
+3,Travel & Diet/Meal Planning,Middle,13,,0.6191,what is the recommended daily dose of DHA to not be deficient? I can't imagine people get enough in their diet
+3,Travel & Diet/Meal Planning,Middle,14,,0.6191,Create a workout plan for a beginner focusing on strength training
+3,Travel & Diet/Meal Planning,Middle,15,,0.6191,UK climate average temperature month by month
+3,Travel & Diet/Meal Planning,Middle,16,,0.5826,"I NEED TO GO BOOK A RESERVATION IN AFRICA KENYA,WHERE DO I START? ChatGPT said: ChatGPT That sounds exciting! Booking a reservation in Kenya depends on what you're planning to do and where you're staying. Here’s a general guide to get you started:  Flights: The first thing you’ll want to sort is your flight. Major airports in Kenya include Nairobi’s Jomo Kenyatta International Airport (NBO) and Moi International Airport in Mombasa (MBA). You can check flights through airline websites or travel booking platforms like Skyscanner, Expedia, or Google Flights.  Accommodation: There are a variety of accommodation options, depending on your interests. If you're heading to Nairobi, you’ll find everything from luxury hotels to charming guesthouses. For safaris or beach holidays, you might want to consider booking lodges or resorts. Websites like Booking.com, Airbnb, or local services like SafariBookings for safari lodges could be helpful. If you’re going on safari, it’s worth booking early, as these can fill up quickly.  Activities: If you're planning a safari, check out Kenya's national parks such as Maasai Mara, Amboseli, or Tsavo. You could book a guided safari through a tour operator like Gamewatchers Safaris or any local agencies that offer these tours. For other activities, there are plenty of things like hiking Mount Kenya or visiting the beaches along the Indian Ocean, and these can often be arranged directly through your accommodation.  Visas & Health: Check whether you need a visa before you go and make sure you're up to date on vaccinations. The Kenyan government’s website or your local embassy will have more information.  Local Transport: Depending on where you’re going, you might need to book local flights (for example, to get to the Maasai Mara or Mombasa), or consider renting a car, especially if you're planning on exploring on your own.  If you’re not sure about what to book first, let me know more details about your trip, and I can help narrow things down for you!       ChatGPT can make m"
+3,Travel & Diet/Meal Planning,Middle,17,,0.5787,What are some unique pizza places to visit in london?
+3,Travel & Diet/Meal Planning,Middle,18,,0.5787,why does my dog drink so much water
+3,Travel & Diet/Meal Planning,Middle,19,,0.5787,Can you recommend some books to read?
+3,Travel & Diet/Meal Planning,Middle,20,,0.5787,Note on osteomyelities
+3,Travel & Diet/Meal Planning,High,1,0.0,0.7968,"Tell me the pros and cons of lions mane supplement, is it safe and what is the recommended dose"
+3,Travel & Diet/Meal Planning,High,2,2.0,0.7379,Write me a 4 day meal plan for low FODMAP diet that has a mixture of vegetarian and meat based meals
+3,Travel & Diet/Meal Planning,High,3,7.0,0.7668,How do I troubleshoot a slow internet connection at home?
+3,Travel & Diet/Meal Planning,High,4,25.0,0.6667,How to permanently treat toilet infection
+3,Travel & Diet/Meal Planning,High,5,27.0,0.6667,List 5 relaxing places for a 3 days Valentines trip
+3,Travel & Diet/Meal Planning,High,6,32.0,0.7264,How can I fix a slow internet connection at home?
+3,Travel & Diet/Meal Planning,High,7,33.0,0.7264,How do I fix a slow internet connection at home?
+3,Travel & Diet/Meal Planning,High,8,41.0,0.7264,"I am planning to travel for a vacation in Japan, do you have any recommendations?"
+3,Travel & Diet/Meal Planning,High,9,44.0,0.6667,Could you help me create a weekly meal plan?
+3,Travel & Diet/Meal Planning,High,10,56.0,0.6667,how to lose weight when lazy
+3,Travel & Diet/Meal Planning,High,11,60.0,0.7264,Advert plan on water bottle
+3,Travel & Diet/Meal Planning,High,12,68.0,0.6667,What’s the best way to plan a project from start to finish
+3,Travel & Diet/Meal Planning,High,13,,0.6911,"Question 1  What is the average atomic mass for the hypothetical element that contains three isotopes of mass 16.0 amu, 17 0 amu, and 18.0 amu with relative abundances of 20.0%, 50.0%, and 30.0%, respectively? Remember to use the formula and include the unit in your response"
+3,Travel & Diet/Meal Planning,High,14,,0.6473,A sample of boron consists of 80.0% boron-11 (with an atomic mass of 11.009 amu) and 20.0% boron-10 (with an atomic mass of 10.012 amu). What is the average atomic mass of boron based on this sample?  Use the appropriate number of significant figures  10.818 amu  10.810 ama  11.009 amu  10.81 amu
+3,Travel & Diet/Meal Planning,High,15,,0.6191,My Piper Cherokee Six burns 1 quart of oil approximately every 7 hours. Is this normal oil consumption?
+3,Travel & Diet/Meal Planning,High,16,,0.5787,in terms of daily living what can 30 usd buy in atlanta right now?
+3,Travel & Diet/Meal Planning,High,17,,0.5787,Who will have more seats in the senate after the 2026 midterms?
+3,Travel & Diet/Meal Planning,High,18,,0.5787,what foods are good to feed cats
+3,Travel & Diet/Meal Planning,High,19,,0.5787,"What is the monthly cost of $45,000 at 2.9% for 60 months?"
+3,Travel & Diet/Meal Planning,High,20,,0.5787,"What is the monthly cost of $32,000 at 3.3% for 72 months?"
