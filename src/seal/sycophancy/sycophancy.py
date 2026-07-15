@@ -68,42 +68,41 @@ Question: {question} Advice: {advice}""",
 
 r_batch_id = {
     "validation": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",
     },
     "indirectness": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
-    },
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",}
     "framing": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",
     },
 }
 r_file_id = {
     "validation": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",
     },
     "indirectness": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",
     },
     "framing": {
-        "gemma_4_31B_response": "",
-        "qwen_3.5_27B_response": "",
-        "llama_3.3_70B_response": "",
-        "gpt-5.5_response": "",
+        "responses_gemma-4-31B": "",
+        "responses_qwen-3.5-27B": "",
+        "responses_llama-3.3-70B": "",
+        "responses_gpt-5.5": "",
     },
 }
 
@@ -113,7 +112,7 @@ if __name__ == "__main__":
         "-f",
         "--file_name",
         type=str,
-        default="../../../data_Elisa/test_sample/Elisa_prompts_sample_responses.csv",
+        default="../../../results/sampled_dataset_responses_clean.csv",
         help="Response file path",
     )
     parser.add_argument(
@@ -126,7 +125,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     df = pd.read_csv(args.file_name)
     judge_prompt = prompts[args.dim]
-    response_cols = [c for c in df.columns if c.split("_")[-1] == "response"]
+    response_cols = [c for c in df.columns if c.split("_")[0] == "responses"]
     prompts = df["prompt"].tolist()
     for r in response_cols:
         if os.path.isfile(f"batch_output_{args.dim}_{r}.jsonl"):
