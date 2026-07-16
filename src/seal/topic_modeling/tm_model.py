@@ -1159,12 +1159,6 @@ def top_docs_per_topic(
         if len(candidate_id) == 0:
             candidate_id = np.arange(n_docs)
 
-        # Exclude vocabulary-collapsed documents: queries where only a single
-        # topic survived sparsification get theta_k == 1.0 by arithmetic
-        # accident, not genuine topical signal.  They trivially pass the elbow
-        # threshold and dominate the S3+theta ranking, producing nonsensical
-        # representatives.  Require at least 2 non-zero topics; fall back to
-        # the full candidate set only if this filter would leave nothing.
         nz_topics = (thetas[candidate_id] > 1e-6).sum(axis=1)
         non_collapsed = candidate_id[nz_topics >= 2]
         if len(non_collapsed) > 0:
