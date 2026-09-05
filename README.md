@@ -24,10 +24,10 @@ uv pip install -e ".[viz]"
 - `get_open_LLM_responses.py` is used to generate responses from the open-weights LLMs.
     Example usage:
   ```
-  ...
+  python get_open_LLM_responses.py --model_id meta-llama/Llama-3.3-70B-Instruct --data_id sampled_dataset
   ```
-- `ses_topic_modeling.py`
+- `ses_topic_modeling.py` is used to conduct topic modeling
     Example usage:
   ```
-  ...
+  python ses_topic_modeling.py
   ```
