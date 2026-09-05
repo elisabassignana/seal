@@ -1,7 +1,7 @@
 """Build a prompt-level, SES-balanced sample from the language technologies survey.
 
-Reads data_Elisa/survey-language-technologies.csv (one row per user, prompt1..prompt10
-columns) and writes data_Elisa/sampled_dataset.csv (one row per prompt), with:
+Reads data/survey-language-technologies.csv (one row per user, prompt1..prompt10
+columns) and writes data/sampled_dataset.csv (one row per prompt), with:
   - the survey disaggregated so each prompt gets its own row
   - duplicate prompts (repeated across users) dropped, keeping the first occurrence
   - social_class derived from ses (1-3 low, 4-7 middle, 8-10 upper)
@@ -11,8 +11,8 @@ columns) and writes data_Elisa/sampled_dataset.csv (one row per prompt), with:
 
 import pandas as pd
 
-INPUT_PATH = "data_Elisa/survey-language-technologies.csv"
-OUTPUT_PATH = "data_Elisa/sampled_dataset.csv"
+INPUT_PATH = "data/survey-language-technologies.csv"
+OUTPUT_PATH = "data/sampled_dataset.csv"
 NUM_PROMPTS = 10
 RANDOM_SEED = 42
 
