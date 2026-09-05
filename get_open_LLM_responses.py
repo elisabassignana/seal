@@ -4,7 +4,7 @@ from vllm import LLM
 import os
 import random
 
-DATA_PATH = "data_Elisa"
+DATA_PATH = "data"
 RES_PATH = "results"
 
 def create_prompts(questions):
