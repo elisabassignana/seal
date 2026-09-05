@@ -25,7 +25,7 @@ warnings.filterwarnings("ignore")
 # we use the complete dtset for training
 HF_REPO_ID = "MilaNLProc/survey-language-technologies"
 HF_FILENAME = "survey-language-technologies.csv"
-SES_DATA_PATH = "data_Elisa/sampled_dataset.csv"        # plots only use this
+SES_DATA_PATH = "data/sampled_dataset.csv"        # plots only use this
 OUTPUT_DIR = "data/output/ses_plots"
 MODELS_DIR = "data/output/models"
 K_MIN, K_MAX, K_STEP = 5, 51, 5
