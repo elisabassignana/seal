@@ -27,19 +27,15 @@ import polars as pl
 from elfen.extractor import Extractor
 from elfen.configs.extractor_config import CONFIG_ALL
 
-# Feature selection: extract the full ``emotion`` area plus the psycholinguistic
-# norms whose feature name contains one of these substrings.  ELFeN spells it
-# "sensorimotor"; "sensorymotor" is accepted as an alias for convenience.
+# Feature selection: extract the full ``emotion`` area
 FULL_AREAS = ("emotion",)
-PSYCHOLINGUISTIC_KEYWORDS = ("prevalence", "socialness", "iconicity", "sensorimotor", "sensorymotor")
 
 
 def build_feature_config() -> Dict[str, Any]:
     """Return an ELFeN config restricted to the emotion area and selected norms.
 
     Starts from ELFeN's ``CONFIG_ALL`` (so feature names always match the
-    installed version) and keeps only the ``emotion`` area in full plus the
-    psycholinguistic features matching ``PSYCHOLINGUISTIC_KEYWORDS``.
+    installed version) and keeps only the ``emotion`` area in full.
     """
     config = copy.deepcopy(CONFIG_ALL)
     all_features = config["features"]
@@ -49,11 +45,6 @@ def build_feature_config() -> Dict[str, Any]:
         if area in all_features:
             selected[area] = list(all_features[area])
 
-    psycho = all_features.get("psycholinguistic", [])
-    matched = [f for f in psycho if any(kw in f for kw in PSYCHOLINGUISTIC_KEYWORDS)]
-    if matched:
-        selected["psycholinguistic"] = matched
-
     config["features"] = selected
     return config
 
@@ -61,7 +52,9 @@ def build_feature_config() -> Dict[str, Any]:
 def _records_from_mapping(mapping: Dict[str, Any]) -> Iterable[Dict[str, Any]]:
     for prompt_id, payload in mapping.items():
         if isinstance(payload, dict):
-            response = payload.get("response", payload.get("answer", payload.get("text", "")))
+            response = payload.get(
+                "response", payload.get("answer", payload.get("text", ""))
+            )
             attempts = payload.get("attempts")
         else:
             response = payload
@@ -89,13 +82,20 @@ def load_generated_responses(results_file: pathlib.Path) -> pl.DataFrame:
     if suffix == ".csv":
         df = pl.read_csv(results_file)
         if "response" not in df.columns:
-            for candidate in ("generated_response", "answer", "text", "output"):
+            for candidate in (
+                "generated_response",
+                "answer",
+                "text",
+                "output",
+            ):
                 if candidate in df.columns:
                     df = df.rename({candidate: "response"})
                     break
         if "prompt_id" not in df.columns:
             df = df.with_row_index("prompt_id")
-        return df.with_columns(pl.col("response").cast(pl.Utf8, strict=False).fill_null(""))
+        return df.with_columns(
+            pl.col("response").cast(pl.Utf8, strict=False).fill_null("")
+        )
 
     text = results_file.read_text(encoding="utf-8").strip()
     if not text:
@@ -104,7 +104,9 @@ def load_generated_responses(results_file: pathlib.Path) -> pl.DataFrame:
     try:
         parsed = json.loads(text)
     except json.JSONDecodeError:
-        parsed = [json.loads(line) for line in text.splitlines() if line.strip()]
+        parsed = [
+            json.loads(line) for line in text.splitlines() if line.strip()
+        ]
 
     if isinstance(parsed, dict):
         records.extend(_records_from_mapping(parsed))
@@ -116,33 +118,52 @@ def load_generated_responses(results_file: pathlib.Path) -> pl.DataFrame:
                 records.append(
                     {
                         "prompt_id": str(item["prompt_id"]),
-                        "response": "" if item.get("response") is None else str(item.get("response")),
+                        "response": (
+                            ""
+                            if item.get("response") is None
+                            else str(item.get("response"))
+                        ),
                         "attempts": item.get("attempts"),
                     }
                 )
             elif len(item) == 1:
                 records.extend(_records_from_mapping(item))
             else:
-                prompt_id = item.get("id") or item.get("custom_id") or item.get("key")
-                response = item.get("response") or item.get("answer") or item.get("text") or item.get("output")
+                prompt_id = (
+                    item.get("id") or item.get("custom_id") or item.get("key")
+                )
+                response = (
+                    item.get("response")
+                    or item.get("answer")
+                    or item.get("text")
+                    or item.get("output")
+                )
                 if prompt_id is not None:
                     records.append(
                         {
                             "prompt_id": str(prompt_id),
-                            "response": "" if response is None else str(response),
+                            "response": (
+                                "" if response is None else str(response)
+                            ),
                             "attempts": item.get("attempts"),
                         }
                     )
     else:
-        raise ValueError(f"Unsupported generated-response format in {results_file}")
+        raise ValueError(
+            f"Unsupported generated-response format in {results_file}"
+        )
 
     if not records:
-        raise ValueError(f"No generated responses could be parsed from {results_file}")
+        raise ValueError(
+            f"No generated responses could be parsed from {results_file}"
+        )
 
     df = pl.DataFrame(records)
     if "attempts" not in df.columns:
         df = df.with_columns(pl.lit(None).alias("attempts"))
-    return df.with_columns(pl.col("response").cast(pl.Utf8, strict=False).fill_null(""))
+    return df.with_columns(
+        pl.col("response").cast(pl.Utf8, strict=False).fill_null("")
+    )
 
 
 def _run_elfen(
@@ -153,16 +174,23 @@ def _run_elfen(
     """Run the ELFeN pipeline on ``text_column`` and return the enriched frame.
 
     Only the features in :func:`build_feature_config` are extracted (emotion
-    area + selected psycholinguistic norms).
+    area).
     """
-    extractor = Extractor(data=df, config=build_feature_config(), model=model, text_column=text_column)
+    extractor = Extractor(
+        data=df,
+        config=build_feature_config(),
+        model=model,
+        text_column=text_column,
+    )
     extractor.extract_features()
     extractor.token_normalize("all")
     extractor.rescale("all")
     return extractor.data
 
 
-def _feature_columns(result: pl.DataFrame, input_columns: Iterable[str]) -> List[str]:
+def _feature_columns(
+    result: pl.DataFrame, input_columns: Iterable[str]
+) -> List[str]:
     """Columns produced by ELFeN = result columns not present in the input."""
     input_set = set(input_columns)
     return [c for c in result.columns if c not in input_set]
@@ -183,14 +211,18 @@ def _csv_writable(dtype: pl.DataType) -> bool:
     return True
 
 
-def _writable_columns(result: pl.DataFrame, feature_cols: Iterable[str]) -> List[str]:
+def _writable_columns(
+    result: pl.DataFrame, feature_cols: Iterable[str]
+) -> List[str]:
     """Keep only feature columns whose dtype ``write_csv`` supports; log the rest."""
     keep, dropped = [], []
     schema = result.schema
     for col in feature_cols:
         (keep if _csv_writable(schema[col]) else dropped).append(col)
     if dropped:
-        print(f"       dropping {len(dropped)} non-serialisable column(s): {', '.join(dropped)}")
+        print(
+            f"       dropping {len(dropped)} non-serialisable column(s): {', '.join(dropped)}"
+        )
     return keep
 
 
@@ -215,7 +247,9 @@ def fill_feature_nulls(
     Float columns have their NaNs normalised to null first so both are filled.
     """
     if strategy not in ("zero", "mean", "median"):
-        raise ValueError(f"Unknown fill strategy: {strategy!r} (use zero|mean|median)")
+        raise ValueError(
+            f"Unknown fill strategy: {strategy!r} (use zero|mean|median)"
+        )
 
     schema = df.schema
     exprs = []
@@ -223,7 +257,9 @@ def fill_feature_nulls(
         expr = pl.col(col)
         series = df[col]
         if schema[col] in _FLOAT_DTYPES:
-            expr = expr.fill_nan(None)  # treat NaN like null so it gets filled too
+            expr = expr.fill_nan(
+                None
+            )  # treat NaN like null so it gets filled too
             series = series.fill_nan(None)
 
         if strategy == "zero":
@@ -257,25 +293,41 @@ def extract_model_features(
     written: List[pathlib.Path] = []
 
     for response_column in response_columns:
-        model_name = response_column.split(response_prefix, 1)[-1] if response_prefix in response_column else response_column
-        work = df.select([id_column, response_column]).rename({response_column: "response"})
-        work = work.with_columns(pl.col("response").cast(pl.Utf8, strict=False).fill_null(""))
+        model_name = (
+            response_column.split(response_prefix, 1)[-1]
+            if response_prefix in response_column
+            else response_column
+        )
+        work = df.select([id_column, response_column]).rename(
+            {response_column: "response"}
+        )
+        work = work.with_columns(
+            pl.col("response").cast(pl.Utf8, strict=False).fill_null("")
+        )
         if not keep_empty:
-            work = work.filter(pl.col("response").str.strip_chars().str.len_chars() > 0)
+            work = work.filter(
+                pl.col("response").str.strip_chars().str.len_chars() > 0
+            )
         if work.is_empty():
             print(f"[skip] {response_column}: no non-empty responses")
             continue
 
         result = _run_elfen(work, text_column="response", model=model)
-        feature_cols = _feature_columns(result, input_columns=(id_column, "response"))
+        feature_cols = _feature_columns(
+            result, input_columns=(id_column, "response")
+        )
         feature_cols = _writable_columns(result, feature_cols)
         result = result.select([id_column, *feature_cols])
-        result = fill_feature_nulls(result, feature_cols, strategy=fill_strategy)
+        result = fill_feature_nulls(
+            result, feature_cols, strategy=fill_strategy
+        )
 
         out_path = output_dir / f"elfen_features_{model_name}.csv"
         result.write_csv(str(out_path))
         written.append(out_path)
-        print(f"[ok]   {response_column}: {len(feature_cols)} features for {result.height} responses -> {out_path}")
+        print(
+            f"[ok]   {response_column}: {len(feature_cols)} features for {result.height} responses -> {out_path}"
+        )
 
     return written
 
@@ -292,12 +344,18 @@ def extract_elfen_features(
     # Wide multi-model CSV path: one response column per model -> one CSV per model.
     if results_file.suffix.lower() == ".csv":
         df = pl.read_csv(results_file, infer_schema_length=0)
-        response_columns = [c for c in df.columns if c.startswith(response_prefix)]
+        response_columns = [
+            c for c in df.columns if c.startswith(response_prefix)
+        ]
         if response_columns:
             if id_column not in df.columns:
                 df = df.with_row_index(id_column)
-            models = ", ".join(c.split(response_prefix, 1)[-1] for c in response_columns)
-            print(f"Detected {len(response_columns)} model response columns: {models}")
+            models = ", ".join(
+                c.split(response_prefix, 1)[-1] for c in response_columns
+            )
+            print(
+                f"Detected {len(response_columns)} model response columns: {models}"
+            )
             written = extract_model_features(
                 df=df,
                 response_columns=response_columns,
@@ -308,49 +366,99 @@ def extract_elfen_features(
                 response_prefix=response_prefix,
                 fill_strategy=fill_strategy,
             )
-            print(f"Wrote {len(written)} per-model ELFeN feature files to {output}")
+            print(
+                f"Wrote {len(written)} per-model ELFeN feature files to {output}"
+            )
             return
 
     # Legacy single-response path: write one CSV. If `output` is a directory
     # (no .csv suffix) put the file inside it, otherwise treat it as the file.
     df = load_generated_responses(results_file)
     if not keep_empty:
-        df = df.filter(pl.col("response").str.strip_chars().str.len_chars() > 0)
+        df = df.filter(
+            pl.col("response").str.strip_chars().str.len_chars() > 0
+        )
     if df.is_empty():
-        raise ValueError("No non-empty generated responses available for ELFeN extraction.")
+        raise ValueError(
+            "No non-empty generated responses available for ELFeN extraction."
+        )
 
-    output_file = output if output.suffix.lower() == ".csv" else output / f"{results_file.stem}_elfen.csv"
+    output_file = (
+        output
+        if output.suffix.lower() == ".csv"
+        else output / f"{results_file.stem}_elfen.csv"
+    )
     output_file.parent.mkdir(parents=True, exist_ok=True)
     result = _run_elfen(df, text_column="response", model=model)
     writable = [c for c in result.columns if _csv_writable(result.schema[c])]
     result = result.select(writable)
-    feature_cols = _feature_columns(result, input_columns=("prompt_id", "response", "attempts"))
+    feature_cols = _feature_columns(
+        result, input_columns=("prompt_id", "response", "attempts")
+    )
     result = fill_feature_nulls(result, feature_cols, strategy=fill_strategy)
     result.write_csv(str(output_file))
     print(f"Wrote ELFeN features for {df.height} responses to {output_file}")
 
 
 def _default_output_dir(results_file: pathlib.Path) -> pathlib.Path:
-    """results/linguistic/ relative to a results/ tree if present, else alongside input."""
+    """results/emotion/ relative to a results/ tree if present, else alongside input."""
     for parent in results_file.parents:
         if parent.name == "results":
-            return parent / "linguistic"
-    return results_file.parent / "linguistic"
+            return parent / "emotion"
+    return results_file.parent / "emotion"
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Extract ELFeN features for generated LLM responses.")
-    parser.add_argument("--results-file", type=pathlib.Path, required=True, help="Path to generated results.json/csv/jsonl")
-    parser.add_argument("--out", type=pathlib.Path, default=None, help="Output directory for per-model feature CSVs (default: results/linguistic/)")
-    parser.add_argument("--model", type=str, default="en_core_web_trf", help="spaCy model used by ELFeN")
-    parser.add_argument("--keep-empty", action="store_true", help="Keep empty responses instead of filtering them out")
-    parser.add_argument("--response-prefix", type=str, default="responses_", help="Column prefix identifying per-model response columns")
-    parser.add_argument("--id-column", type=str, default="id", help="Column used as the id/join key written into each output CSV")
-    parser.add_argument("--fill-strategy", type=str, default="zero", choices=("zero", "mean", "median"),
-                        help="How to fill null/NaN feature values (aggregate ratings with no lexicon words). Default: zero")
+    parser = argparse.ArgumentParser(
+        description="Extract ELFeN features for generated LLM responses."
+    )
+    parser.add_argument(
+        "--results-file",
+        type=pathlib.Path,
+        required=True,
+        help="Path to generated results.json/csv/jsonl",
+    )
+    parser.add_argument(
+        "--out",
+        type=pathlib.Path,
+        default=None,
+        help="Output directory for per-model feature CSVs (default: results/emotion/)",
+    )
+    parser.add_argument(
+        "--model",
+        type=str,
+        default="en_core_web_trf",
+        help="spaCy model used by ELFeN",
+    )
+    parser.add_argument(
+        "--keep-empty",
+        action="store_true",
+        help="Keep empty responses instead of filtering them out",
+    )
+    parser.add_argument(
+        "--response-prefix",
+        type=str,
+        default="responses_",
+        help="Column prefix identifying per-model response columns",
+    )
+    parser.add_argument(
+        "--id-column",
+        type=str,
+        default="id",
+        help="Column used as the id/join key written into each output CSV",
+    )
+    parser.add_argument(
+        "--fill-strategy",
+        type=str,
+        default="zero",
+        choices=("zero", "mean", "median"),
+        help="How to fill null/NaN feature values (aggregate ratings with no lexicon words). Default: zero",
+    )
     args = parser.parse_args()
 
-    output: Optional[pathlib.Path] = args.out or _default_output_dir(args.results_file)
+    output: Optional[pathlib.Path] = args.out or _default_output_dir(
+        args.results_file
+    )
     extract_elfen_features(
         args.results_file,
         output,
