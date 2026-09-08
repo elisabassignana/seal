@@ -10,8 +10,8 @@ Aggregated to **732 users** × **946 columns** (905 numeric score columns). Each
 | Helpfulness (normalized) | 4 | 1 | yes |
 | Human-likeness | 40 | 10 | yes |
 | Sycophancy | 12 | 3 | yes |
-| Linguistic (elfen) | 532 | 133 | yes |
-| Complexity | 312 | 78 | yes |
+| Linguistic (elfen) | 48 | 12 | yes |
+| Complexity | 16 | 4 | yes |
 | Identifier / demographics | 42 | 42 | no |
 
 ## Helpfulness (raw) (4 columns)
@@ -2254,24 +2254,12 @@ min                                  0.0
 max                                  1.0
 Name: 945, dtype: object> |
 
-## Linguistic (elfen) (532 columns = 133 metrics × 4 models)
+## Linguistic (elfen) (48 columns = 12 metrics × 4 models)
 
-Column pattern: `ling_avg_Auditory_sensorimotor_<model>`. Per-column stats are in `metrics_overview.csv`. Base metrics:
+Column pattern: `ling_avg_arousal_<model>`. Per-column stats are in `metrics_overview.csv`. Base metrics:
 
-- `ling_avg_Auditory_sensorimotor`
-- `ling_avg_Foot_leg_sensorimotor`
-- `ling_avg_Gustatory_sensorimotor`
-- `ling_avg_Hand_arm_sensorimotor`
-- `ling_avg_Haptic_sensorimotor`
-- `ling_avg_Head_sensorimotor`
-- `ling_avg_Interoceptive_sensorimotor`
-- `ling_avg_Mouth_sensorimotor`
-- `ling_avg_Olfactory_sensorimotor`
-- `ling_avg_Torso_sensorimotor`
-- `ling_avg_Visual_sensorimotor`
 - `ling_avg_arousal`
 - `ling_avg_dominance`
-- `ling_avg_iconicity`
 - `ling_avg_intensity_anger`
 - `ling_avg_intensity_anticipation`
 - `ling_avg_intensity_disgust`
@@ -2280,200 +2268,17 @@ Column pattern: `ling_avg_Auditory_sensorimotor_<model>`. Per-column stats are i
 - `ling_avg_intensity_sadness`
 - `ling_avg_intensity_surprise`
 - `ling_avg_intensity_trust`
-- `ling_avg_prevalence`
-- `ling_avg_sd_Auditory_sensorimotor`
-- `ling_avg_sd_Foot_leg_sensorimotor`
-- `ling_avg_sd_Gustatory_sensorimotor`
-- `ling_avg_sd_Hand_arm_sensorimotor`
-- `ling_avg_sd_Haptic_sensorimotor`
-- `ling_avg_sd_Head_sensorimotor`
-- `ling_avg_sd_Interoceptive_sensorimotor`
-- `ling_avg_sd_Mouth_sensorimotor`
-- `ling_avg_sd_Olfactory_sensorimotor`
-- `ling_avg_sd_Torso_sensorimotor`
-- `ling_avg_sd_Visual_sensorimotor`
-- `ling_avg_sd_iconicity`
-- `ling_avg_sd_socialness`
-- `ling_avg_socialness`
 - `ling_avg_valence`
-- `ling_max_Auditory_sensorimotor`
-- `ling_max_Foot_leg_sensorimotor`
-- `ling_max_Gustatory_sensorimotor`
-- `ling_max_Hand_arm_sensorimotor`
-- `ling_max_Haptic_sensorimotor`
-- `ling_max_Head_sensorimotor`
-- `ling_max_Interoceptive_sensorimotor`
-- `ling_max_Mouth_sensorimotor`
-- `ling_max_Olfactory_sensorimotor`
-- `ling_max_Torso_sensorimotor`
-- `ling_max_Visual_sensorimotor`
-- `ling_max_iconicity`
-- `ling_max_prevalence`
-- `ling_max_socialness`
-- `ling_min_Auditory_sensorimotor`
-- `ling_min_Foot_leg_sensorimotor`
-- `ling_min_Gustatory_sensorimotor`
-- `ling_min_Hand_arm_sensorimotor`
-- `ling_min_Haptic_sensorimotor`
-- `ling_min_Head_sensorimotor`
-- `ling_min_Interoceptive_sensorimotor`
-- `ling_min_Mouth_sensorimotor`
-- `ling_min_Olfactory_sensorimotor`
-- `ling_min_Torso_sensorimotor`
-- `ling_min_Visual_sensorimotor`
-- `ling_min_iconicity`
-- `ling_min_prevalence`
-- `ling_min_socialness`
-- `ling_n_controversial_Auditory_sensorimotor`
-- `ling_n_controversial_Foot_leg_sensorimotor`
-- `ling_n_controversial_Gustatory_sensorimotor`
-- `ling_n_controversial_Hand_arm_sensorimotor`
-- `ling_n_controversial_Haptic_sensorimotor`
-- `ling_n_controversial_Head_sensorimotor`
-- `ling_n_controversial_Interoceptive_sensorimotor`
-- `ling_n_controversial_Mouth_sensorimotor`
-- `ling_n_controversial_Olfactory_sensorimotor`
-- `ling_n_controversial_Torso_sensorimotor`
-- `ling_n_controversial_Visual_sensorimotor`
-- `ling_n_controversial_iconicity`
-- `ling_n_controversial_socialness`
-- `ling_n_high_Auditory_sensorimotor`
-- `ling_n_high_Foot_leg_sensorimotor`
-- `ling_n_high_Gustatory_sensorimotor`
-- `ling_n_high_Hand_arm_sensorimotor`
-- `ling_n_high_Haptic_sensorimotor`
-- `ling_n_high_Head_sensorimotor`
-- `ling_n_high_Interoceptive_sensorimotor`
-- `ling_n_high_Mouth_sensorimotor`
-- `ling_n_high_Olfactory_sensorimotor`
-- `ling_n_high_Torso_sensorimotor`
-- `ling_n_high_Visual_sensorimotor`
-- `ling_n_high_arousal`
-- `ling_n_high_dominance`
-- `ling_n_high_iconicity`
-- `ling_n_high_intensity_anger`
-- `ling_n_high_intensity_anticipation`
-- `ling_n_high_intensity_disgust`
-- `ling_n_high_intensity_fear`
-- `ling_n_high_intensity_joy`
-- `ling_n_high_intensity_sadness`
-- `ling_n_high_intensity_surprise`
-- `ling_n_high_intensity_trust`
-- `ling_n_high_prevalence`
-- `ling_n_high_socialness`
-- `ling_n_high_valence`
-- `ling_n_low_Auditory_sensorimotor`
-- `ling_n_low_Foot_leg_sensorimotor`
-- `ling_n_low_Gustatory_sensorimotor`
-- `ling_n_low_Hand_arm_sensorimotor`
-- `ling_n_low_Haptic_sensorimotor`
-- `ling_n_low_Head_sensorimotor`
-- `ling_n_low_Interoceptive_sensorimotor`
-- `ling_n_low_Mouth_sensorimotor`
-- `ling_n_low_Olfactory_sensorimotor`
-- `ling_n_low_Torso_sensorimotor`
-- `ling_n_low_Visual_sensorimotor`
-- `ling_n_low_arousal`
-- `ling_n_low_dominance`
-- `ling_n_low_iconicity`
-- `ling_n_low_intensity_anger`
-- `ling_n_low_intensity_anticipation`
-- `ling_n_low_intensity_disgust`
-- `ling_n_low_intensity_fear`
-- `ling_n_low_intensity_joy`
-- `ling_n_low_intensity_sadness`
-- `ling_n_low_intensity_surprise`
-- `ling_n_low_intensity_trust`
-- `ling_n_low_prevalence`
-- `ling_n_low_socialness`
-- `ling_n_low_valence`
-- `ling_n_negative_sentiment`
-- `ling_n_positive_sentiment`
-- `ling_n_tokens`
 - `ling_sentiment_score`
 
-## Complexity (312 columns = 78 metrics × 4 models)
+## Complexity (16 columns = 4 metrics × 4 models)
 
-Column pattern: `cplx_additive_connectives_<model>`. Per-column stats are in `metrics_overview.csv`. Base metrics:
+Column pattern: `cplx_adversative_connectives_<model>`. Per-column stats are in `metrics_overview.csv`. Base metrics:
 
-- `cplx_additive_connectives`
-- `cplx_adjectives_density`
-- `cplx_adverbs_density`
 - `cplx_adversative_connectives`
-- `cplx_argument_overlap_adjacent`
-- `cplx_argument_overlap_all`
 - `cplx_average_age_of_acquisition`
-- `cplx_average_cefr_level`
-- `cplx_average_concreteness`
-- `cplx_average_familiarity`
-- `cplx_average_imagery`
-- `cplx_average_meaningfulness`
-- `cplx_average_number_of_clauses_per_sentence`
-- `cplx_average_number_of_commas_per_sentence`
-- `cplx_average_number_of_meaning_per_word`
-- `cplx_average_sentence_length`
-- `cplx_causal_connectives`
-- `cplx_coca_academic_range`
-- `cplx_coleman_liau_index`
-- `cplx_concept_density_concepts_per_sentence`
-- `cplx_conceptual_graph_ontology_number_of_concpets`
-- `cplx_conceptual_graph_ontology_number_of_distinct_concepts`
-- `cplx_connectives`
-- `cplx_content_word_frequency_log`
-- `cplx_content_word_overlap_adjacent`
-- `cplx_content_word_overlap_all`
-- `cplx_dale_chall_readability_score`
-- `cplx_dependency_parser_branching`
-- `cplx_dependency_parser_dependency_distance`
-- `cplx_dependency_parser_tree_depth`
-- `cplx_dissimilarity_of_words_between_sentences`
-- `cplx_first_person_pronouns_density`
-- `cplx_flesch_kincaid_grade_level`
-- `cplx_gunning_fog_index`
-- `cplx_knowledge_graph_average_node_pagerank`
-- `cplx_knowledge_graph_number_of_connected_components`
-- `cplx_linsear_write_formula`
-- `cplx_logical_connectives`
-- `cplx_mattr`
-- `cplx_max_kuperman_age_of_acquisition`
-- `cplx_max_number_of_clauses_per_sentence`
-- `cplx_max_number_of_if_per_sentence`
-- `cplx_max_number_of_wh_clauses_per_sentence`
-- `cplx_mean_word_length`
-- `cplx_median_kuperman_age_of_acquisition`
-- `cplx_modifiers_per_noun_phrase`
 - `cplx_negations_density`
-- `cplx_noun_overlap_adjacent`
-- `cplx_nouns_density`
-- `cplx_number_of_connectives`
-- `cplx_number_of_connectives_per_3_sentence_sliding_window`
-- `cplx_number_of_wordnet_hypernyms_per_word`
-- `cplx_number_of_wordnet_hyponyms_per_word`
-- `cplx_overlap_between_adjacent_sents_based_on_argument_bearing_words`
-- `cplx_passive_constructions_density`
-- `cplx_percentage_of_words_above_b1_level`
-- `cplx_percentage_of_words_with_more_than_5_meanings`
-- `cplx_polysemy`
-- `cplx_pos_dissimilarity_between_sentences`
-- `cplx_pronouns_density`
-- `cplx_reading_time`
-- `cplx_stem_overlap_sent`
 - `cplx_syllables_per_word`
-- `cplx_te_score`
-- `cplx_temporal_cohesions`
-- `cplx_temporal_connectives`
-- `cplx_text_length`
-- `cplx_third_person_pronouns_density`
-- `cplx_type_token_ratio`
-- `cplx_verb_aspect_repetition`
-- `cplx_verb_overlap_adjacent`
-- `cplx_verb_tense_repetition`
-- `cplx_verb_tense_repetition_nltk`
-- `cplx_verb_ttr`
-- `cplx_verb_ttr_adj`
-- `cplx_verbs_density`
-- `cplx_word_concreteness`
-- `cplx_word_frequency_log`
 
 ## Identifier / demographics (42 columns)
 
