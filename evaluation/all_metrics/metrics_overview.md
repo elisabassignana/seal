@@ -1,6 +1,6 @@
 # Metrics overview — `all_metrics_per_user.csv`
 
-Aggregated to **732 users** × **946 columns** (905 numeric score columns). Each score is the mean across a user's prompts; the four models are `qwen-3.5-27B`, `llama-3.3-70B`, `gemma-4-31B`, `gpt-5.5`.
+Aggregated to **732 users** × **166 columns** (124 numeric score columns). Each score is the mean across a user's prompts; the four models are `qwen-3.5-27B`, `llama-3.3-70B`, `gemma-4-31B`, `gpt-5.5`.
 
 ## Families
 
