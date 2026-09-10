@@ -224,3 +224,4 @@ _old_do_not_remove
 results/sampled_dataset_responses.csv
 evaluation/human_likeness/prompt_sample/
 evaluation/human_likeness/humtdumt/
+/plots
